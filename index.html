@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <title>lotto 번호 생성기</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/css/default.css" />
     <link rel="stylesheet" href="src/css/styles.css" />
 </head>
 <body>
-    <div id="container">
-        <div id="auto_create" onclick="LOTTO.number_create('A');">자동 생성</div>
-        <div id="semi_auto_create" onclick="LOTTO.number_create('S');">반자동 생성</div>
-        <div id="contents"></div>
+    <div class="nav_wrap">
+        <nav class="gnbNav">
+            <div id="gnb" class="gnb">
+                <ul>
+                    <li class="gnb1">
+                        <a href="LOTTO.number_create('A');">자동 생성</a>
+                    </li>
+                    <li class="gnb1">
+                        <a href="LOTTO.number_create('A');">반자동 생성</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
-    <footer>3</footer>
+    <div id="contents">contents</div>
+    <footer>devmango1128@gmail.com</footer>
 </body>
 <script src="src/js/index.js"></script>
 </html>
