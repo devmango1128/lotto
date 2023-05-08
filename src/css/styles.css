@@ -6,3 +6,31 @@ html {
 body {
     margin: 0;
 }
+
+h1 {
+    text-align:center;
+}
+
+div {
+    font-size: 30px;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+
+
+footer {
+    font-size: 30px;
+    text-align: center;
+    background-color: #c2ebf9;
+}
+
+
+/*반응형웹*/
+@media (max-width:600px){
+    /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+}
