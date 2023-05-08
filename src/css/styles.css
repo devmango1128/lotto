@@ -1,10 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
 body {
-    margin: 0;
+    width: 800px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -31,6 +36,32 @@ footer {
 
 
 /*반응형웹*/
-@media (max-width:600px){
-    /*가로 너비가 600px 이하일 때 아래 스타일 적용*/
+/*데스크탑*/
+@media (max-width: 1280px){
+
+    body { font-size: 12px;}
+
+}
+@media (max-width: 1024px){
+
+    body { font-size: 13px;}
+
+}
+/*노트북*/
+@media (max-width: 960px){
+
+    body { font-size: 14px;}
+
+}
+/*타블렛*/
+@media (max-width: 768px){
+
+    body { font-size: 15px;}
+
+}
+/*모바일*/
+@media (max-width: 576px){
+
+    body { font-size: 16px;}
+
 }
