@@ -36,7 +36,7 @@
     display: inline-block
 }
 
-.nav_wrap .gnbNav .gnb > ul > li > a {
+.nav_wrap .gnbNav .gnb > ul > li > div {
     display: block;
     padding: 0 49px;
     line-height: 62px;
@@ -45,9 +45,13 @@
     color: #252525
 }
 
-.nav_wrap .gnbNav .gnb > ul > li > a:hover, .nav_wrap .gnbNav .gnb > ul > li > a:focus, .nav_wrap .gnbNav .gnb > ul > li.active > a {
+.nav_wrap .gnbNav .gnb > ul > li > div.active {
     color: #fff;
-    background: #007bc3
+    background: #007bc3;
+}
+
+.nav_wrap .gnbNav .gnb > ul > li > div:hover, .nav_wrap .gnbNav .gnb > ul > li > div:focus, .nav_wrap .gnbNav .gnb > ul > li.active > a {
+    cursor: pointer;
 }
 
 
@@ -55,29 +59,41 @@
 /*데스크탑*/
 @media (max-width: 1280px){
 
-    body { font-size: 12px;}
+    body { font-size: 15px;}
+    .nav_wrap { min-width: 1280px;}
 
 }
 @media (max-width: 1024px){
 
-    body { font-size: 13px;}
+    body { font-size: 15px;}
+    .nav_wrap { min-width: 1024px;}
 
 }
 /*노트북*/
 @media (max-width: 960px){
 
-    body { font-size: 14px;}
+    body { font-size: 15px;}
+    .nav_wrap { min-width: 960px;}
 
 }
 /*타블렛*/
 @media (max-width: 768px){
 
     body { font-size: 15px;}
+    .nav_wrap { min-width: 768px;}
 
 }
 /*모바일*/
 @media (max-width: 576px){
 
-    body { font-size: 16px;}
+    body { font-size: 14px;}
+    .nav_wrap { min-width: 576px;}
+
+}
+
+@media (max-width: 375px){
+
+    body { font-size: 14px;}
+    .nav_wrap { min-width: 375px;}
 
 }
