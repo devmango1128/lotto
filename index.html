@@ -1,29 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>lotto 번호 생성기</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="src/css/default.css" />
-    <link rel="stylesheet" href="src/css/styles.css" />
-</head>
-<body>
-    <div class="nav_wrap">
-        <nav class="gnbNav">
-            <div id="gnb" class="gnb">
-                <ul>
-                    <li class="gnb1">
-                        <div class="menu" onclick="LOTTO.number_create(this, 'A');">자동 생성</div>
-                    </li>
-                    <li class="gnb1">
-                        <div class="menu" onclick="LOTTO.number_create(this, 'S');">반자동 생성</div>
-                    </li>
-                </ul>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Heroic Features - Start Bootstrap Template</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/src/css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-lg-5">
+                <div class="lotto-area">
+                    <select class="lotto-number">
+                        <option>11111회</option>
+                        <option>11110회</option>
+                    </select>
+                    <div class="ball-1">1</div>
+                    <div class="ball-2">11</div>
+                    <div class="ball-3">21</div>
+                    <div class="ball-3">23</div>
+                    <div class="ball-4">35</div>
+                    <div class="ball-5">41</div>
+                    <div class="bonus"> + </div>
+                    <div class="ball-5">45</div>
+                </div>
             </div>
         </nav>
-    </div>
-    <div id="contents">contents</div>
-    <footer>devmango1128@gmail.com</footer>
-</body>
-<script src="src/js/index.js"></script>
+        <!-- Page Content-->
+        <section class="pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
+                                <h2 class="fs-4 fw-bold">자동 추천</h2>
+                                <p class="mb-0">원하는 만큼 번호를 자동으로 추천해줘요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                                <h2 class="fs-4 fw-bold">반자동 추천</h2>
+                                <p class="mb-0">내가 원하는 숫자를 넣어서 자동으로 추천해줘요! 조상님이 꿈에서 숫자를 다 알려주지 않았다면!!? 모든 경우의 수를 알려드려요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
+                                <h2 class="fs-4 fw-bold">어디서 구매할까?</h2>
+                                <p class="mb-0">당신의 사주를 분석해서 맞춤 명당 서비스를 제공해드려요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
+                                <h2 class="fs-4 fw-bold">실수령액 계산기</h2>
+                                <p class="mb-0">로또에 당첨된 당신! 축하드립니다! 세금을 제외한 실수령액이 얼마인지 궁금하신가요?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
+                                <h2 class="fs-4 fw-bold">가장 많이 당첨된 숫자는?</h2>
+                                <p class="mb-0">지금까지 가장 많이 당첨된 숫자를 알려드려요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xxl-4 mb-5">
+                        <div class="card bg-light border-0 h-100">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                                <h2 class="fs-4 fw-bold">역대 당첨금 수령액</h2>
+                                <p class="mb-0">지금까지 1등들은 얼마를 받았을까?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; LOTTO 2023</p></div>
+        </footer>
+        <script src="/src/js/index.js"></script>
+    </body>
 </html>
