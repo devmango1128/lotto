@@ -4888,8 +4888,62 @@ textarea.form-control-lg {
   margin-left: calc(-1 * var(--bs-list-group-border-width));
   border-left-width: var(--bs-list-group-border-width);
 }
+/*custom*/
+select.lotto-number {
+
+}
+
+div.lotto-area {
+  display: inline-block;
+}
+
+select.lotto-number {
+  float: left;
+  position: relative;
+  width: 100px;
+  height: 40px;
+  background-color: #212529;
+  color: #fff;
+  border: 1px solid #212529;
+  margin-right:20px;
+}
+
+div.lotto-area div {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 800;
+  color:#ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 28px;
+}
+
+div.lotto-area div.ball-1 {
+  background-color: #f86977;
+}
+div.lotto-area div.ball-2 {
+  background-color: #f6aa55;
+}
+div.lotto-area div.ball-3 {
+  background-color: #b5bb0d;
+}
+div.lotto-area div.ball-4 {
+  background-color: #5583f6;
+}
+div.lotto-area div.ball-5 {
+  background-color: #e472ff;
+}
 
 @media (min-width: 576px) {
+  div.lotto-area div {
+    font-size: 18px;
+    width:30px;
+    height:30px;
+    line-height: 28px;
+  }
   .list-group-horizontal-sm {
     flex-direction: row;
   }
@@ -4914,6 +4968,12 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
+  div.lotto-area div {
+    font-size: 18px;
+    width:30px;
+    height:30px;
+    line-height: 28px;
+  }
   .list-group-horizontal-md {
     flex-direction: row;
   }
@@ -4938,6 +4998,12 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 992px) {
+  div.lotto-area div {
+    font-size: 20px;
+    width:40px;
+    height:40px;
+    line-height: 38px;
+  }
   .list-group-horizontal-lg {
     flex-direction: row;
   }
@@ -4962,6 +5028,12 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 1200px) {
+  div.lotto-area div {
+    font-size: 20px;
+    width:40px;
+    height:40px;
+    line-height: 38px;
+  }
   .list-group-horizontal-xl {
     flex-direction: row;
   }
@@ -4986,6 +5058,12 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 1400px) {
+  div.lotto-area div {
+    font-size: 20px;
+    width:40px;
+    height:40px;
+    line-height: 38px;
+  }
   .list-group-horizontal-xxl {
     flex-direction: row;
   }
@@ -5788,7 +5866,7 @@ textarea.form-control-lg {
 }
 
 .carousel.pointer-event {
-  touch-action: pan-y;
+  touch-action: pan-y;f
 }
 
 .carousel-inner {
@@ -8450,13 +8528,9 @@ textarea.form-control-lg {
 
 @media (min-width: 576px) {
   div.lotto-area div {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 700;
-    color:#ffffff;
+    font-size: 18px;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
     line-height: 28px;
   }
   .select.lotto-number {
@@ -9074,13 +9148,9 @@ textarea.form-control-lg {
 }
 @media (min-width: 768px) {
   div.lotto-area div {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 700;
-    color:#ffffff;
+    font-size: 18px;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
     line-height: 28px;
   }
   .select.lotto-number {
@@ -11582,54 +11652,5 @@ textarea.form-control-lg {
   height: 4rem;
   width: 4rem;
   font-size: 2rem;
-}
-
-/*custom*/
-select.lotto-number {
-
-}
-
-div.lotto-area {
-  display: inline-block;
-}
-
-select.lotto-number {
-  float: left;
-  position: relative;
-  width: 100px;
-  height: 40px;
-  background-color: #212529;
-  color: #fff;
-  border: 1px solid #212529;
-  margin-right:20px;
-}
-
-div.lotto-area div {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 800;
-  color:#ffffff;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 38px;
-}
-
-div.lotto-area div.ball-1 {
-  background-color: #f86977;
-}
-div.lotto-area div.ball-2 {
-  background-color: #f6aa55;
-}
-div.lotto-area div.ball-3 {
-  background-color: #b5bb0d;
-}
-div.lotto-area div.ball-4 {
-  background-color: #5583f6;
-}
-div.lotto-area div.ball-5 {
-  background-color: #e472ff;
 }
 
