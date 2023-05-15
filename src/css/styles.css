@@ -4743,7 +4743,7 @@ div.lotto-area div {
   line-height: 23px;
 }
 
-select.lotto-number {
+select.lotto-turn {
   display: inline-block;
   vertical-align: middle;
   background-color: solid 1px rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
@@ -7997,6 +7997,7 @@ div.lotto-area div.ball-5 {
 }
 
 .pt-4 {
+  text-align: center;
   padding-top: 1.5rem !important;
 }
 

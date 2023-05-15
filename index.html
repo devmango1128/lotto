@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Heroic Features - Start Bootstrap Template</title>
+        <title>lotto</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="src/css/styles.css" rel="stylesheet" />
     </head>
@@ -14,10 +15,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-lg-5">
                 <div class="lotto-area">
-                    <select class="lotto-number">
-                        <option>11111회</option>
-                        <option>11110회</option>
-                    </select>
+                    <select id="lottoTurn" class="lotto-turn"></select>
                     <div class="ball-1">1</div>
                     <div class="ball-2">11</div>
                     <div class="ball-3">21</div>
@@ -95,6 +93,6 @@
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; LOTTO 2023</p></div>
         </footer>
-        <script src="src/js/index.js"></script>
+        <script type="module" src="src/js/index.js"></script>
     </body>
 </html>

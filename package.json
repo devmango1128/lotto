@@ -1,5 +1,25 @@
 {
   "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
     "lotto": "^1.0.4"
-  }
+  },
+  "name": "lotto",
+  "description": "lotto project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devmango1128/lotto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devmango1128/lotto/issues"
+  },
+  "homepage": "https://github.com/devmango1128/lotto#readme"
 }
