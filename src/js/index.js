@@ -44,34 +44,19 @@ let LOTTO = {
 
         console.log(selectedValue); // 선택된 옵션의 값 출력
 
-        // var url = 'https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=' + selectedValue;
-        //
-        // $.ajax({
-        //     url: url,
-        //     method: 'GET',
-        //     dataType: 'jsonp',
-        //     jsonpCallback: 'processLottoData',
-        //     success: function(response) {
-        //         console.log(response);
-        //         // 응답 데이터를 처리하는 코드 작성
-        //     },
-        //     error: function(xhr, status, error) {
-        //         console.error(error);
-        //     }
-        // });
+        const url = 'https://cors-anywhere.herokuapp.com/https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=' + selectedValue;
 
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=' + selectedValue, true); // AJAX 요청 설정
-
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                const response = xhr.responseText;
-                // AJAX 요청이 완료되고 응답이 성공적으로 도착한 경우에 실행할 코드
+        $.ajax({
+            url: url,
+            method: 'GET',
+            success: function(response) {
                 console.log(response);
+                // 응답 데이터를 처리하는 코드 작성
+            },
+            error: function(xhr, status, error) {
+                console.error(error);
             }
-        };
-
-        xhr.send(); // AJAX 요청 보내기
+        });
     }
 }
 
