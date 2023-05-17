@@ -16,14 +16,18 @@
             <div class="container px-lg-5">
                 <div class="lotto-area">
                     <select id="lottoTurn" class="lotto-turn" onchange="LOTTO.fn_lotto_turn_change()"></select>
-                    <div class="ball-1">1</div>
-                    <div class="ball-2">11</div>
-                    <div class="ball-3">21</div>
-                    <div class="ball-3">23</div>
-                    <div class="ball-4">35</div>
-                    <div class="ball-5">41</div>
+                    <span class="win-text">당첨번호</span>
+                    <span id="winDate" class="win-date"></span>
+                </div>
+                <div class="lotto-area mg_t5">
+                    <div id="ball-1"></div>
+                    <div id="ball-2"></div>
+                    <div id="ball-3"></div>
+                    <div id="ball-4"></div>
+                    <div id="ball-5"></div>
+                    <div id="ball-6"></div>
                     <div class="bonus"> + </div>
-                    <div class="ball-5">45</div>
+                    <div id="ball-b"></div>
                 </div>
             </div>
         </nav>

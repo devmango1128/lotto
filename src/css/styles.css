@@ -4743,6 +4743,11 @@ div.lotto-area div {
   line-height: 23px;
 }
 
+div.lotto-area span {
+  color:#fff;
+  vertical-align: middle;
+}
+
 select.lotto-turn {
   display: inline-block;
   vertical-align: middle;
@@ -4755,20 +4760,24 @@ div.lotto-area div.bonus {
   width: 10px;
 }
 
-div.lotto-area div.ball-1 {
+div.lotto-area div.ball-0 {
   background-color: #f86977;
 }
-div.lotto-area div.ball-2 {
+div.lotto-area div.ball-1 {
   background-color: #f6aa55;
 }
-div.lotto-area div.ball-3 {
-  background-color: #b5bb0d;
+div.lotto-area div.ball-2 {
+  background-color: #839f06;
 }
-div.lotto-area div.ball-4 {
+div.lotto-area div.ball-3 {
   background-color: #5583f6;
 }
-div.lotto-area div.ball-5 {
-  background-color: #e472ff;
+div.lotto-area div.ball-4 {
+  background-color: #872b9b;
+}
+
+.mg_t5{
+  margin-top:5px;
 }
 
 @keyframes progress-bar-stripes {
