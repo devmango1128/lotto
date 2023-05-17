@@ -20,7 +20,7 @@ let LOTTO = {
     fn_lotto_turn_change : function() {
         let _this = this;
 
-        const url = '/turnHistory.json?date=' + new Date();
+        const url = '/lotto/turnHistory.json?date=' + new Date();
         const xhr = new XMLHttpRequest();
 
         xhr.open('GET', url, true);
