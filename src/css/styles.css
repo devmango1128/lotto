@@ -4773,11 +4773,32 @@ div.lotto-area div.ball-3 {
   background-color: #5583f6;
 }
 div.lotto-area div.ball-4 {
-  background-color: #872b9b;
+  background-color: #cb56e5;
 }
 
-.mg_t5{
-  margin-top:5px;
+div.lotto-area span.amnt-txt {
+  text-align: center;
+  vertical-align: middle;
+  height: 22px;
+  line-height: 18px;
+}
+
+/*margin*/
+.mg-t5 {
+  margin-top: 5px;
+}
+.mg-t10 {
+  margin-top: 10px;
+}
+
+/*text color*/
+.f-c-w {
+  color:#fff;
+}
+
+/*display*/
+.dp-ib {
+  display: inline-block;
 }
 
 @keyframes progress-bar-stripes {

@@ -35,37 +35,11 @@ let LOTTO = {
                 const selectedValue = selectElement.value ? selectElement.value : selectElement.options[0].value;
 
                 _this.weekLottoData = _this.lottoData[selectedValue-1];
+                _this.fn_create_ball();
 
-                let drwtNo1 = _this.weekLottoData.drwtNo1;
-                let drwtNo2 = _this.weekLottoData.drwtNo2;
-                let drwtNo3 = _this.weekLottoData.drwtNo3;
-                let drwtNo4 = _this.weekLottoData.drwtNo4;
-                let drwtNo5 = _this.weekLottoData.drwtNo5;
-                let drwtNo6 = _this.weekLottoData.drwtNo6;
-                let drwtNoB = _this.weekLottoData.bnusNo;
+                document.getElementById('firstWinamnt').innerHTML =_this.weekLottoData.firstWinamnt.toLocaleString();
+                document.getElementById('firstPrzwnerCo').innerHTML = _this.weekLottoData.firstPrzwnerCo;
 
-                 document.getElementById('winDate').innerHTML = '(' + _this.weekLottoData.drwNoDate + ')';
-                 document.getElementById('ball-1').innerHTML = drwtNo1;
-                 document.getElementById('ball-1').className = "";
-                 document.getElementById('ball-1').classList.add("ball-" + _this.fn_digitNumber(drwtNo1));
-                 document.getElementById('ball-2').innerHTML = drwtNo2;
-                 document.getElementById('ball-2').className = "";
-                 document.getElementById('ball-2').classList.add("ball-" + _this.fn_digitNumber(drwtNo2));
-                 document.getElementById('ball-3').innerHTML = drwtNo3;
-                 document.getElementById('ball-3').className = "";
-                 document.getElementById('ball-3').classList.add("ball-" + _this.fn_digitNumber(drwtNo3));
-                 document.getElementById('ball-4').innerHTML = drwtNo4;
-                 document.getElementById('ball-4').className = "";
-                 document.getElementById('ball-4').classList.add("ball-" + _this.fn_digitNumber(drwtNo4));
-                 document.getElementById('ball-5').innerHTML = drwtNo5;
-                 document.getElementById('ball-5').className = "";
-                 document.getElementById('ball-5').classList.add("ball-" + _this.fn_digitNumber(drwtNo5));
-                 document.getElementById('ball-6').innerHTML = drwtNo6;
-                 document.getElementById('ball-6').className = "";
-                 document.getElementById('ball-6').classList.add("ball-" + _this.fn_digitNumber(drwtNo6));
-                 document.getElementById('ball-b').innerHTML = drwtNoB;
-                 document.getElementById('ball-b').className = "";
-                 document.getElementById('ball-b').classList.add("ball-" + _this.fn_digitNumber(drwtNoB));
                 /*bnusNo: 18
                 drwNo: 1067
                 drwNoDate: "2023-05-13"
@@ -75,11 +49,11 @@ let LOTTO = {
                 drwtNo4: 23
                 drwtNo5: 28
                 drwtNo6: 33
-                firstAccumamnt: 25754482130
-                firstPrzwnerCo: 13
-                firstWinamnt: 1981114010
+                firstAccumamnt: 25754482130 //등위별 총 당첨금액
+                firstPrzwnerCo: 13 //당첨게임수
+                firstWinamnt: 1981114010 //1게임당 당첨금액
                 returnValue: "success"
-                totSellamnt: 110703299000
+                totSellamnt: 110703299000 //총판매금액
                                 * */
             } else {
                 console.error('Error:', xhr.status);
@@ -99,6 +73,29 @@ let LOTTO = {
         } else if (number >= 10 && number < 100) {
             const tensDigit = Math.floor(number / 10) * 1;
             return tensDigit;
+        }
+    },
+    fn_create_ball : function() {
+
+        let _this = this;
+
+        let drwtArr = [
+            _this.weekLottoData.drwtNo1,
+            _this.weekLottoData.drwtNo2,
+            _this.weekLottoData.drwtNo3,
+            _this.weekLottoData.drwtNo4,
+            _this.weekLottoData.drwtNo5,
+            _this.weekLottoData.drwtNo6,
+            _this.weekLottoData.bnusNo,
+        ];
+
+        document.getElementById('winDate').innerHTML = '(' + _this.weekLottoData.drwNoDate + ')';
+
+        for(let i = 1; i <= drwtArr.length; i++) {
+            document.getElementById('ball-' + i).className = "";
+            document.getElementById('ball-' + i).innerHTML = drwtArr[i-1];
+            console.log(_this.fn_digitNumber(drwtArr[i-1]));
+            document.getElementById('ball-' + i).classList.add("ball-" + _this.fn_digitNumber(drwtArr[i-1]));
         }
     }
 }
