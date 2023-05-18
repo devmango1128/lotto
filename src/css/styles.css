@@ -4804,6 +4804,10 @@ div.lotto-area span.amnt-txt {
   display: inline-block;
 }
 
+input:focus, select:focus, option:focus, textarea:focus, button:focus{
+  outline: none;
+}
+
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
