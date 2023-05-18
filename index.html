@@ -8,11 +8,12 @@
         <title>lotto</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <link href="src/css/styles.css" rel="stylesheet" />
     </head>
     <body>
         <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mg-b20">
             <div class="container px-lg-5">
                 <div class="lotto-area">
                     <select id="lottoTurn" class="lotto-turn" onchange="LOTTO.fn_lotto_turn_change()"></select>
@@ -42,7 +43,9 @@
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
+                                    <i class="fa-solid fa-circle-dot"></i>
+                                </div>
                                 <h2 class="fs-4 fw-bold">자동 추천</h2>
                                 <p class="mb-0">원하는 만큼 번호를 자동으로 추천해줘요!</p>
                             </div>
@@ -51,18 +54,11 @@
                     <div class="col-lg-6 col-xxl-4 mb-5">
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
+                                    <i class="fa-regular fa-circle-dot"></i>
+                                </div>
                                 <h2 class="fs-4 fw-bold">반자동 추천</h2>
                                 <p class="mb-0">내가 원하는 숫자를 넣어서 자동으로 추천해줘요! 조상님이 꿈에서 숫자를 다 알려주지 않았다면!!? 모든 경우의 수를 알려드려요!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
-                                <h2 class="fs-4 fw-bold">어디서 구매할까?</h2>
-                                <p class="mb-0">당신의 사주를 분석해서 맞춤 명당 서비스를 제공해드려요!</p>
                             </div>
                         </div>
                     </div>
@@ -81,15 +77,6 @@
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
                                 <h2 class="fs-4 fw-bold">가장 많이 당첨된 숫자는?</h2>
                                 <p class="mb-0">지금까지 가장 많이 당첨된 숫자를 알려드려요!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
-                        <div class="card bg-light border-0 h-100">
-                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
-                                <h2 class="fs-4 fw-bold">역대 당첨금 수령액</h2>
-                                <p class="mb-0">지금까지 1등들은 얼마를 받았을까?</p>
                             </div>
                         </div>
                     </div>
