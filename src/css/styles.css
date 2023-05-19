@@ -4151,6 +4151,17 @@ textarea.form-control-lg {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+.navbar-white {
+  --bs-navbar-color: rgba(255, 255, 255, 0.55);
+  --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
+  --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
+  --bs-navbar-active-color: #fff;
+  --bs-navbar-brand-color: #fff;
+  --bs-navbar-brand-hover-color: #fff;
+  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 .card {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
@@ -4783,6 +4794,13 @@ div.lotto-area span.amnt-txt {
   line-height: 18px;
 }
 
+div.logo {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-weight: 800;
+}
+
 /*margin*/
 .mg-t5 {
   margin-top: 5px;
@@ -4802,6 +4820,17 @@ div.lotto-area span.amnt-txt {
 /*display*/
 .dp-ib {
   display: inline-block;
+}
+.dp_b {
+  display: block !important;
+}
+.dp_n {
+  display: none;
+}
+
+/*cursor*/
+.cur_p {
+  cursor: pointer;
 }
 
 input:focus, select:focus, option:focus, textarea:focus, button:focus{

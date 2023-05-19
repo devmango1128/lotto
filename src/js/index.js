@@ -40,21 +40,6 @@ let LOTTO = {
                 document.getElementById('firstWinamnt').innerHTML =_this.weekLottoData.firstWinamnt.toLocaleString();
                 document.getElementById('firstPrzwnerCo').innerHTML = _this.weekLottoData.firstPrzwnerCo;
 
-                /*bnusNo: 18
-                drwNo: 1067
-                drwNoDate: "2023-05-13"
-                drwtNo1: 7
-                drwtNo2: 10
-                drwtNo3: 19
-                drwtNo4: 23
-                drwtNo5: 28
-                drwtNo6: 33
-                firstAccumamnt: 25754482130 //등위별 총 당첨금액
-                firstPrzwnerCo: 13 //당첨게임수
-                firstWinamnt: 1981114010 //1게임당 당첨금액
-                returnValue: "success"
-                totSellamnt: 110703299000 //총판매금액
-                                * */
             } else {
                 console.error('Error:', xhr.status);
             }
@@ -97,6 +82,27 @@ let LOTTO = {
             console.log(_this.fn_digitNumber(drwtArr[i-1]));
             document.getElementById('ball-' + i).classList.add("ball-" + _this.fn_digitNumber(drwtArr[i-1]));
         }
+    },
+    fn_go_page : function(page) {
+
+        const _this = this;
+
+        const elements = document.getElementsByClassName("section");
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].classList.remove("dp_b");
+            elements[i].classList.add("dp_n");
+        }
+
+        switch (page) {
+            case 'M' : _this.fn_display_show('mainSection'); break;
+            case 'A' : _this.fn_display_show('autoSection'); break;
+            case 'S' : _this.fn_display_show('semiSection'); break;
+            case 'F' : _this.fn_display_show('fortuneSection'); break;
+            case 'E' : _this.fn_display_show('emergeSection'); break;
+        }
+    },
+    fn_display_show(id) {
+        document.getElementById(id).classList.add("dp_b");
     }
 }
 

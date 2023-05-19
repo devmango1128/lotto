@@ -12,6 +12,11 @@
         <link href="src/css/styles.css" rel="stylesheet" />
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-white bg-white">
+            <div class="logo px-lg-5 cur_p" onclick="LOTTO.fn_go_page('M')">
+                조상님 LOTTO
+            </div>
+        </nav>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mg-b20">
             <div class="container px-lg-5">
@@ -20,7 +25,7 @@
                     <span class="win-text">당첨번호</span>
                     <span id="winDate" class="win-date"></span>
                 </div>
-                <div class="lotto-area mg_t5">
+                <div class="lotto-area mg-t10">
                     <div id="ball-1" class="ball-1">0</div>
                     <div id="ball-2" class="ball-1">0</div>
                     <div id="ball-3" class="ball-1">0</div>
@@ -30,17 +35,17 @@
                     <div class="bonus"> + </div>
                     <div id="ball-7" class="ball-1">0</div>
                 </div>
-                <div class="lotto-area mg-t5 f-c-w">
+                <div class="lotto-area mg-t10 f-c-w">
                     1등 당첨금액 <span id="firstWinamnt" class="amnt-txt dp-ib">0</span>원(<span id="firstPrzwnerCo" class="amnt-txt dp-ib">0</span>명)
                 </div>
             </div>
         </nav>
         <!-- Page Content-->
-        <section class="pt-4">
+        <section id="mainSection" class="section pt-4">
             <div class="container px-lg-5">
                 <!-- Page Features-->
                 <div class="row gx-lg-5">
-                    <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5 cur_p" onclick="LOTTO.fn_go_page('A')">
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -51,7 +56,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5 cur_p" onclick="LOTTO.fn_go_page('S')">
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -62,34 +67,69 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5 cur_p" onclick="LOTTO.fn_go_page('F')">
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
                                     <i class="fa-solid fa-sack-dollar"></i>
                                 </div>
-                                <h2 class="fs-4 fw-bold">실수령액 계산기</h2>
-                                <p class="mb-0">로또에 당첨된 당신! 축하드립니다! 세금을 제외한 실수령액이 얼마인지 궁금하신가요?</p>
+                                <h2 class="fs-4 fw-bold">사주로 보는 당첨 예상 번호</h2>
+                                <p class="mb-0">내 사주로 보는 당첨 예상 번호! 이번주 1등 주인공은 당신입니다!</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="col-lg-6 col-xxl-4 mb-5 cur_p" onclick="LOTTO.fn_go_page('E')">
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
                                     <i class="fa-solid fa-arrow-down-1-9"></i>
                                 </div>
-                                <h2 class="fs-4 fw-bold">가장 많이 당첨된 숫자는?</h2>
-                                <p class="mb-0">지금까지 가장 많이 당첨된 숫자를 알려드려요!</p>
+                                <h2 class="fs-4 fw-bold">출현 숫자/ 미출현 숫자</h2>
+                                <p class="mb-0">지금까지 가장 출현한 숫자와 가장 적게 출현한 숫자를 알려드려요!</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Page Content-->
+
+        <section id="autoSection" class="section pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    자동 추천
+                </div>
+            </div>
+        </section>
+        <section id="semiSection" class="section pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    반자동 추천
+                </div>
+            </div>
+        </section>
+        <section id="fortuneSection" class="section pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    사주로보는 로또번호
+                </div>
+            </div>
+        </section>
+        <section id="emergeSection" class="section pt-4">
+            <div class="container px-lg-5">
+                <!-- Page Features-->
+                <div class="row gx-lg-5">
+                    출현/미출현
+                </div>
+            </div>
+        </section>
+
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; LOTTO 2023</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; 조상님 LOTTO 2023</p></div>
         </footer>
         <script src="src/js/index.js"></script>
     </body>
