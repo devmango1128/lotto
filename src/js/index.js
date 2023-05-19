@@ -79,7 +79,6 @@ let LOTTO = {
         for(let i = 1; i <= drwtArr.length; i++) {
             document.getElementById('ball-' + i).className = "";
             document.getElementById('ball-' + i).innerHTML = drwtArr[i-1];
-            console.log(_this.fn_digitNumber(drwtArr[i-1]));
             document.getElementById('ball-' + i).classList.add("ball-" + _this.fn_digitNumber(drwtArr[i-1]));
         }
     },
@@ -95,15 +94,57 @@ let LOTTO = {
 
         switch (page) {
             case 'M' : _this.fn_display_show('mainSection'); break;
-            case 'A' : _this.fn_display_show('autoSection'); break;
+            case 'A' :
+                _this.fn_display_show('autoSection');
+                _this.auto_number_create();
+                break;
             case 'S' : _this.fn_display_show('semiSection'); break;
+            case 'V' : _this.fn_display_show('saveSection'); break;
             case 'F' : _this.fn_display_show('fortuneSection'); break;
             case 'E' : _this.fn_display_show('emergeSection'); break;
+            case 'R' : _this.fn_display_show('storeSection'); break;
         }
     },
     fn_display_show(id) {
         document.getElementById(id).classList.add("dp_b");
-    }
+    },
+    auto_number_create() {
+
+        const _this = this;
+        let numbers = [];
+
+        // 1부터 45까지의 숫자 배열 생성
+        for (let i = 1; i <= 45; i++) {
+            numbers.push(i);
+        }
+
+        let lottoNumbers = [];
+
+        for (let i = 0; i < 6; i++) {
+
+            let randomIndex = Math.floor(Math.random() * numbers.length);
+            lottoNumbers.push(numbers[randomIndex]);
+            numbers.splice(randomIndex, 1);
+        }
+
+        lottoNumbers.sort(function(a, b) {
+            return a - b;
+        });
+
+        _this.fn_auto_create_ball(lottoNumbers);
+    },
+    fn_auto_create_ball : function(lottoNumbers) {
+
+        let _this = this;
+
+        for(let i = 1; i <= lottoNumbers.length; i++) {
+            setTimeout(function(index) {
+                document.getElementById('auto-ball-' + i).className = "";
+                document.getElementById('auto-ball-' + i).innerHTML = lottoNumbers[i-1];
+                document.getElementById('auto-ball-' + i).classList.add("ball-" + _this.fn_digitNumber(lottoNumbers[i-1]));
+            }, 500 * i, i);
+        }
+    },
 }
 
 document.addEventListener("DOMContentLoaded", function(){

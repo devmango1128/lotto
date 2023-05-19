@@ -4741,7 +4741,7 @@ textarea.form-control-lg {
   color: #101214;
 }
 
-div.lotto-area div {
+div.lotto-area div, .auto-ball-area div {
   display: inline-block;
   font-size: 14px;
   font-weight: 800;
@@ -4771,19 +4771,19 @@ div.lotto-area div.bonus {
   width: 10px;
 }
 
-div.lotto-area div.ball-0 {
+div.lotto-area div.ball-0, div.auto-ball-area div.ball-0 {
   background-color: #f86977;
 }
-div.lotto-area div.ball-1 {
+div.lotto-area div.ball-1, div.auto-ball-area div.ball-1 {
   background-color: #f6aa55;
 }
-div.lotto-area div.ball-2 {
+div.lotto-area div.ball-2, div.auto-ball-area div.ball-2 {
   background-color: #839f06;
 }
-div.lotto-area div.ball-3 {
+div.lotto-area div.ball-3, div.auto-ball-area div.ball-3 {
   background-color: #5583f6;
 }
-div.lotto-area div.ball-4 {
+div.lotto-area div.ball-4, div.auto-ball-area div.ball-4 {
   background-color: #cb56e5;
 }
 
@@ -4800,6 +4800,30 @@ div.logo {
   width: 100%;
   font-weight: 800;
 }
+
+div.navigate {
+  display: block;
+  text-align: left;
+  margin-top: -40px;
+  position: absolute;
+  font-size: 13px;
+}
+
+div.contents {
+  flex: 1;
+}
+
+div.auto-ball-area {
+  border : 2px solid #0d6efd;
+  border-radius: 8px; /* Adjust the value to change the degree of rounding */
+  padding: 10px; /* Optional: Add padding for content */
+}
+
+div.auto-ball-area div.ball-s {
+  background-color: #818080;
+  color:#fff;
+}
+
 
 /*margin*/
 .mg-t5 {
@@ -4833,6 +4857,9 @@ div.logo {
   cursor: pointer;
 }
 
+.col_blue {
+  color: #212529;
+}
 input:focus, select:focus, option:focus, textarea:focus, button:focus{
   outline: none;
 }
