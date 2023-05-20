@@ -4871,6 +4871,10 @@ div.auto-ball-area div.ball-s {
   cursor: pointer;
 }
 
+.auto-refresh {
+  float:right;
+}
+
 
 /*margin*/
 .mg-0a {
@@ -4920,6 +4924,14 @@ div.auto-ball-area div.ball-s {
 /*color*/
 .col-blue {
   color: #212529;
+}
+.col-dark {
+  color: #212529
+}
+
+/**width*/
+.wid-100 {
+  width: 100%;
 }
 
 input:focus, select:focus, option:focus, textarea:focus, button:focus{
