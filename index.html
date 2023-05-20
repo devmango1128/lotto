@@ -13,7 +13,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-white bg-white logo-nav">
-            <div class="logo px-lg-5 cur-p" onclick="LOTTO.fn_go_page('M')">
+            <div class="logo px-lg-5 cur-p" onclick="LOTTO.fn_modal_page('M')">
                 조상님 LOTTO
             </div>
         </nav>
@@ -46,7 +46,7 @@
                 <div class="container px-lg-5">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('A')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('A')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('S')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('S')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('V')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('V')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('F')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('F')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('E')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('E')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -101,7 +101,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('R')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('R')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -116,17 +116,14 @@
                 </div>
             </section>
             <!-- Page Content-->
-
-            <section id="autoSection" class="section pt-4 dp-n">
-                <div class="container px-lg-5">
+        </div>
+        <div id="autoSection-modal" class="modal">
+            <div id="autoSection" class="modal-content">
+                <span class="close" onclick="LOTTO.fn_modal_close('autoSection-modal')">&times;</span>
+                <div class="container px-lg-5 mg-t40">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
-                        <div class="navigate cur-p" onclick="LOTTO.fn_go_page('M')">
-                            <i class="fa-solid fa-house col-blue"></i>
-                            >
-                            자동 추천
-                        </div>
-                        <div class="col-lg-12 col-xxl-4 mg-5 mg-0a cur-p">
+                        <div class="cmg-0a cur-p">
                             <div class="auto-ball-area">
                                 <div id="auto-ball-1" class="ball-s">?</div>
                                 <div id="auto-ball-2" class="ball-s">?</div>
@@ -137,8 +134,7 @@
                             </div>
                         </div>
                         <div class="button-area">
-                            <button>새로 생성하기</button>
-                            <button>표에 저장하기</button>
+                            <button class="btn">새로 생성하기</button>
                         </div>
                         <div class="col-lg-6 col-xxl-4 mb-5 cur-p">
                             <table>
@@ -153,90 +149,13 @@
                                         <td>6</td>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>A</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>B</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>C</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>D</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>E</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-
+                                <tbody></tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="semiSection" class="section pt-4 dp-n">
-                <div class="container px-lg-5">
-                    <!-- Page Features-->
-                    <div class="row gx-lg-5">
-                        반자동 추천
-                    </div>
-                </div>
-            </section>
-            <section id="saveSection" class="section pt-4 dp-n">
-                <div class="container px-lg-5">
-                    <!-- Page Features-->
-                    <div class="row gx-lg-5">
-                        내가 저장한 번호
-                    </div>
-                </div>
-            </section>
-            <section id="fortuneSection" class="section pt-4 dp-n">
-                <div class="container px-lg-5">
-                    <!-- Page Features-->
-                    <div class="row gx-lg-5">
-                        사주로보는 로또번호
-                    </div>
-                </div>
-            </section>
-            <section id="emergeSection" class="section pt-4 dp-n">
-                <div class="container px-lg-5">
-                    <!-- Page Features-->
-                    <div class="row gx-lg-5">
-                        출현/미출현
-                    </div>
-                </div>
-            </section>
-            <section id="storeSection" class="section pt-4 dp-n">
-                <div class="container px-lg-5">
-                    <!-- Page Features-->
-                    <div class="row gx-lg-5">
-                        전국 지점보기
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
-        <script src="src/js/index.js"></script>
     </body>
+    <script src="src/js/index.js"></script>
 </html>

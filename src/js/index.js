@@ -82,20 +82,14 @@ let LOTTO = {
             document.getElementById('ball-' + i).classList.add("ball-" + _this.fn_digitNumber(drwtArr[i-1]));
         }
     },
-    fn_go_page : function(page) {
+    fn_modal_page : function(page) {
 
         const _this = this;
-
-        const elements = document.getElementsByClassName("section");
-        for (let i = 0; i < elements.length; i++) {
-            elements[i].classList.remove("dp-b");
-            elements[i].classList.add("dp-n");
-        }
 
         switch (page) {
             case 'M' : _this.fn_display_show('mainSection'); break;
             case 'A' :
-                _this.fn_display_show('autoSection');
+                _this.fn_display_show('autoSection-modal');
                 _this.auto_number_create();
                 break;
             case 'S' : _this.fn_display_show('semiSection'); break;
@@ -107,6 +101,10 @@ let LOTTO = {
     },
     fn_display_show(id) {
         document.getElementById(id).classList.add("dp-b");
+    },
+    fn_modal_close(id) {
+        document.getElementById(id).classList.remove("dp-b");
+        document.getElementById(id).classList.add("dp-n");
     },
     auto_number_create() {
 
@@ -137,6 +135,8 @@ let LOTTO = {
 
         let _this = this;
 
+        _this.fn_auto_ball_init();
+
         for(let i = 1; i <= lottoNumbers.length; i++) {
             setTimeout(function(index) {
                 document.getElementById('auto-ball-' + i).className = "";
@@ -145,9 +145,14 @@ let LOTTO = {
             }, 500 * i, i);
         }
     },
+    fn_auto_ball_init() {
+        for(let i = 1; i < 7; i++) {
+            document.getElementById('auto-ball-' + i).className = "";
+            document.getElementById('auto-ball-' + i).innerHTML = '?';
+            document.getElementById('auto-ball-' + i).classList.add("ball-s");
+        }
+    }
 }
-
-
 
 document.addEventListener("DOMContentLoaded", function(){
     LOTTO.init();
