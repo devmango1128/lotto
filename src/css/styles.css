@@ -4794,6 +4794,14 @@ div.lotto-area span.amnt-txt {
   line-height: 18px;
 }
 
+nav.logo-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index:999;
+}
+
 div.logo {
   display: inline-block;
   text-align: center;
@@ -4824,13 +4832,25 @@ div.auto-ball-area div.ball-s {
   color:#fff;
 }
 
-
 /*margin*/
+.mg-0a {
+  margin : 0 auto
+}
+
 .mg-t5 {
   margin-top: 5px;
 }
 .mg-t10 {
   margin-top: 10px;
+}
+.mg-t40 {
+  margin-top: 40px;
+}
+.mg-b5 {
+  margin-bottom: 5px;
+}
+.mg-b10 {
+  margin-bottom: 10px;
 }
 .mg-b20 {
   margin-bottom: 20px;
@@ -4845,21 +4865,23 @@ div.auto-ball-area div.ball-s {
 .dp-ib {
   display: inline-block;
 }
-.dp_b {
+.dp-b {
   display: block !important;
 }
-.dp_n {
+.dp-n {
   display: none;
 }
 
 /*cursor*/
-.cur_p {
+.cur-p {
   cursor: pointer;
 }
 
-.col_blue {
+/*color*/
+.col-blue {
   color: #212529;
 }
+
 input:focus, select:focus, option:focus, textarea:focus, button:focus{
   outline: none;
 }

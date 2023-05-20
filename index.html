@@ -12,13 +12,13 @@
         <link href="src/css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-white bg-white">
-            <div class="logo px-lg-5 cur_p" onclick="LOTTO.fn_go_page('M')">
+        <nav class="navbar navbar-expand-lg navbar-white bg-white logo-nav">
+            <div class="logo px-lg-5 cur-p" onclick="LOTTO.fn_go_page('M')">
                 조상님 LOTTO
             </div>
         </nav>
         <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mg-b20">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mg-b20 mg-t40">
             <div class="container px-lg-5">
                 <div class="lotto-area">
                     <select id="lottoTurn" class="lotto-turn" onchange="LOTTO.fn_lotto_turn_change()"></select>
@@ -40,13 +40,13 @@
                 </div>
             </div>
         </nav>
-        <div class="contents">
+        <div id="contents" class="contents">
             <!-- Page Content-->
             <section id="mainSection" class="section pt-4">
                 <div class="container px-lg-5">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur_p" onclick="LOTTO.fn_go_page('A')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('A')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur_p" onclick="LOTTO.fn_go_page('S')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('S')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur_p" onclick="LOTTO.fn_go_page('V')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('V')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur_p" onclick="LOTTO.fn_go_page('F')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('F')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur_p" onclick="LOTTO.fn_go_page('E')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('E')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -101,7 +101,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur_p" onclick="LOTTO.fn_go_page('R')">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_go_page('R')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
@@ -117,16 +117,16 @@
             </section>
             <!-- Page Content-->
 
-            <section id="autoSection" class="section pt-4 dp_n">
+            <section id="autoSection" class="section pt-4 dp-n">
                 <div class="container px-lg-5">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
-                        <div class="navigate cur_p" onclick="LOTTO.fn_go_page('M')">
-                            <i class="fa-solid fa-house col_blue"></i>
+                        <div class="navigate cur-p" onclick="LOTTO.fn_go_page('M')">
+                            <i class="fa-solid fa-house col-blue"></i>
                             >
                             자동 추천
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur_p">
+                        <div class="col-lg-12 col-xxl-4 mg-5 mg-0a cur-p">
                             <div class="auto-ball-area">
                                 <div id="auto-ball-1" class="ball-s">?</div>
                                 <div id="auto-ball-2" class="ball-s">?</div>
@@ -140,7 +140,7 @@
                             <button>새로 생성하기</button>
                             <button>표에 저장하기</button>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur_p">
+                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p">
                             <table>
                                 <thead>
                                     <tr>
@@ -196,7 +196,7 @@
                     </div>
                 </div>
             </section>
-            <section id="semiSection" class="section pt-4 dp_n">
+            <section id="semiSection" class="section pt-4 dp-n">
                 <div class="container px-lg-5">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
@@ -204,7 +204,7 @@
                     </div>
                 </div>
             </section>
-            <section id="saveSection" class="section pt-4 dp_n">
+            <section id="saveSection" class="section pt-4 dp-n">
                 <div class="container px-lg-5">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
@@ -212,7 +212,7 @@
                     </div>
                 </div>
             </section>
-            <section id="fortuneSection" class="section pt-4 dp_n">
+            <section id="fortuneSection" class="section pt-4 dp-n">
                 <div class="container px-lg-5">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
@@ -220,7 +220,7 @@
                     </div>
                 </div>
             </section>
-            <section id="emergeSection" class="section pt-4 dp_n">
+            <section id="emergeSection" class="section pt-4 dp-n">
                 <div class="container px-lg-5">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
@@ -228,7 +228,7 @@
                     </div>
                 </div>
             </section>
-            <section id="storeSection" class="section pt-4 dp_n">
+            <section id="storeSection" class="section pt-4 dp-n">
                 <div class="container px-lg-5">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">

@@ -88,8 +88,8 @@ let LOTTO = {
 
         const elements = document.getElementsByClassName("section");
         for (let i = 0; i < elements.length; i++) {
-            elements[i].classList.remove("dp_b");
-            elements[i].classList.add("dp_n");
+            elements[i].classList.remove("dp-b");
+            elements[i].classList.add("dp-n");
         }
 
         switch (page) {
@@ -106,7 +106,7 @@ let LOTTO = {
         }
     },
     fn_display_show(id) {
-        document.getElementById(id).classList.add("dp_b");
+        document.getElementById(id).classList.add("dp-b");
     },
     auto_number_create() {
 
@@ -146,6 +146,8 @@ let LOTTO = {
         }
     },
 }
+
+
 
 document.addEventListener("DOMContentLoaded", function(){
     LOTTO.init();
