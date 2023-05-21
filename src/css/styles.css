@@ -4771,19 +4771,19 @@ div.lotto-area div.bonus {
   width: 10px;
 }
 
-div.lotto-area div.ball-0, div.auto-ball-area div.ball-0 {
+div.lotto-area div.ball-0, div.auto-ball-area div.ball-0, div.auto-ball-list div.ball-0 {
   background-color: #f86977;
 }
-div.lotto-area div.ball-1, div.auto-ball-area div.ball-1 {
+div.lotto-area div.ball-1, div.auto-ball-area div.ball-1, div.auto-ball-list div.ball-1  {
   background-color: #f6aa55;
 }
-div.lotto-area div.ball-2, div.auto-ball-area div.ball-2 {
+div.lotto-area div.ball-2, div.auto-ball-area div.ball-2, div.auto-ball-list div.ball-2 {
   background-color: #839f06;
 }
-div.lotto-area div.ball-3, div.auto-ball-area div.ball-3 {
+div.lotto-area div.ball-3, div.auto-ball-area div.ball-3, div.auto-ball-list div.ball-3  {
   background-color: #5583f6;
 }
-div.lotto-area div.ball-4, div.auto-ball-area div.ball-4 {
+div.lotto-area div.ball-4, div.auto-ball-area div.ball-4, div.auto-ball-list div.ball-4  {
   background-color: #cb56e5;
 }
 
@@ -4840,10 +4840,16 @@ div.auto-ball-list {
   border : 2px solid #212529;
   border-radius: 8px; /* Adjust the value to change the degree of rounding */
   padding: 10px; /* Optional: Add padding for content */
+  min-height: 46px;
 }
 
-.favorites {
-  float:right;
+div.auto-ball-list div.list{
+  gap: 4px;
+  margin-left: -20px;
+}
+
+div.auto-ball-list div.list div{
+  margin-right:4px;
 }
 
 .modal {

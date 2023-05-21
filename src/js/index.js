@@ -1,6 +1,9 @@
 let LOTTO = {
     lottoData : null,
     weekLottoData : null,
+    autoLottoData : [],
+    cnt : 0,
+    listCnt : 0,
     init : function() {
         this.fn_lotto_turn_change();
     },
@@ -90,13 +93,11 @@ let LOTTO = {
             case 'M' : _this.fn_display_show('mainSection'); break;
             case 'A' :
                 _this.fn_display_show('autoSection-modal');
+                _this.cnt = 0;
                 _this.auto_number_create();
                 break;
-            case 'S' : _this.fn_display_show('semiSection'); break;
             case 'V' : _this.fn_display_show('saveSection'); break;
-            case 'F' : _this.fn_display_show('fortuneSection'); break;
             case 'E' : _this.fn_display_show('emergeSection'); break;
-            case 'R' : _this.fn_display_show('storeSection'); break;
         }
     },
     fn_display_show(id) {
@@ -110,11 +111,13 @@ let LOTTO = {
     },
     fn_lotto_refresh() {
 
+        const _this = this;
+
         document.getElementById('lottoRefresh').classList.add("fa-spin");
-        this.auto_number_create();
 
         setTimeout(function(index) {
             document.getElementById('lottoRefresh').classList.remove("fa-spin");
+            _this.auto_number_create();
         }, 1000);
     },
     auto_number_create() {
@@ -141,28 +144,62 @@ let LOTTO = {
         });
 
         _this.fn_auto_create_ball(lottoNumbers);
+        _this.autoLottoData.push({lottoNumbers});
+
     },
     fn_auto_create_ball : function(lottoNumbers) {
 
         let _this = this;
 
-        _this.fn_auto_ball_init();
+        if(_this.cnt < 5) {
+            _this.fn_auto_ball_init();
 
-        for(let i = 1; i <= lottoNumbers.length; i++) {
-            setTimeout(function(index) {
-                document.getElementById('auto-ball-' + i).className = "";
-                document.getElementById('auto-ball-' + i).innerHTML = lottoNumbers[i-1];
-                document.getElementById('auto-ball-' + i).classList.add("ball-" + _this.fn_digitNumber(lottoNumbers[i-1]));
-            }, 500 * i, i);
+            for (let i = 1; i <= lottoNumbers.length; i++) {
+                setTimeout(function (index) {
+                    document.getElementById('auto-ball-' + i).className = "";
+                    document.getElementById('auto-ball-' + i).innerHTML = lottoNumbers[i - 1];
+                    document.getElementById('auto-ball-' + i).classList.add("ball-" + _this.fn_digitNumber(lottoNumbers[i - 1]));
+
+                    if (i == lottoNumbers.length) {
+
+                        _this.fn_lotto_refresh();
+                        _this.fn_create_auto_ball_list();
+                    }
+
+                }, 500 * i, i);
+            }
         }
+
+        _this.cnt++;
     },
     fn_auto_ball_init() {
         for(let i = 1; i < 7; i++) {
-            document.getElementById('auto-ball-' + i).className = "";
+            document.getElementById('auto-ball-' + i).className = '';
             document.getElementById('auto-ball-' + i).innerHTML = '?';
-            document.getElementById('auto-ball-' + i).classList.add("ball-s");
+            document.getElementById('auto-ball-' + i).classList.add('ball-s');
         }
+    },
+    fn_create_auto_ball_list() {
+
+        const _this = this;
+        const data = _this.autoLottoData[_this.cnt - 1];
+        const lottoData = data.lottoNumbers;
+
+        let autoBallList = document.getElementById('autoBallList');
+        let listDiv = document.createElement('div');
+        listDiv.classList.add('list');
+        listDiv.classList.add('mg-b5');
+
+        for (let i = 0; i < lottoData.length; i++) {
+            let ballDiv = document.createElement('div');
+            ballDiv.className = 'ball-' + _this.fn_digitNumber(lottoData[i]);
+            ballDiv.textContent = lottoData[i];
+            listDiv.appendChild(ballDiv);
+        }
+
+        autoBallList.appendChild(listDiv);
     }
+
 }
 
 document.addEventListener("DOMContentLoaded", function(){
