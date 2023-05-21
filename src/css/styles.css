@@ -4741,7 +4741,7 @@ textarea.form-control-lg {
   color: #101214;
 }
 
-div.lotto-area div, .auto-ball-area div {
+div.lotto-area div, .auto-ball-area div, .auto-ball-list div div {
   display: inline-block;
   font-size: 14px;
   font-weight: 800;
@@ -4827,9 +4827,23 @@ div.auto-ball-area {
   padding: 10px; /* Optional: Add padding for content */
 }
 
-div.auto-ball-area div.ball-s {
+div.auto-ball-area div.ball-s, div.auto-ball-list div.ball-s {
   background-color: #818080;
   color:#fff;
+}
+
+.auto-refresh {
+  float:right;
+}
+
+div.auto-ball-list {
+  border : 2px solid #212529;
+  border-radius: 8px; /* Adjust the value to change the degree of rounding */
+  padding: 10px; /* Optional: Add padding for content */
+}
+
+.favorites {
+  float:right;
 }
 
 .modal {
@@ -4870,11 +4884,6 @@ div.auto-ball-area div.ball-s {
   text-decoration: none;
   cursor: pointer;
 }
-
-.auto-refresh {
-  float:right;
-}
-
 
 /*margin*/
 .mg-0a {

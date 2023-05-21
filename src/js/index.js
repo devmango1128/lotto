@@ -100,11 +100,22 @@ let LOTTO = {
         }
     },
     fn_display_show(id) {
+
         document.getElementById(id).classList.add("dp-b");
     },
     fn_modal_close(id) {
+
         document.getElementById(id).classList.remove("dp-b");
         document.getElementById(id).classList.add("dp-n");
+    },
+    fn_lotto_refresh() {
+
+        document.getElementById('lottoRefresh').classList.add("fa-spin");
+        this.auto_number_create();
+
+        setTimeout(function(index) {
+            document.getElementById('lottoRefresh').classList.remove("fa-spin");
+        }, 1000);
     },
     auto_number_create() {
 

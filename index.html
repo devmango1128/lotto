@@ -46,69 +46,36 @@
                 <div class="container px-lg-5">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('A')">
+                        <div class="col-lg-3 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('A')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
                                         <i class="fa-solid fa-circle-dot"></i>
                                     </div>
-                                    <h2 class="fs-4 fw-bold">자동 추천</h2>
-                                    <p class="mb-0">원하는 만큼 번호를 자동으로 추천해줘요!</p>
+                                    <h2 class="fs-4 fw-bold">번호 생성</h2>
+                                    <p class="mb-0">고정수, 제외수를 포함하여 자동으로 번호를 생성해줘요.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('S')">
-                            <div class="card bg-light border-0 h-100">
-                                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
-                                        <i class="fa-regular fa-circle-dot"></i>
-                                    </div>
-                                    <h2 class="fs-4 fw-bold">반자동 추천</h2>
-                                    <p class="mb-0">내가 원하는 숫자를 넣어서 자동으로 추천해줘요! 조상님이 꿈에서 숫자를 다 알려주지 않았다면!!? 모든 경우의 수를 알려드려요!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('V')">
+                        <div class="col-lg-3 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('V')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
                                         <i class="fa-solid fa-download"></i>
                                     </div>
                                     <h2 class="fs-4 fw-bold">저장한 번호 보기</h2>
-                                    <p class="mb-0">저장한 번호 보기(단, 핸드폰 캐시를 지우면 초기화 될 수 있어요!!)</p>
+                                    <p class="mb-0">저장한 번호를 모아서 볼 수 있어요! <br />(단, 핸드폰 캐시를 지우면 초기화 될 수 있어요!)</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('F')">
-                            <div class="card bg-light border-0 h-100">
-                                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
-                                        <i class="fa-solid fa-person-rays"></i>
-                                    </div>
-                                    <h2 class="fs-4 fw-bold">사주로 보는 당첨 예상 번호</h2>
-                                    <p class="mb-0">내 사주로 보는 당첨 예상 번호! 이번주 1등 주인공은 당신입니다!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('E')">
+                        <div class="col-lg-3 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('V')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
                                         <i class="fa-solid fa-arrow-down-1-9"></i>
                                     </div>
-                                    <h2 class="fs-4 fw-bold">출현 숫자/ 미출현 숫자</h2>
-                                    <p class="mb-0">지금까지 가장 출현한 숫자와 가장 적게 출현한 숫자를 알려드려요!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('R')">
-                            <div class="card bg-light border-0 h-100">
-                                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
-                                        <i class="fa-solid fa-store"></i>
-                                    </div>
-                                    <h2 class="fs-4 fw-bold">전국 로또 판매점 찾기</h2>
-                                    <p class="mb-0">우리집 근처에 로또 판매점이 있을까?</p>
+                                    <h2 class="fs-4 fw-bold">출현번호 분석</h2>
+                                    <p class="mb-0">자주 출현한 번호를 분석해서 보여줘요.</p>
                                 </div>
                             </div>
                         </div>
@@ -131,9 +98,66 @@
                                 <div id="auto-ball-4" class="ball-s">?</div>
                                 <div id="auto-ball-5" class="ball-s">?</div>
                                 <div id="auto-ball-6" class="ball-s">?</div>
-                                <div class="auto-refresh" onclick="LOTTO.auto_number_create()">
-                                    <i class="fa-solid fa-rotate fa-spin fa-lg col-dark" ></i>
-                                <div>
+                                <div class="auto-refresh" onclick="LOTTO.fn_lotto_refresh()">
+                                    <i id="lottoRefresh" class="fa-solid fa-rotate fa-lg col-dark" ></i>
+                                </div>
+                            </div>
+                            <div id="autoBallList" class="auto-ball-list mg-t10">
+                                <div class="list">
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="favorites" onclick="">
+                                        <i class="fa-regular fa-star fa-lg col-dark"></i>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="favorites" onclick="">
+                                        <i class="fa-regular fa-star fa-lg col-dark"></i>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="favorites" onclick="">
+                                        <i class="fa-regular fa-star fa-lg col-dark"></i>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="favorites" onclick="">
+                                        <i class="fa-regular fa-star fa-lg col-dark"></i>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="ball-s">?</div>
+                                    <div class="favorites" onclick="">
+                                        <i class="fa-regular fa-star fa-lg col-dark"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
