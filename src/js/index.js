@@ -4,6 +4,7 @@ let LOTTO = {
     autoLottoData : [],
     cnt : 0,
     listCnt : 0,
+    isLottoCreate : false,
     init : function() {
         this.fn_lotto_turn_change();
     },
@@ -100,30 +101,47 @@ let LOTTO = {
             case 'E' : _this.fn_display_show('emergeSection'); break;
         }
     },
-    fn_display_show(id) {
+    fn_display_show : function(id) {
 
-        document.getElementById(id).classList.add("dp-b");
+        document.getElementById(id).classList.add('dp-b');
     },
-    fn_modal_close(id) {
-
-        document.getElementById(id).classList.remove("dp-b");
-        document.getElementById(id).classList.add("dp-n");
-    },
-    fn_lotto_refresh() {
+    fn_modal_close : function(id) {
 
         const _this = this;
 
-        document.getElementById('lottoRefresh').classList.add("fa-spin");
+        if(_this.isLottoCreate) {
+            alert('번호 생성중입니다.');
+            return;
+        }
+        else {
+            this.fn_auto_ball_list_init();
+
+            document.getElementById(id).classList.remove('dp-b');
+            document.getElementById(id).classList.add('dp-n');
+        }
+    },
+    fn_auto_ball_list_init : function() {
+
+        document.getElementById('autoBallList').innerHTML = '';
+
+    },
+    fn_lotto_refresh : function() {
+
+        const _this = this;
+
+        document.getElementById('lottoRefresh').classList.add('fa-spin');
 
         setTimeout(function(index) {
-            document.getElementById('lottoRefresh').classList.remove("fa-spin");
+            document.getElementById('lottoRefresh').classList.remove('fa-spin');
             _this.auto_number_create();
-        }, 1000);
+        }, 500);
     },
-    auto_number_create() {
+    auto_number_create : function() {
 
         const _this = this;
         let numbers = [];
+
+        _this.isLottoCreate = true;
 
         // 1부터 45까지의 숫자 배열 생성
         for (let i = 1; i <= 45; i++) {
@@ -133,7 +151,6 @@ let LOTTO = {
         let lottoNumbers = [];
 
         for (let i = 0; i < 6; i++) {
-
             let randomIndex = Math.floor(Math.random() * numbers.length);
             lottoNumbers.push(numbers[randomIndex]);
             numbers.splice(randomIndex, 1);
@@ -156,9 +173,9 @@ let LOTTO = {
 
             for (let i = 1; i <= lottoNumbers.length; i++) {
                 setTimeout(function (index) {
-                    document.getElementById('auto-ball-' + i).className = "";
+                    document.getElementById('auto-ball-' + i).className = '';
                     document.getElementById('auto-ball-' + i).innerHTML = lottoNumbers[i - 1];
-                    document.getElementById('auto-ball-' + i).classList.add("ball-" + _this.fn_digitNumber(lottoNumbers[i - 1]));
+                    document.getElementById('auto-ball-' + i).classList.add('ball-' + _this.fn_digitNumber(lottoNumbers[i - 1]));
 
                     if (i == lottoNumbers.length) {
 
@@ -170,16 +187,18 @@ let LOTTO = {
             }
         }
 
+        if(_this.cnt === 5) _this.isLottoCreate = false;
+
         _this.cnt++;
     },
-    fn_auto_ball_init() {
+    fn_auto_ball_init : function() {
         for(let i = 1; i < 7; i++) {
             document.getElementById('auto-ball-' + i).className = '';
             document.getElementById('auto-ball-' + i).innerHTML = '?';
             document.getElementById('auto-ball-' + i).classList.add('ball-s');
         }
     },
-    fn_create_auto_ball_list() {
+    fn_create_auto_ball_list : function() {
 
         const _this = this;
         const data = _this.autoLottoData[_this.cnt - 1];
@@ -199,9 +218,8 @@ let LOTTO = {
 
         autoBallList.appendChild(listDiv);
     }
-
 }
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener('DOMContentLoaded', function(){
     LOTTO.init();
 });

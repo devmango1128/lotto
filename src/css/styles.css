@@ -4852,6 +4852,33 @@ div.auto-ball-list div.list div{
   margin-right:4px;
 }
 
+div.checkbox-area {
+  display: inline-block;
+  float: left;
+  margin-top: 5px;
+}
+
+div.button-area {
+  display: inline-block;;
+  float: right;
+}
+
+div button.btn {
+  border-radius: 4px;
+}
+
+div button.blue {
+  border: 1px solid #0d6efd;
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+div button.red {
+  border: 1px solid #fa4b5e;
+  background-color: #fa4b5e;
+  color: #ffffff;
+}
+
 .modal {
   display: none;
   position: fixed;
