@@ -1,26 +1,14 @@
 let LOTTO = {
-    lottoData : null,
-    weekLottoData : null,
-    autoLottoData : [],
-    cnt : 0,
-    listCnt : 0,
-    isLottoCreate : false,
+    lottoData : null, //로또 데이터
+    weekLottoData : null, //이번주 로또 데이터
+    autoLottoData : [], //자동 로또 데이터
+    fixedList : [], //반자동 선택 수
+    //시작
     init : function() {
         this.fn_lotto_turn_change();
+        this.fn_create_fixed_number_ball();
     },
-    fn_lotto_turn : function(lotto_len) {
-        let _this = this;
-        const lottoTurn = document.getElementById('lottoTurn');
-
-        for (let i = lotto_len; i > 0; i--) {
-
-            let newOption = document.createElement('option');
-            newOption.value = i;
-            newOption.text = i + '회';
-
-            lottoTurn.appendChild(newOption);
-        }
-    },
+    //로또 회차별 데이터 조회
     fn_lotto_turn_change : function() {
         let _this = this;
 
@@ -55,15 +43,21 @@ let LOTTO = {
 
         xhr.send();
     },
-    fn_digitNumber : function(number) {
+    //로또 회차 리스트
+    fn_lotto_turn : function(lotto_len) {
+        let _this = this;
+        const lottoTurn = document.getElementById('lottoTurn');
 
-        if (number < 10) {
-            return 0;
-        } else if (number >= 10 && number < 100) {
-            const tensDigit = Math.floor(number / 10) * 1;
-            return tensDigit;
+        for (let i = lotto_len; i > 0; i--) {
+
+            let newOption = document.createElement('option');
+            newOption.value = i;
+            newOption.text = i + '회';
+
+            lottoTurn.appendChild(newOption);
         }
     },
+    //당첨번호 그리기
     fn_create_ball : function() {
 
         let _this = this;
@@ -81,11 +75,63 @@ let LOTTO = {
         document.getElementById('winDate').innerHTML = '(' + _this.weekLottoData.drwNoDate + ')';
 
         for(let i = 1; i <= drwtArr.length; i++) {
-            document.getElementById('ball-' + i).className = "";
+            document.getElementById('ball-' + i).className = '';
             document.getElementById('ball-' + i).innerHTML = drwtArr[i-1];
             document.getElementById('ball-' + i).classList.add("ball-" + _this.fn_digitNumber(drwtArr[i-1]));
         }
     },
+    //공 1자리, 10자리, 20자리, 30자리, 40자리일때 색 다르게 하기 위해 시작숫자 구하기
+    fn_digitNumber : function(number) {
+
+        if (number < 10) {
+            return 0;
+        } else if (number >= 10 && number < 100) {
+            const tensDigit = Math.floor(number / 10) * 1;
+            return tensDigit;
+        }
+    },
+    //반자동(고정수)안에 볼 그리기
+    fn_create_fixed_number_ball : function() {
+
+        const _this = this;
+
+        //우선 숨김 처리
+        document.getElementById('fixedNumberList').style.display = 'none';
+
+        let fixedBallList = document.getElementById('fixedNumberList');
+        let fixedListDiv = document.createElement('div');
+
+        for (let i = 1; i <= 45; i++) {
+            let ballDiv = document.createElement('div');
+            ballDiv.className = 'ball-' + _this.fn_digitNumber(i);
+            ballDiv.textContent = i;
+            ballDiv.onclick = _this.fn_fixed_choice;
+            fixedBallList.appendChild(ballDiv);
+        }
+    },
+    //고정수 반자동 숫자 선택
+    fn_fixed_choice : function(event) {
+
+        const _this = LOTTO;
+        const choiceNumber = event.target.textContent;
+
+        if(_this.fixedList.length > 4) {
+            alert('5개를 초과하여 선택 할 수 없습니다.');
+            return;
+        }
+
+        if(_this.fixedList.includes(choiceNumber)) {
+            event.target.classList.remove('ball-click');
+            const index = _this.fixedList.indexOf(choiceNumber);
+            if (index !== -1) {
+                _this.fixedList.splice(index, 1);
+            }
+        } else  {
+            event.target.classList.add('ball-click');
+            _this.fixedList.push(choiceNumber);
+        }
+    },
+    //모달 페이지 열기
     fn_modal_page : function(page) {
 
         const _this = this;
@@ -93,130 +139,151 @@ let LOTTO = {
         switch (page) {
             case 'M' : _this.fn_display_show('mainSection'); break;
             case 'A' :
+                _this.fn_set_modal_title('번호 생성');
+                _this.fn_modal_page_init(page);
                 _this.fn_display_show('autoSection-modal');
-                _this.cnt = 0;
-                _this.auto_number_create();
                 break;
             case 'V' : _this.fn_display_show('saveSection'); break;
             case 'E' : _this.fn_display_show('emergeSection'); break;
         }
     },
+    //모달 타이틀 설정
+    fn_set_modal_title : function(title) {
+
+        document.getElementById('title').innerText = title;
+    },
+    //모달 페이지 초기화
+    fn_modal_page_init : function(page) {
+
+        const _this = this;
+
+        switch (page) {
+            case 'M' : break;
+            case 'A' :
+                document.getElementById('fixedCheckbox').checked = false;
+                document.getElementById('fixedNumberList').innerHTML = '';
+                _this.fixedList = [];
+                this.fn_create_fixed_number_ball();
+                break;
+            case 'V' :
+            case 'E' :
+        }
+    },
+    //모달 페이지 보이기
     fn_display_show : function(id) {
 
         document.getElementById(id).classList.add('dp-b');
     },
+    //모달 페이지 닫기
     fn_modal_close : function(id) {
 
         const _this = this;
 
-        if(_this.isLottoCreate) {
-            alert('번호 생성중입니다.');
-            return;
-        }
-        else {
-            this.fn_auto_ball_list_init();
+        this.fn_auto_ball_list_init();
 
-            document.getElementById(id).classList.remove('dp-b');
-            document.getElementById(id).classList.add('dp-n');
-        }
+        document.getElementById(id).classList.remove('dp-b');
+        document.getElementById(id).classList.add('dp-n');
     },
+    //생성된 로또 번호 리스트 초기화
     fn_auto_ball_list_init : function() {
 
         document.getElementById('autoBallList').innerHTML = '';
 
     },
-    fn_lotto_refresh : function() {
+    //반자동(고정수) 체크
+    fn_fixed_number_check : function() {
 
-        const _this = this;
+        const checkbox = document.getElementById('fixedCheckbox');
+        const fixedList = document.getElementById('fixedNumberList');
 
-        document.getElementById('lottoRefresh').classList.add('fa-spin');
-
-        setTimeout(function(index) {
-            document.getElementById('lottoRefresh').classList.remove('fa-spin');
-            _this.auto_number_create();
-        }, 500);
+        if (checkbox.checked) {
+            fixedList.style.display = '';
+        } else {
+            fixedList.style.display = 'none';
+        }
     },
-    auto_number_create : function() {
+    //로또번호 생성
+    lotto_number_create : function() {
 
         const _this = this;
+
+        _this.lotto_number_create_init();
+
         let numbers = [];
 
-        _this.isLottoCreate = true;
-
-        // 1부터 45까지의 숫자 배열 생성
-        for (let i = 1; i <= 45; i++) {
-            numbers.push(i);
-        }
-
-        let lottoNumbers = [];
-
-        for (let i = 0; i < 6; i++) {
-            let randomIndex = Math.floor(Math.random() * numbers.length);
-            lottoNumbers.push(numbers[randomIndex]);
-            numbers.splice(randomIndex, 1);
-        }
-
-        lottoNumbers.sort(function(a, b) {
-            return a - b;
-        });
-
-        _this.fn_auto_create_ball(lottoNumbers);
-        _this.autoLottoData.push({lottoNumbers});
-
-    },
-    fn_auto_create_ball : function(lottoNumbers) {
-
-        let _this = this;
-
-        if(_this.cnt < 5) {
-            _this.fn_auto_ball_init();
-
-            for (let i = 1; i <= lottoNumbers.length; i++) {
-                setTimeout(function (index) {
-                    document.getElementById('auto-ball-' + i).className = '';
-                    document.getElementById('auto-ball-' + i).innerHTML = lottoNumbers[i - 1];
-                    document.getElementById('auto-ball-' + i).classList.add('ball-' + _this.fn_digitNumber(lottoNumbers[i - 1]));
-
-                    if (i == lottoNumbers.length) {
-
-                        _this.fn_lotto_refresh();
-                        _this.fn_create_auto_ball_list();
-                    }
-
-                }, 500 * i, i);
+        for (let i = 0; i < 5; i++) {
+            // 1부터 45까지의 숫자 배열 생성
+            for (let j = 1; j <= 45; j++) {
+                numbers.push(j);
             }
+
+            let lottoNumbers = [];
+            lottoNumbers = [..._this.fixedList];
+
+            // fixedList 값을 numbers 배열에서 제거
+            for (let j = 0; j < _this.fixedList.length; j++) {
+                let index = numbers.indexOf(_this.fixedList[j]);
+                if (index !== -1) {
+                    numbers.splice(index, 1);
+                }
+            }
+
+            while (lottoNumbers.length < 6) {
+                let randomIndex = Math.floor(Math.random() * numbers.length);
+                let randomNum = numbers[randomIndex];
+                if (!lottoNumbers.includes(randomNum)) {
+                    lottoNumbers.push(randomNum);
+                }
+            }
+
+            // 정렬
+            lottoNumbers.sort(function (a, b) {
+                return a - b;
+            });
+
+            _this.autoLottoData.push(lottoNumbers);
         }
 
-        if(_this.cnt === 5) _this.isLottoCreate = false;
-
-        _this.cnt++;
+        _this.fn_create_lotto_ball_list();
     },
-    fn_auto_ball_init : function() {
-        for(let i = 1; i < 7; i++) {
-            document.getElementById('auto-ball-' + i).className = '';
-            document.getElementById('auto-ball-' + i).innerHTML = '?';
-            document.getElementById('auto-ball-' + i).classList.add('ball-s');
-        }
+    lotto_number_create_init : function() {
+        this.autoLottoData = [];
+        document.getElementById('autoBallList').innerHTML = '';
     },
-    fn_create_auto_ball_list : function() {
+    //자동 생성된 로또번호 리스트 그리기
+    fn_create_lotto_ball_list : function() {
 
         const _this = this;
-        const data = _this.autoLottoData[_this.cnt - 1];
-        const lottoData = data.lottoNumbers;
 
+        let lottoData = this.autoLottoData;
         let autoBallList = document.getElementById('autoBallList');
-        let listDiv = document.createElement('div');
-        listDiv.classList.add('list');
-        listDiv.classList.add('mg-b5');
 
-        for (let i = 0; i < lottoData.length; i++) {
-            let ballDiv = document.createElement('div');
-            ballDiv.className = 'ball-' + _this.fn_digitNumber(lottoData[i]);
-            ballDiv.textContent = lottoData[i];
-            listDiv.appendChild(ballDiv);
+        for(let i = 0; i < lottoData.length; i++) {
+
+            let listDiv = document.createElement('div');
+            listDiv.classList.add('list');
+            listDiv.classList.add('mg-b5');
+
+            for (let j = 0; j < lottoData[i].length; j++) {
+
+                let ballDiv = document.createElement('div');
+                let alp = document.createElement('div');
+                alp.classList.add('alp');
+
+                if (i == 0) alp.innerHTML = 'A';
+                else if (i == 1) alp.innerHTML = 'B';
+                else if (i == 2) alp.innerHTML = 'C';
+                else if (i == 3) alp.innerHTML = 'D';
+                else if (i == 4) alp.innerHTML = 'E';
+
+                if(j == 0) listDiv.appendChild(alp);
+                ballDiv.className = 'ball-' + _this.fn_digitNumber(lottoData[i][j]);
+                ballDiv.textContent = lottoData[i][j];
+                listDiv.appendChild(ballDiv);
+            }
+
+            autoBallList.appendChild(listDiv);
         }
-
-        autoBallList.appendChild(listDiv);
     }
 }
 

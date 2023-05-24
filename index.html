@@ -86,31 +86,23 @@
         </div>
         <div id="autoSection-modal" class="modal">
             <div id="autoSection" class="modal-content">
+                <span id="title" class="title">test</span>
                 <span class="close" onclick="LOTTO.fn_modal_close('autoSection-modal')">&times;</span>
-                <div class="container px-lg-5 mg-t40">
+                <div class="container px-lg-5 mg-t20">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
                         <div class="cmg-0a cur-p">
-                            <div class="auto-ball-area">
-                                <div id="auto-ball-1" class="ball-s">?</div>
-                                <div id="auto-ball-2" class="ball-s">?</div>
-                                <div id="auto-ball-3" class="ball-s">?</div>
-                                <div id="auto-ball-4" class="ball-s">?</div>
-                                <div id="auto-ball-5" class="ball-s">?</div>
-                                <div id="auto-ball-6" class="ball-s">?</div>
-                                <div class="auto-refresh">
-                                    <i id="lottoRefresh" class="fa-solid fa-rotate fa-lg col-dark" ></i>
+                            <div class="dp-ib wid-100">
+                                <div class="checkbox-area">
+                                    <input type="checkbox" id="fixedCheckbox" onclick="LOTTO.fn_fixed_number_check()"> 반자동
+                                </div>
+                                <div class="button-area">
+                                    <button class="btn blue mg-t5" onclick="LOTTO.lotto_number_create()">생성</button>
+                                    <button class="btn red mg-t5">저장</button>
                                 </div>
                             </div>
-                            <div id="autoBallList" class="auto-ball-list mg-t10"></div>
-                            <div class="checkbox-area">
-                                <input type="checkbox"> 고정수
-                                <input type="checkbox"> 제외수
-                            </div>
-                            <div class="button-area">
-                                <button class="btn blue mg-t5">새로 생성</button>
-                                <button class="btn red mg-t5">저장</button>
-                            </div>
+                            <div id="fixedNumberList" class="fixed-number-list mg-b5 dp-n"></div>
+                            <div id="autoBallList" class="auto-ball-list"></div>
                         </div>
                     </div>
                 </div>
