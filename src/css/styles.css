@@ -4750,6 +4750,10 @@ div.lotto-area div.ball-4, div.auto-ball-area div.ball-4, div.auto-ball-list div
   background-color: #cb56e5;
 }
 
+div.auto-ball-list div.ball-q {
+  background-color: #464545;
+}
+
 div.lotto-area span.amnt-txt {
   text-align: center;
   vertical-align: middle;

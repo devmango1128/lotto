@@ -115,7 +115,8 @@ let LOTTO = {
         const _this = LOTTO;
         const choiceNumber = event.target.textContent;
 
-        if(_this.fixedList.length > 4) {
+        //5개일 이상 선택했을 때(같은 번호 해제인 경우는 제외)
+        if(_this.fixedList.length > 4 && !_this.fixedList.includes(choiceNumber)) {
             alert('5개를 초과하여 선택 할 수 없습니다.');
             return;
         }
@@ -141,6 +142,7 @@ let LOTTO = {
             case 'A' :
                 _this.fn_set_modal_title('번호 생성');
                 _this.fn_modal_page_init(page);
+                _this.fn_auto_ball_list_init();
                 _this.fn_display_show('autoSection-modal');
                 break;
             case 'V' : _this.fn_display_show('saveSection'); break;
@@ -189,6 +191,21 @@ let LOTTO = {
 
         document.getElementById('autoBallList').innerHTML = '';
 
+        let autoBallList = document.getElementById('autoBallList');
+
+        let listDiv = document.createElement('div');
+        listDiv.classList.add('list');
+        listDiv.classList.add('mg-b5');
+
+        for (let j = 0; j < 6; j++) {
+            let ballDiv = document.createElement('div');
+            ballDiv.className = 'ball-q';
+            ballDiv.textContent = '?';
+            listDiv.appendChild(ballDiv);
+        }
+
+        autoBallList.appendChild(listDiv);
+
     },
     //반자동(고정수) 체크
     fn_fixed_number_check : function() {
@@ -217,12 +234,11 @@ let LOTTO = {
                 numbers.push(j);
             }
 
-            let lottoNumbers = [];
-            lottoNumbers = [..._this.fixedList];
+            let lottoNumbers = _this.fixedList.slice();
 
-            // fixedList 값을 numbers 배열에서 제거
-            for (let j = 0; j < _this.fixedList.length; j++) {
-                let index = numbers.indexOf(_this.fixedList[j]);
+            // 고정된 숫자들을 numbers 배열에서 제거
+            for (let j = 0; j < lottoNumbers.length; j++) {
+                let index = numbers.indexOf(lottoNumbers[j]);
                 if (index !== -1) {
                     numbers.splice(index, 1);
                 }
@@ -231,13 +247,12 @@ let LOTTO = {
             while (lottoNumbers.length < 6) {
                 let randomIndex = Math.floor(Math.random() * numbers.length);
                 let randomNum = numbers[randomIndex];
-                if (!lottoNumbers.includes(randomNum)) {
-                    lottoNumbers.push(randomNum);
-                }
+                lottoNumbers.push(randomNum);
+                numbers.splice(randomIndex, 1);
             }
 
             // 정렬
-            lottoNumbers.sort(function (a, b) {
+            lottoNumbers.sort(function(a, b) {
                 return a - b;
             });
 
