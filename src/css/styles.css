@@ -4709,8 +4709,8 @@ div.lotto-area div, .auto-ball-list div div, .fixed-number-list div, .save-ball-
   font-size: 16px;
   font-weight: 800;
   color:#ffffff;
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
@@ -4818,7 +4818,8 @@ div.fixed-number-list div {
 }
 
 div.fixed-number-list div.ball-click {
-  background-color: #212529 !important;
+  background-color: #4c4c4c !important;
+  border: 1px solid #212529;
 }
 
 div.auto-ball-list div.list{
@@ -4831,7 +4832,7 @@ div.auto-ball-list div.list div.alp{
 }
 
 div.auto-ball-list div.list div{
-  margin: 1px 8px 1px 8px;
+  margin: 1px 5px 1px 5px;
 }
 
 div.checkbox-area {
@@ -4856,12 +4857,20 @@ div.save-lotto-list div.save-date {
   width: 100%;
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
-  margin-bottom: 2px;
-  padding : 2px;
+  margin-bottom: 8px;
+  padding: 5px 0px 5px 2px;
 }
 
 div.save-lotto-list div.save-ball-list div {
   margin: 0px 10px 0px 0px;
+}
+
+div.save-lotto-list button.delete-btn {
+  float: right;
+  height: 24px;
+  line-height: 12px;
+  padding: 5px;
+  font-size: 12px;
 }
 
 div button.btn {
@@ -4938,6 +4947,9 @@ div button.red {
 }
 .mg-t40 {
   margin-top: 40px;
+}
+.mg-t100 {
+  margin-top: 100px;
 }
 .mg-b5 {
   margin-bottom: 5px;

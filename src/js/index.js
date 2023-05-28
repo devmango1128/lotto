@@ -171,7 +171,9 @@ let LOTTO = {
                 document.getElementById('fixedCheckbox').checked = false;
                 document.getElementById('fixedNumberList').innerHTML = '';
                 _this.fixedList = [];
-                this.fn_create_fixed_number_ball();
+                _this.autoLottoData = [];
+                _this.fn_create_fixed_number_ball();
+                _this.isNumberCreate = false;
                 break;
             case 'V' :
             case 'E' :
@@ -384,14 +386,44 @@ let LOTTO = {
 
         const _this = this;
 
+        //초기화
+        document.getElementById('saveLottoList').innerHTML = '';
+
         let keyArr = [];
 
+        //storage 키 저장
         for (let i = 0; i < localStorage.length; i++) {
             keyArr.push(localStorage.key(i));
         }
 
+        // 선택된 숫자 정렬
+        keyArr.sort().reverse();
+
         const saveLottoList = document.getElementById('saveLottoList');
 
+        //데이터가 없는 경우
+        if(keyArr.length == 0) {
+
+            let listDiv = document.createElement('div');
+
+            listDiv.classList.add('list');
+            listDiv.classList.add('mg-t100');
+
+            let iEle = document.createElement('i');
+            iEle.classList.add('fa-solid');
+            iEle.classList.add('fa-circle-exclamation');
+            iEle.classList.add('fa-2xl');
+            listDiv.appendChild(iEle);
+
+            let noDataDiv = document.createElement('div');
+            noDataDiv.classList.add('mg-t10');
+            noDataDiv.textContent = '저장 된 데이터가 없습니다.';
+
+            listDiv.appendChild(noDataDiv);
+            saveLottoList.appendChild(listDiv);
+        }
+
+        //생성된 storage key 갯수만큼 생성
         for (let i = 0; i < keyArr.length; i++) {
 
             let listDiv = document.createElement('div');
@@ -405,19 +437,33 @@ let LOTTO = {
             let dateDiv = document.createElement('div');
             dateDiv.classList.add('save-date');
 
+            let spanDiv = document.createElement('span');
+            spanDiv.textContent = lottoData.saveDate;
+
+            let btnDiv = document.createElement('button');
+            btnDiv.classList.add('btn');
+            btnDiv.classList.add('red');
+            btnDiv.classList.add('delete-btn');
+            btnDiv.setAttribute('data-key', lottoData.key);
+            btnDiv.textContent = '삭제';
+            btnDiv.onclick = LOTTO.fn_delete_save_lotto_number;
+
+            dateDiv.appendChild(spanDiv);
+            dateDiv.appendChild(btnDiv);
+            listDiv.appendChild(dateDiv);
+
             //로또 번호
             let lottoNumberDivs = document.createElement('div');
             lottoNumberDivs.classList.add('lotto-number-list');
 
-            dateDiv.textContent = lottoData.saveDate;
-            listDiv.appendChild(dateDiv);
-
+            //key storage 안에 로또 번호 데이터 row 를 생성
             for (let j = 0; j < lottoData.lottoData.length; j++) {
                 let lottoNumbers = document.createElement('div');
                 lottoNumbers.classList.add('save-ball-list');
                 lottoNumbers.classList.add('txt-ai-c');
                 lottoNumbers.classList.add('mg-b5');
 
+                //row 안 숫자 정렬
                 for (let k = 0; k < lottoData.lottoData[j].length; k++) {
                     let lottoNumber = document.createElement('div');
                     lottoNumber.className = 'ball-' + _this.fn_digitNumber(lottoData.lottoData[j][k]);
@@ -430,6 +476,15 @@ let LOTTO = {
 
             saveLottoList.appendChild(listDiv);
         }
+    },
+    //storage 에서 삭제
+    fn_delete_save_lotto_number : function(e) {
+
+        const key = 'lottoData_' + e.target.attributes['data-key'].value;
+        localStorage.removeItem(key);
+
+        //삭제 후 다시 새로 그려준다.
+        LOTTO.fn_get_save_number_list();
     }
 }
 
