@@ -232,6 +232,14 @@ let LOTTO = {
 
         const _this = this;
 
+        const checkbox = document.getElementById('fixedCheckbox');
+
+        //반자동 체크가 되어있으면서 숫자가 선택 안 된 경우
+        if (checkbox.checked && _this.fixedList.length == 0) {
+            alert('반자동 숫자를 선택해주세요.');
+            return;
+        }
+
         _this.lotto_number_create_init();
 
         for (let i = 0; i < 5; i++) {
