@@ -53,7 +53,7 @@
                                         <i class="fa-solid fa-circle-dot"></i>
                                     </div>
                                     <h2 class="fs-4 fw-bold">번호 생성</h2>
-                                    <p class="mb-0">고정수, 제외수를 포함하여 자동으로 번호를 생성해줘요.</p>
+                                    <p class="mb-0">자동으로 번호를 생성해줘요.(반자동 기능 포함)</p>
                                 </div>
                             </div>
                         </div>
@@ -63,8 +63,8 @@
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
                                         <i class="fa-solid fa-download"></i>
                                     </div>
-                                    <h2 class="fs-4 fw-bold">저장한 번호 보기</h2>
-                                    <p class="mb-0">저장한 번호를 모아서 볼 수 있어요! <br />(단, 핸드폰 캐시를 지우면 초기화 될 수 있어요!)</p>
+                                    <h2 class="fs-4 fw-bold">번호 관리</h2>
+                                    <p class="mb-0">저장한 번호를 모아서 볼 수 있어요!</p>
                                 </div>
                             </div>
                         </div>
@@ -84,9 +84,10 @@
             </section>
             <!-- Page Content-->
         </div>
+        <!-- 번호 생성 modal -->
         <div id="autoSection-modal" class="modal">
             <div id="autoSection" class="modal-content">
-                <span id="title" class="title">test</span>
+                <span id="autoTitle" class="title">번호 생성</span>
                 <span class="close" onclick="LOTTO.fn_modal_close('autoSection-modal')">&times;</span>
                 <div class="container px-lg-5 mg-t20">
                     <!-- Page Features-->
@@ -97,8 +98,8 @@
                                     <input type="checkbox" id="fixedCheckbox" onclick="LOTTO.fn_fixed_number_check()"> 반자동
                                 </div>
                                 <div class="button-area">
-                                    <button class="btn blue mg-t5" onclick="LOTTO.lotto_number_create()">생성</button>
-                                    <button class="btn red mg-t5">저장</button>
+                                    <button class="btn blue mg-t5" onclick="LOTTO.fn_lotto_number_create()">생성</button>
+                                    <button class="btn red mg-t5" onclick="LOTTO.fn_lotto_number_save()">저장</button>
                                 </div>
                             </div>
                             <div id="fixedNumberList" class="fixed-number-list mg-b5 dp-n"></div>
@@ -106,6 +107,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- 저장한 번호 보기 modal -->
+        <div id="saveNumberSection-modal" class="modal">
+            <div id="saveNumberSection" class="modal-content">
+                <span id="saveNumberTitle" class="title">번호 관리</span>
+                <span class="close" onclick="LOTTO.fn_modal_close('saveNumberSection-modal')">&times;</span>
             </div>
         </div>
     </body>

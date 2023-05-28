@@ -3,6 +3,7 @@ let LOTTO = {
     weekLottoData : null, //이번주 로또 데이터
     autoLottoData : [], //자동 로또 데이터
     fixedList : [], //반자동 선택 수
+    isNumberCreate : false, //번호 생성 여부
     //시작
     init : function() {
         this.fn_lotto_turn_change();
@@ -140,19 +141,24 @@ let LOTTO = {
         switch (page) {
             case 'M' : _this.fn_display_show('mainSection'); break;
             case 'A' :
-                _this.fn_set_modal_title('번호 생성');
+                _this.fn_set_modal_title('autoTitle', '번호 생성');
                 _this.fn_modal_page_init(page);
                 _this.fn_auto_ball_list_init();
                 _this.fn_display_show('autoSection-modal');
                 break;
-            case 'V' : _this.fn_display_show('saveSection'); break;
+            case 'V' :
+                _this.fn_set_modal_title('saveNumberTitle', '번호 관리');
+                _this.fn_modal_page_init(page);
+                _this.fn_get_save_number_list();
+                _this.fn_display_show('saveNumberSection-modal');
+                break;
             case 'E' : _this.fn_display_show('emergeSection'); break;
         }
     },
     //모달 타이틀 설정
-    fn_set_modal_title : function(title) {
+    fn_set_modal_title : function(titleId, title) {
 
-        document.getElementById('title').innerText = title;
+        document.getElementById(titleId).innerText = title;
     },
     //모달 페이지 초기화
     fn_modal_page_init : function(page) {
@@ -228,7 +234,7 @@ let LOTTO = {
         }
     },
     //로또번호 생성
-    lotto_number_create : function() {
+    fn_lotto_number_create : function() {
 
         const _this = this;
 
@@ -240,7 +246,7 @@ let LOTTO = {
             return;
         }
 
-        _this.lotto_number_create_init();
+        _this.fn_lotto_number_create_init();
 
         for (let i = 0; i < 5; i++) {
 
@@ -280,7 +286,8 @@ let LOTTO = {
 
         _this.fn_create_lotto_ball_list();
     },
-    lotto_number_create_init : function() {
+    //로또 자동 html 초기화
+    fn_lotto_number_create_init : function() {
         this.autoLottoData = [];
         document.getElementById('autoBallList').innerHTML = '';
     },
@@ -318,6 +325,70 @@ let LOTTO = {
 
             autoBallList.appendChild(listDiv);
         }
+
+        _this.isNumberCreate = true;
+    },
+    //로또 번호 저장
+    fn_lotto_number_save : function() {
+
+        const _this = this;
+
+        if(_this.autoLottoData.length == 0) {
+            alert('저장 할 로또 번호를 생성해주세요.');
+            return;
+        }
+
+        if(!_this.isNumberCreate) {
+            alert('이미 저장 된 번호입니다.\n저장 할 번호를 새로 생성해주세요.');
+            return;
+        }
+
+        const saveDate = _this.fn_set_now_date();
+
+        let storageData = {
+            'lottoData' : _this.autoLottoData,
+            'saveDate' : saveDate.currentDateTime,
+            'key' : saveDate.key
+        }
+
+        // 배열을 JSON 문자열로 변환
+        let arrayString = JSON.stringify(storageData);
+
+        // Local Storage 저장
+        localStorage.setItem('lottoData_' + saveDate.key, arrayString);
+        _this.isNumberCreate = false;
+
+    },
+    //현재 날짜 및 시간 생성
+    fn_set_now_date : function() {
+        const now = new Date();
+
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+
+        const date =  {
+            'key' : year + month + day + hours + minutes + seconds,
+            'currentDateTime' : year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds
+        };
+
+        return date;
+    },
+    //저장된 로또 번호 들고오기
+    fn_get_save_number_list : function() {
+
+        const localStorageData = {};
+
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+            localStorageData[key] = value;
+        }
+
+        console.log(localStorageData);
     }
 }
 
