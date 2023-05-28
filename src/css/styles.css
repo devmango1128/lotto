@@ -4704,9 +4704,9 @@ textarea.form-control-lg {
   color: #101214;
 }
 
-div.lotto-area div, .auto-ball-list div div, .fixed-number-list div {
+div.lotto-area div, .auto-ball-list div div, .fixed-number-list div, .save-ball-list div {
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   color:#ffffff;
   width: 25px;
@@ -4734,19 +4734,19 @@ div.lotto-area div.bonus {
   width: 10px;
 }
 
-div.lotto-area div.ball-0, div.auto-ball-area div.ball-0, div.auto-ball-list div.ball-0, div.fixed-number-list div.ball-0 {
+div.lotto-area div.ball-0, div.auto-ball-area div.ball-0, div.auto-ball-list div.ball-0, div.fixed-number-list div.ball-0, div.save-ball-list div.ball-0 {
   background-color: #f86977;
 }
-div.lotto-area div.ball-1, div.auto-ball-area div.ball-1, div.auto-ball-list div.ball-1, div.fixed-number-list div.ball-1  {
+div.lotto-area div.ball-1, div.auto-ball-area div.ball-1, div.auto-ball-list div.ball-1, div.fixed-number-list div.ball-1, div.save-ball-list div.ball-1  {
   background-color: #f6aa55;
 }
-div.lotto-area div.ball-2, div.auto-ball-area div.ball-2, div.auto-ball-list div.ball-2, div.fixed-number-list div.ball-2 {
+div.lotto-area div.ball-2, div.auto-ball-area div.ball-2, div.auto-ball-list div.ball-2, div.fixed-number-list div.ball-2, div.save-ball-list div.ball-2 {
   background-color: #839f06;
 }
-div.lotto-area div.ball-3, div.auto-ball-area div.ball-3, div.auto-ball-list div.ball-3, div.fixed-number-list div.ball-3  {
+div.lotto-area div.ball-3, div.auto-ball-area div.ball-3, div.auto-ball-list div.ball-3, div.fixed-number-list div.ball-3, div.save-ball-list div.ball-3  {
   background-color: #5583f6;
 }
-div.lotto-area div.ball-4, div.auto-ball-area div.ball-4, div.auto-ball-list div.ball-4, div.fixed-number-list div.ball-4  {
+div.lotto-area div.ball-4, div.auto-ball-area div.ball-4, div.auto-ball-list div.ball-4, div.fixed-number-list div.ball-4, div.save-ball-list div.ball-4  {
   background-color: #cb56e5;
 }
 
@@ -4767,6 +4767,7 @@ nav.logo-nav {
   left: 0;
   width: 100%;
   z-index:999;
+  border-bottom: 3px solid #dc392d;
 }
 
 div.logo {
@@ -4840,8 +4841,27 @@ div.checkbox-area {
 }
 
 div.button-area {
-  display: inline-block;;
+  display: inline-block;
   float: right;
+}
+
+div.save-lotto-list {
+  height: 580px;
+  overflow-y: auto;
+}
+
+div.save-lotto-list div.save-date {
+  text-align: left;
+  font-size: 16px;
+  width: 100%;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 2px;
+  padding : 2px;
+}
+
+div.save-lotto-list div.save-ball-list div {
+  margin: 0px 10px 0px 0px;
 }
 
 div button.btn {
@@ -4928,6 +4948,9 @@ div button.red {
 .mg-b20 {
   margin-bottom: 20px;
 }
+.mg-b30 {
+  margin-bottom: 30px;
+}
 
 /*text color*/
 .f-c-w {
@@ -4961,6 +4984,14 @@ div button.red {
 /**width*/
 .wid-100 {
   width: 100%;
+}
+
+/*text-align*/
+.txt-ai-l {
+  text-align: left;
+}
+.txt-ai-c {
+  text-align: center;
 }
 
 input:focus, select:focus, option:focus, textarea:focus, button:focus{

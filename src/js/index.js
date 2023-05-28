@@ -356,6 +356,8 @@ let LOTTO = {
 
         // Local Storage 저장
         localStorage.setItem('lottoData_' + saveDate.key, arrayString);
+
+        alert('저장되었습니다.');
         _this.isNumberCreate = false;
 
     },
@@ -380,15 +382,54 @@ let LOTTO = {
     //저장된 로또 번호 들고오기
     fn_get_save_number_list : function() {
 
-        const localStorageData = {};
+        const _this = this;
+
+        let keyArr = [];
 
         for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            const value = localStorage.getItem(key);
-            localStorageData[key] = value;
+            keyArr.push(localStorage.key(i));
         }
 
-        console.log(localStorageData);
+        const saveLottoList = document.getElementById('saveLottoList');
+
+        for (let i = 0; i < keyArr.length; i++) {
+
+            let listDiv = document.createElement('div');
+
+            listDiv.classList.add('list');
+            listDiv.classList.add('mg-t10');
+
+            const lottoData = JSON.parse(localStorage.getItem(keyArr[i]));
+
+            //저장 날짜
+            let dateDiv = document.createElement('div');
+            dateDiv.classList.add('save-date');
+
+            //로또 번호
+            let lottoNumberDivs = document.createElement('div');
+            lottoNumberDivs.classList.add('lotto-number-list');
+
+            dateDiv.textContent = lottoData.saveDate;
+            listDiv.appendChild(dateDiv);
+
+            for (let j = 0; j < lottoData.lottoData.length; j++) {
+                let lottoNumbers = document.createElement('div');
+                lottoNumbers.classList.add('save-ball-list');
+                lottoNumbers.classList.add('txt-ai-c');
+                lottoNumbers.classList.add('mg-b5');
+
+                for (let k = 0; k < lottoData.lottoData[j].length; k++) {
+                    let lottoNumber = document.createElement('div');
+                    lottoNumber.className = 'ball-' + _this.fn_digitNumber(lottoData.lottoData[j][k]);
+                    lottoNumber.textContent = lottoData.lottoData[j][k]
+                    lottoNumbers.appendChild(lottoNumber);
+                }
+
+                listDiv.appendChild(lottoNumbers);
+            }
+
+            saveLottoList.appendChild(listDiv);
+        }
     }
 }
 
