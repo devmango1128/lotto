@@ -210,6 +210,7 @@ let LOTTO = {
     //반자동(고정수) 체크
     fn_fixed_number_check : function() {
 
+        const _this = this;
         const checkbox = document.getElementById('fixedCheckbox');
         const fixedList = document.getElementById('fixedNumberList');
 
@@ -217,6 +218,13 @@ let LOTTO = {
             fixedList.style.display = '';
         } else {
             fixedList.style.display = 'none';
+            let elements = document.querySelectorAll('.ball-click');
+
+            for (let i = 0; i < elements.length; i++) {
+                let element = elements[i];
+                element.classList.remove('ball-click');
+            }
+            _this.fixedList = [];
         }
     },
     //로또번호 생성
@@ -226,37 +234,40 @@ let LOTTO = {
 
         _this.lotto_number_create_init();
 
-        let numbers = [];
-
         for (let i = 0; i < 5; i++) {
-            // 1부터 45까지의 숫자 배열 생성
-            for (let j = 1; j <= 45; j++) {
-                numbers.push(j);
-            }
 
-            let lottoNumbers = _this.fixedList.slice();
+            let includedNumbers = [..._this.fixedList]; //고정수(반자동)수
+            let selectedNumbers = []; //로또번호
+            let availableNumbers = Array.apply(null, Array(45)).map(function (_, i) {
+                return i + 1;
+            });
 
-            // 고정된 숫자들을 numbers 배열에서 제거
-            for (let j = 0; j < lottoNumbers.length; j++) {
-                let index = numbers.indexOf(lottoNumbers[j]);
-                if (index !== -1) {
-                    numbers.splice(index, 1);
+            // 특정 숫자들을 포함하여 중복되지 않는 랜덤한 6개의 숫자 선택
+            for (let j = 0; j < includedNumbers.length; j++) {
+                let includedNum = Number(includedNumbers[j]);
+
+                if (selectedNumbers.indexOf(includedNum) !== -1) {
+                    continue; // 이미 선택된 숫자는 건너뜀
                 }
+
+                selectedNumbers.push(includedNum);
+                availableNumbers.splice(availableNumbers.indexOf(includedNum), 1);
             }
 
-            while (lottoNumbers.length < 6) {
-                let randomIndex = Math.floor(Math.random() * numbers.length);
-                let randomNum = numbers[randomIndex];
-                lottoNumbers.push(randomNum);
-                numbers.splice(randomIndex, 1);
+            while (selectedNumbers.length < 6) {
+                let randomIndex = Math.floor(Math.random() * availableNumbers.length);
+                let randomNum = availableNumbers[randomIndex];
+
+                selectedNumbers.push(randomNum);
+                availableNumbers.splice(randomIndex, 1);
             }
 
-            // 정렬
-            lottoNumbers.sort(function(a, b) {
+            // 선택된 숫자 정렬
+            selectedNumbers.sort(function(a, b) {
                 return a - b;
             });
 
-            _this.autoLottoData.push(lottoNumbers);
+            _this.autoLottoData.push(selectedNumbers);
         }
 
         _this.fn_create_lotto_ball_list();
