@@ -68,14 +68,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('E')">
+                        <div class="col-lg-3 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('W')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
                                         <i class="fa-solid fa-arrow-down-1-9"></i>
                                     </div>
                                     <h2 class="fs-4 fw-bold">당첨번호 분석</h2>
-                                    <p class="mb-0">당첨율 높은 번호를 분석해서 보여줘요.</p>
+                                    <p class="mb-0">당첨률 높은 번호를 분석해서 보여줘요.</p>
                                 </div>
                             </div>
                         </div>
@@ -117,6 +117,18 @@
                 <div class="container px-lg-5 mg-t20">
                     <div class="row gx-lg-5">
                         <div id="saveLottoList" class="save-lotto-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 당첨률 높은 번호 보기 modal -->
+        <div id="winRateSection-modal" class="modal">
+            <div id="winRateSection" class="modal-content">
+                <span id="winRateTitle" class="title">당첨번호 분석</span>
+                <span class="close" onclick="LOTTO.fn_modal_close('winRateSection-modal')">&times;</span>
+                <div class="container px-lg-5 mg-t20">
+                    <div class="row gx-lg-5">
+                        <div id="winRateList" class="win-rete-list"></div>
                     </div>
                 </div>
             </div>

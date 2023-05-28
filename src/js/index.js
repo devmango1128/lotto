@@ -141,18 +141,23 @@ let LOTTO = {
         switch (page) {
             case 'M' : _this.fn_display_show('mainSection'); break;
             case 'A' :
-                _this.fn_set_modal_title('autoTitle', '번호 생성');
+                _this.fn_set_modal_title('autoTitle', '번호 추천');
                 _this.fn_modal_page_init(page);
                 _this.fn_auto_ball_list_init();
                 _this.fn_display_show('autoSection-modal');
                 break;
             case 'V' :
-                _this.fn_set_modal_title('saveNumberTitle', '번호 관리');
+                _this.fn_set_modal_title('saveNumberTitle', '관심번호 즐겨찾기');
                 _this.fn_modal_page_init(page);
                 _this.fn_get_save_number_list();
                 _this.fn_display_show('saveNumberSection-modal');
                 break;
-            case 'E' : _this.fn_display_show('emergeSection'); break;
+            case 'W' :
+                _this.fn_set_modal_title('winRateTitle', '당첨번호 분석');
+                _this.fn_modal_page_init(page);
+                _this.fn_get_win_rate_list();
+                _this.fn_display_show('winRateSection-modal');
+                break;
         }
     },
     //모달 타이틀 설정
@@ -175,8 +180,8 @@ let LOTTO = {
                 _this.fn_create_fixed_number_ball();
                 _this.isNumberCreate = false;
                 break;
-            case 'V' :
-            case 'E' :
+            case 'V' : break;
+            case 'W' : break;
         }
     },
     //모달 페이지 보이기
@@ -485,6 +490,27 @@ let LOTTO = {
 
         //삭제 후 다시 새로 그려준다.
         LOTTO.fn_get_save_number_list();
+    },
+    //당첨번호 분석
+    fn_get_win_rate_list : function() {
+
+        const _this = this;
+
+        const drwtNoCnt = new Array(46).fill(0); // 당첨 번호 카운트 배열 초기화
+
+        for (let i = 0; i < _this.lottoData.length; i++) {
+            const lottoData = _this.lottoData[i];
+
+            for (let j = 1; j <= 6; j++) {
+                if (lottoData[`drwtNo${j}`] <= 46) {
+                    drwtNoCnt[lottoData[`drwtNo${j}`]]++;
+                }
+            }
+        }
+
+        for (let i = 1; i <= 45; i++) {
+            console.log(`${i}번: ${drwtNoCnt[i]}`);
+        }
     }
 }
 
