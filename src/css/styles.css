@@ -4704,7 +4704,7 @@ textarea.form-control-lg {
   color: #101214;
 }
 
-div.lotto-area div, .auto-ball-list div div, .fixed-number-list div, .save-ball-list div {
+div.lotto-area div, .auto-ball-list div div, .fixed-number-list div, .save-ball-list div,  div.win-rate-list-group div {
   display: inline-block;
   font-size: 16px;
   font-weight: 800;
@@ -4714,7 +4714,7 @@ div.lotto-area div, .auto-ball-list div div, .fixed-number-list div, .save-ball-
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
-  line-height: 23px;
+  line-height: 25px;
 }
 
 div.lotto-area span {
@@ -4734,19 +4734,19 @@ div.lotto-area div.bonus {
   width: 10px;
 }
 
-div.lotto-area div.ball-0, div.auto-ball-area div.ball-0, div.auto-ball-list div.ball-0, div.fixed-number-list div.ball-0, div.save-ball-list div.ball-0 {
+div.lotto-area div.ball-0, div.auto-ball-area div.ball-0, div.auto-ball-list div.ball-0, div.fixed-number-list div.ball-0, div.save-ball-list div.ball-0, div.win-rate-list-group div.ball-0 {
   background-color: #f86977;
 }
-div.lotto-area div.ball-1, div.auto-ball-area div.ball-1, div.auto-ball-list div.ball-1, div.fixed-number-list div.ball-1, div.save-ball-list div.ball-1  {
+div.lotto-area div.ball-1, div.auto-ball-area div.ball-1, div.auto-ball-list div.ball-1, div.fixed-number-list div.ball-1, div.save-ball-list div.ball-1, div.win-rate-list-group div.ball-1  {
   background-color: #f6aa55;
 }
-div.lotto-area div.ball-2, div.auto-ball-area div.ball-2, div.auto-ball-list div.ball-2, div.fixed-number-list div.ball-2, div.save-ball-list div.ball-2 {
+div.lotto-area div.ball-2, div.auto-ball-area div.ball-2, div.auto-ball-list div.ball-2, div.fixed-number-list div.ball-2, div.save-ball-list div.ball-2, div.win-rate-list-group div.ball-2 {
   background-color: #839f06;
 }
-div.lotto-area div.ball-3, div.auto-ball-area div.ball-3, div.auto-ball-list div.ball-3, div.fixed-number-list div.ball-3, div.save-ball-list div.ball-3  {
+div.lotto-area div.ball-3, div.auto-ball-area div.ball-3, div.auto-ball-list div.ball-3, div.fixed-number-list div.ball-3, div.save-ball-list div.ball-3, div.win-rate-list-group div.ball-3 {
   background-color: #5583f6;
 }
-div.lotto-area div.ball-4, div.auto-ball-area div.ball-4, div.auto-ball-list div.ball-4, div.fixed-number-list div.ball-4, div.save-ball-list div.ball-4  {
+div.lotto-area div.ball-4, div.auto-ball-area div.ball-4, div.auto-ball-list div.ball-4, div.fixed-number-list div.ball-4, div.save-ball-list div.ball-4, div.win-rate-list-group div.ball-4 {
   background-color: #cb56e5;
 }
 
@@ -4846,7 +4846,7 @@ div.button-area {
   float: right;
 }
 
-div.save-lotto-list {
+div.save-lotto-list, div.win-rete-list {
   height: 580px;
   overflow-y: auto;
 }
@@ -4871,6 +4871,21 @@ div.save-lotto-list button.delete-btn {
   line-height: 12px;
   padding: 5px;
   font-size: 12px;
+}
+
+div.win-rate-list-group {
+  float: left;
+  margin: 10px 0 5px 0px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 5px;;
+}
+
+div.win-rate-list-group div.win-rate-cnt-div {
+  color: #363535;
+  display: inline-block;
+  width: 70px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 div button.btn {
@@ -4944,6 +4959,9 @@ div button.red {
 }
 .mg-t10 {
   margin-top: 10px;
+}
+.mg-t30 {
+  margin-top: 30px;
 }
 .mg-t40 {
   margin-top: 40px;

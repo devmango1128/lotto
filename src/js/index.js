@@ -508,8 +508,42 @@ let LOTTO = {
             }
         }
 
+        const drwtNoCntArr = [];
+
         for (let i = 1; i <= 45; i++) {
-            console.log(`${i}번: ${drwtNoCnt[i]}`);
+            let obj = {};
+            obj[i] = drwtNoCnt[i];
+            drwtNoCntArr.push(obj);
+        }
+
+        // 값을 기준으로 정렬
+        drwtNoCntArr.sort(function(a, b) {
+            return b[Object.keys(b)[0]] - a[Object.keys(a)[0]];
+        });
+
+
+        const winRateList = document.getElementById('winRateList');
+
+        for (let i = 0; i < drwtNoCntArr.length; i++) {
+            const key = Object.keys(drwtNoCntArr[i])[0];
+            const value = drwtNoCntArr[i][key];
+            console.log(key, value);
+
+            let winRateDiv = document.createElement('div');
+            winRateDiv.classList.add('win-rate-list-group');
+
+            let winRateBallDiv = document.createElement('div');
+            winRateBallDiv.classList.add('ball-' + _this.fn_digitNumber(key));
+            winRateBallDiv.textContent = key;
+
+            let winRateCntDiv = document.createElement('div');
+            winRateCntDiv.classList.add('win-rate-cnt-div');
+            winRateCntDiv.textContent = value + '번';
+
+            winRateDiv.appendChild(winRateBallDiv);
+            winRateDiv.appendChild(winRateCntDiv);
+
+            winRateList.appendChild(winRateDiv);
         }
     }
 }
