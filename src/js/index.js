@@ -488,6 +488,8 @@ let LOTTO = {
         const key = 'lottoData_' + e.target.attributes['data-key'].value;
         localStorage.removeItem(key);
 
+        alert("삭제되었습니다.");
+
         //삭제 후 다시 새로 그려준다.
         LOTTO.fn_get_save_number_list();
     },
