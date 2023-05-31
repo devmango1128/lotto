@@ -195,6 +195,7 @@ let LOTTO = {
         const _this = this;
 
         this.fn_auto_ball_list_init();
+        this.fn_win_rate_init();
 
         document.getElementById(id).classList.remove('dp-b');
         document.getElementById(id).classList.add('dp-n');
@@ -488,10 +489,10 @@ let LOTTO = {
         const key = 'lottoData_' + e.target.attributes['data-key'].value;
         localStorage.removeItem(key);
 
-        alert("삭제되었습니다.");
-
         //삭제 후 다시 새로 그려준다.
         LOTTO.fn_get_save_number_list();
+
+        alert("삭제되었습니다.");
     },
     //당첨번호 분석
     fn_get_win_rate_list : function() {
@@ -523,16 +524,14 @@ let LOTTO = {
             return b[Object.keys(b)[0]] - a[Object.keys(a)[0]];
         });
 
-
         const winRateList = document.getElementById('winRateList');
 
         for (let i = 0; i < drwtNoCntArr.length; i++) {
-            const key = Object.keys(drwtNoCntArr[i])[0];
-            const value = drwtNoCntArr[i][key];
-            console.log(key, value);
 
             let winRateDiv = document.createElement('div');
             winRateDiv.classList.add('win-rate-list-group');
+            const key = Object.keys(drwtNoCntArr[i])[0];
+            const value = drwtNoCntArr[i][key];
 
             let winRateBallDiv = document.createElement('div');
             winRateBallDiv.classList.add('ball-' + _this.fn_digitNumber(key));
@@ -547,6 +546,11 @@ let LOTTO = {
 
             winRateList.appendChild(winRateDiv);
         }
+    },
+    //당첨번호 초기화
+    fn_win_rate_init : function() {
+        const winRateList = document.getElementById('winRateList');
+        winRateList.innerText = '';
     }
 }
 
