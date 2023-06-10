@@ -4,6 +4,7 @@ let LOTTO = {
     autoLottoData : [], //자동 로또 데이터
     fixedList : [], //반자동 선택 수
     isNumberCreate : false, //번호 생성 여부
+    storeData : null,   //판매점데이터
     //시작
     init : function() {
         this.fn_lotto_turn_change();
@@ -160,6 +161,12 @@ let LOTTO = {
                 _this.fn_display_show('winRateSection-modal');
                 _this.fn_lotto_start_end();
                 break;
+            case 'S' :
+                _this.fn_set_modal_title('storeTitle', '1등 판매점');
+                _this.fn_modal_page_init(page);
+                _this.fn_get_store_data();
+                _this.fn_display_show('storeSection-modal');
+                break;
         }
     },
     //모달 타이틀 설정
@@ -185,6 +192,9 @@ let LOTTO = {
             case 'V' : break;
             case 'W' :
                 document.getElementById('winRateList').innerHTML = '';
+                break;
+            case 'S' :
+                document.getElementById('storeList').innerHTML = '';
                 break;
         }
     },
@@ -586,6 +596,98 @@ let LOTTO = {
             end.appendChild(endOption);
             if(_this.lottoData.length === i) endOption.selected = true;
         }
+    },
+    //1등 판매점 리스트 조회
+    fn_get_store_data : function() {
+        let _this = this;
+
+        _this.fn_get_turn_list();
+
+        const url = '/lotto/lottoStore.json?date=' + new Date();
+        const xhr = new XMLHttpRequest();
+
+        xhr.open('GET', url, true);
+        xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 400) {
+                const response = JSON.parse(xhr.responseText);
+
+                _this.storeData = response;
+
+                _this.fn_create_store_list();
+
+            } else {
+                console.error('Error:', xhr.status);
+            }
+        };
+
+        xhr.onerror = function() {
+            console.error('Request failed');
+        };
+
+        xhr.send();
+    },
+    fn_get_turn_list : function() {
+        const _this = this;
+
+        const turn = document.getElementById('turnList');
+
+        for(let i = 1; i <= _this.lottoData.length; i++) {
+            let turnOption = document.createElement('option');
+            turnOption.value = i;
+            turnOption.text = i + '회 (' + _this.lottoData[i-1].drwNoDate + ')';
+            turn.appendChild(turnOption);
+
+            if(_this.lottoData.length === i) turnOption.selected = true;
+        }
+    },
+    //1등 판매점 리스트 생성
+    fn_create_store_list : function() {
+
+        const _this = this;
+
+        const turn = document.getElementById('turnList').value;
+        const storeDiv = document.getElementById('storeList');
+
+        console.log(_this.storeData);
+        for(let i = 0; i < _this.storeData.length; i++) {
+            if(Number(_this.storeData[i].drwNo) === Number(turn)) {
+                const list = _this.storeData[i].list;
+                for(let j = 0; j < list.length; j++) {
+                    let storeSubDiv = document.createElement('div');
+                    storeSubDiv.classList.add('store-sub-div');
+                    console.log(list[j]);
+                    let titleDiv = document.createElement('div');
+                    titleDiv.classList.add('store-title');
+                    titleDiv.textContent = list[j].storeName;
+
+                    let gubunDiv = document.createElement('div');
+                    gubunDiv.classList.add('store-gubun');
+                    gubunDiv.textContent = ' | ' + list[j].gubun;
+
+                    let pointDiv = document.createElement('a');
+                    pointDiv.classList.add('store-point');
+                    pointDiv.href = list[j].point;
+
+                    let imgDiv = document.createElement('img');
+                    imgDiv.classList.add('store-img');
+                    imgDiv.src ='../src/img/ico_location.png';
+
+                    pointDiv.appendChild(imgDiv);
+
+                    let addrDiv = document.createElement('div');
+                    addrDiv.classList.add('addr-gubun');
+                    addrDiv.textContent = list[j].addr;
+
+                    storeSubDiv.appendChild(titleDiv);
+                    storeSubDiv.appendChild(gubunDiv);
+                    storeSubDiv.appendChild(pointDiv);
+                    storeSubDiv.appendChild(addrDiv);
+
+                    storeDiv.appendChild(storeSubDiv);
+                }
+            }
+        }
+
     }
 }
 

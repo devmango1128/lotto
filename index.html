@@ -84,6 +84,17 @@
                                 <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
                             </div>
                         </div>
+                        <div class="col-lg-3 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('S')">
+                            <div class="card bg-light border-0 h-100">
+                                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <h2 class="fs-4 fw-bold">1등 판매점 정보</h2>
+                                    <p class="mb-0">1등 판매점 정보를 보여줘요.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -148,6 +159,22 @@
                             </div>
                         </div>
                         <div id="winRateList" class="win-rete-list mg-t30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 1등 로또점 modal -->
+        <div id="storeSection-modal" class="modal">
+            <div id="storeSection" class="modal-content">
+                <span id="storeTitle" class="title">1등 판매점</span>
+                <span class="close" onclick="LOTTO.fn_modal_close('storeSection-modal')">&times;</span>
+                <div class="container px-lg-5 mg-t20">
+                    <div class="row gx-lg-5">
+                        <div class="mg-t10 w-100 store-lotto-search">
+                            <select id="turnList" class="turn-list-select"></select>
+                            <button class="btn turn-btn-blue" onclick="LOTTO.fn_modal_page_init('S'); LOTTO.fn_create_store_list()">조회</button>
+                        </div>
+                        <div id="storeList" class="mg-t10 store-lotto-list"></div>
                     </div>
                 </div>
             </div>

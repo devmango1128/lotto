@@ -4922,6 +4922,53 @@ div.win-rate-detail-search div.temp {
   padding-left: 80px;
 }
 
+div.store-lotto-search {
+  display: inline-block;
+  text-align: left;
+}
+
+div.store-lotto-search button.turn-btn-blue {
+  border: 1px solid #0d6efd;
+  background-color: #0d6efd;
+  color: #ffffff;
+  height: 31px;
+  line-height: 15px;
+  display: inline-block;
+  margin-top: -3px;
+  width:80px;
+}
+
+div.store-lotto-search select.turn-list-select {
+  width:180px;
+  height:30px;
+  font-size: 14px;
+}
+
+div.store-lotto-list div.store-sub-div {
+  display: inline-block;
+  padding: 10px 0px 10px 0px;
+  border-top: 1px solid #e2e2e2;
+  width: 100%;
+  text-align: left;
+}
+
+div.store-lotto-list div.store-title {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+div.store-lotto-list div.store-gubun {
+  display: inline-block;
+  margin-left:5px;
+}
+
+div.store-lotto-list img.store-img {
+  width:13px;
+  height:18px;
+}
+
+
 div button.btn {
   border-radius: 4px;
 }
