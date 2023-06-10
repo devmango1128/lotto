@@ -133,6 +133,20 @@
                 <span class="close" onclick="LOTTO.fn_modal_close('winRateSection-modal')">&times;</span>
                 <div class="container px-lg-5 mg-t20">
                     <div class="row gx-lg-5">
+                        <div class="mg-t10 win-rate-detail-search">
+                            <div class="w-100">
+                                <select id="start" class="win-rate-select"></select>
+                                <select id="hasBonus" class="has-bonus">
+                                    <option value="Y">보너스 포함</option>
+                                    <option value="N">보너스 미포함</option>
+                                </select>
+                            </div>
+                            <div class="temp">~</div>
+                            <div class="w-100">
+                                <select id="end" class="win-rate-select"></select>
+                                <button class="btn bonus-btn-blue" onclick="LOTTO.fn_modal_page_init('W'); LOTTO.fn_get_win_rate_list()">조회</button>
+                            </div>
+                        </div>
                         <div id="winRateList" class="win-rete-list mg-t30"></div>
                     </div>
                 </div>

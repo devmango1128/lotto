@@ -4886,6 +4886,41 @@ div.win-rate-list-group div.win-rate-cnt-div {
   font-weight: 500;
   font-size: 16px;
 }
+div.win-rate-detail-search {
+  display: inline-block;
+  text-align: left;
+}
+
+div.win-rate-detail-search select.win-rate-select {
+  width:180px;
+  height:30px;
+  font-size: 14px;
+}
+
+div.win-rate-detail-search select.has-bonus {
+  width:100px;
+  height:30px;
+  font-size: 14px;
+}
+
+div.win-rate-detail-search button.bonus-btn-blue {
+  border: 1px solid #0d6efd;
+  background-color: #0d6efd;
+  color: #ffffff;
+  height: 31px;
+  line-height: 15px;
+  display: inline-block;
+  margin-top: -3px;
+  width:100px;
+}
+
+div.win-rate-detail-search div.temp {
+  height: 20px;
+  float: left;
+  width: 100%;
+  line-height: 15px;
+  padding-left: 80px;
+}
 
 div button.btn {
   border-radius: 4px;

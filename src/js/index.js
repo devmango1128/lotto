@@ -49,6 +49,7 @@ let LOTTO = {
         let _this = this;
         const lottoTurn = document.getElementById('lottoTurn');
 
+
         for (let i = lotto_len; i > 0; i--) {
 
             let newOption = document.createElement('option');
@@ -157,6 +158,7 @@ let LOTTO = {
                 _this.fn_modal_page_init(page);
                 _this.fn_get_win_rate_list();
                 _this.fn_display_show('winRateSection-modal');
+                _this.fn_lotto_start_end();
                 break;
         }
     },
@@ -181,7 +183,9 @@ let LOTTO = {
                 _this.isNumberCreate = false;
                 break;
             case 'V' : break;
-            case 'W' : break;
+            case 'W' :
+                document.getElementById('winRateList').innerHTML = '';
+                break;
         }
     },
     //모달 페이지 보이기
@@ -501,12 +505,22 @@ let LOTTO = {
 
         const drwtNoCnt = new Array(46).fill(0); // 당첨 번호 카운트 배열 초기화
 
-        for (let i = 0; i < _this.lottoData.length; i++) {
-            const lottoData = _this.lottoData[i];
+        const start = document.getElementById('start').value === '' ? 1 : document.getElementById('start').value;
+        const end = document.getElementById('end').value === '' ? _this.lottoData.length : document.getElementById('end').value;
+        const hasBonus = document.getElementById('hasBonus').value;
 
-            for (let j = 1; j <= 6; j++) {
-                if (lottoData[`drwtNo${j}`] <= 46) {
-                    drwtNoCnt[lottoData[`drwtNo${j}`]]++;
+        for (let i = 0; i < _this.lottoData.length; i++) {
+
+            if(i + 1 >= start && i + 1 <= end) {
+                const lottoData = _this.lottoData[i];
+
+                for (let j = 1; j <= 6; j++) {
+                    if (lottoData[`drwtNo${j}`] <= 46) {
+                        drwtNoCnt[lottoData[`drwtNo${j}`]]++;
+                    }
+                }
+                if(hasBonus=='Y') {
+                    drwtNoCnt[lottoData[`bnusNo`]]++;
                 }
             }
         }
@@ -551,6 +565,27 @@ let LOTTO = {
     fn_win_rate_init : function() {
         const winRateList = document.getElementById('winRateList');
         winRateList.innerText = '';
+    },
+    //시작일, 종료일
+    fn_lotto_start_end : function() {
+
+        const _this = this;
+
+        const start = document.getElementById('start');
+        const end = document.getElementById('end');
+
+        for(let i = 1; i <= _this.lottoData.length; i++) {
+            let startOption = document.createElement('option');
+            startOption.value = i;
+            startOption.text = i + '회 (' + _this.lottoData[i-1].drwNoDate + ')';
+            start.appendChild(startOption);
+
+            let endOption = document.createElement('option');
+            endOption.value = i;
+            endOption.text = i + '회 (' + _this.lottoData[i-1].drwNoDate + ')';
+            end.appendChild(endOption);
+            if(_this.lottoData.length === i) endOption.selected = true;
+        }
     }
 }
 
