@@ -671,15 +671,16 @@ let LOTTO = {
                     gubunDiv.classList.add('store-gubun');
                     gubunDiv.textContent = ' | ' + list[j].gubun;
 
-                    let pointDiv = document.createElement('a');
-                    pointDiv.classList.add('store-point');
-                    pointDiv.href = list[j].point;
+                    //지도 표출 삭제
+                    //let pointDiv = document.createElement('a');
+                    //pointDiv.classList.add('store-point');
+                    //pointDiv.href = list[j].point;
 
-                    let imgDiv = document.createElement('img');
-                    imgDiv.classList.add('store-img');
-                    imgDiv.src ='src/img/ico_location.png';
+                    //let imgDiv = document.createElement('img');
+                    //imgDiv.classList.add('store-img');
+                    //imgDiv.src ='src/img/ico_location.png';
 
-                    pointDiv.appendChild(imgDiv);
+                    //pointDiv.appendChild(imgDiv);
 
                     let addrDiv = document.createElement('div');
                     addrDiv.classList.add('addr-gubun');
@@ -687,7 +688,7 @@ let LOTTO = {
 
                     storeSubDiv.appendChild(titleDiv);
                     storeSubDiv.appendChild(gubunDiv);
-                    storeSubDiv.appendChild(pointDiv);
+                    //storeSubDiv.appendChild(pointDiv);
                     storeSubDiv.appendChild(addrDiv);
 
                     storeDiv.appendChild(storeSubDiv);
