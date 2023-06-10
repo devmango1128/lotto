@@ -1,4 +1,71 @@
-[{"drwNo":"1068",
+[{"drwNo":"1067",
+  "list": [{"no": "1",
+    "storeName": "사당명당 복권방",
+    "gubun": "자동",
+    "addr": "서울 동작구 동작대로7길 74 1층 103호",
+    "point": ""
+  },{"no": "2",
+    "storeName": "오케이상사",
+    "gubun": "수동",
+    "addr": "서울 서초구 신반포로 176 센트럴시티내100호매점",
+    "point": ""
+  },{"no": "3",
+    "storeName": "가판14호",
+    "gubun": "수동",
+    "addr": "서울 중구 퇴계로 37",
+    "point": ""
+  },{"no": "4",
+    "storeName": "세종로또방",
+    "gubun": "자동",
+    "addr": "세종 용포로 32",
+    "point": ""
+  },{"no": "5",
+    "storeName": "로또.토토.블루베리",
+    "gubun": "자동",
+    "addr": "경기 평택시 안현로서6길 7 대건빌딩 105호",
+    "point": ""
+  },{"no": "6",
+    "storeName": "동해복권전문점",
+    "gubun": "수동",
+    "addr": "강원 동해시 발한로 226-1",
+    "point": ""
+  },{"no": "7",
+    "storeName": "오창돼지토토",
+    "gubun": "자동",
+    "addr": "충북 청주시 청원구 2산단3로 12 101호",
+    "point": ""
+  },{"no": "8",
+    "storeName": "로또매점",
+    "gubun": "수동",
+    "addr": "충남 당진시 송산로 723",
+    "point": ""
+  },{"no": "9",
+    "storeName": "로또명당인주점",
+    "gubun": "수동",
+    "addr": "충남 아산시 서해로 519-2",
+    "point": ""
+  },{"no": "10",
+    "storeName": "한남마트 왔다복권",
+    "gubun": "수동",
+    "addr": "충남 천안시 서북구 서부16길 9",
+    "point": ""
+  },{"no": "11",
+    "storeName": "복조리복권방",
+    "gubun": "수동",
+    "addr": "전북 장수군 장계면 장계천변길 55-4",
+    "point": ""
+  },{"no": "12",
+    "storeName": "로또복권맥",
+    "gubun": "수동",
+    "addr": "전남 여수시 여문1로 52",
+    "point": ""
+  },{"no": "13",
+    "storeName": "로또판매점",
+    "gubun": "자동",
+    "addr": "경남 창원시 마산합포구 문화북1길 37 1층",
+    "point": ""
+  }]},
+  {"drwNo":"1068",
   "list": [{"no": "1",
     "storeName": "인동상회",
     "gubun": "자동",
@@ -166,8 +233,7 @@
     "gubun": "수동",
     "addr": "경북 성주군 소학2길 34 1층 세븐일레븐 편의점",
     "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14740103"
-  }]
-  },
+  }]},
   {
     "drwNo": "1070",
     "list": [
@@ -268,8 +334,7 @@
         "gubun": "자동",
         "addr": "경남 양산시 덕계2길 17 좌측 복권판매점",
         "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14840319"
-      }
-    ]},
+   }]},
   {"drwNo":"1071",
     "list": [{"no": "1",
       "storeName": "종합가판점",
@@ -296,6 +361,5 @@
       "gubun": "자동",
       "addr": "강원 속초시 조양상가길 25 롯데마트속초점, 1층 복권판매점",
       "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14200134"
-    }]
-  }
+  }]}
 ]
