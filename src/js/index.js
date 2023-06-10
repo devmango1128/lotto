@@ -648,14 +648,21 @@ let LOTTO = {
         const turn = document.getElementById('turnList').value;
         const storeDiv = document.getElementById('storeList');
 
-        console.log(_this.storeData);
+        let hasDrwNo = false;
+
         for(let i = 0; i < _this.storeData.length; i++) {
+
             if(Number(_this.storeData[i].drwNo) === Number(turn)) {
+
+                hasDrwNo = true;
+
                 const list = _this.storeData[i].list;
+
                 for(let j = 0; j < list.length; j++) {
+
                     let storeSubDiv = document.createElement('div');
                     storeSubDiv.classList.add('store-sub-div');
-                    console.log(list[j]);
+
                     let titleDiv = document.createElement('div');
                     titleDiv.classList.add('store-title');
                     titleDiv.textContent = list[j].storeName;
@@ -670,7 +677,7 @@ let LOTTO = {
 
                     let imgDiv = document.createElement('img');
                     imgDiv.classList.add('store-img');
-                    imgDiv.src ='../src/img/ico_location.png';
+                    imgDiv.src ='src/img/ico_location.png';
 
                     pointDiv.appendChild(imgDiv);
 
@@ -688,6 +695,12 @@ let LOTTO = {
             }
         }
 
+        if(!hasDrwNo) {
+            let storeSubDiv = document.createElement('div');
+            storeSubDiv.classList.add('store-sub-empty-div');
+            storeSubDiv.textContent = '등록된 데이터가 없습니다.';
+            storeDiv.appendChild(storeSubDiv);
+        }
     }
 }
 

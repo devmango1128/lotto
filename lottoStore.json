@@ -71,77 +71,134 @@
     "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14740103"
   }]
   },
-  {"drwNo":"1070",
-  "list": [{"no": "1",
-    "storeName": "복권나라",
-    "gubun": "수동",
-    "addr": "서울 관악구 남부순환로 1739-9",
-    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=11100244"
-  },{"no": "2",
-    "storeName": "세븐일레븐 가야한신점",
-    "gubun": "자동",
-    "addr": "부산 부산진구 가야대로589번길 3 1층",
-    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12610097"
-  },{"no": "3",
-    "storeName": "황금코끼리로또점",
-    "gubun": "자동",
-    "addr": "부산 북구 금곡대로 318",
-    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12630012"
-  },{"no": "4",
-      "storeName": "복드림 복권방",
+  {
+    "drwNo": "1070",
+    "list": [
+      {
+        "no": "1",
+        "storeName": "복권나라",
+        "gubun": "수동",
+        "addr": "서울 관악구 남부순환로 1739-9",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=11100244"
+      },
+      {
+        "no": "2",
+        "storeName": "세븐일레븐 가야한신점",
+        "gubun": "자동",
+        "addr": "부산 부산진구 가야대로589번길 3 1층",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12610097"
+      },
+      {
+        "no": "3",
+        "storeName": "황금코끼리로또점",
+        "gubun": "자동",
+        "addr": "부산 북구 금곡대로 318",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12630012"
+      },
+      {
+        "no": "4",
+        "storeName": "복드림 복권방",
+        "gubun": "자동",
+        "addr": "부산 북구 기찰로 155 (덕천동)",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12640426"
+      },
+      {
+        "no": "5",
+        "storeName": "나나복권",
+        "gubun": "수동",
+        "addr": "부산 영도구 남항로 22 1층",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12610208"
+      },
+      {
+        "no": "6",
+        "storeName": "세진전자통신",
+        "gubun": "자동",
+        "addr": "대구 서구 서대구로 156",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12700270"
+      },
+      {
+        "no": "7",
+        "storeName": "성진마트",
+        "gubun": "자동",
+        "addr": "경기 부천시 수도로 123,(내동)",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14100417"
+      },
+      {
+        "no": "8",
+        "storeName": "일등로또판매점",
+        "gubun": "자동",
+        "addr": "경기 파주시 교하로 1417",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14130157"
+      },
+      {
+        "no": "9",
+        "storeName": "잘찍어로또방",
+        "gubun": "자동",
+        "addr": "경기 평택시 안현로서5길 62",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14110322"
+      },
+      {
+        "no": "10",
+        "storeName": "행복",
+        "gubun": "자동",
+        "addr": "경기 하남시 덕풍동로 111-21 105호",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14140996"
+      },
+      {
+        "no": "11",
+        "storeName": "대박로또방",
+        "gubun": "자동",
+        "addr": "전북 장수군 장천로 170",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14520012"
+      },
+      {
+        "no": "12",
+        "storeName": "왕대박 나눔로또645",
+        "gubun": "자동",
+        "addr": "경북 경주시 금성로 334 1층 중앙점포",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14720004"
+      },
+      {
+        "no": "13",
+        "storeName": "진양상회",
+        "gubun": "자동",
+        "addr": "경북 영주시 선비로 68",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14700010"
+      },
+      {
+        "no": "14",
+        "storeName": "무지개로또복권",
+        "gubun": "자동",
+        "addr": "경남 양산시 덕계2길 17 좌측 복권판매점",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14840319"
+      }
+    ]},
+  {"drwNo":"1071",
+    "list": [{"no": "1",
+      "storeName": "종합가판점",
       "gubun": "자동",
-      "addr": "부산 북구 기찰로 155 (덕천동)",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12640426"
-  },{"no": "5",
-      "storeName": "나나복권",
-      "gubun": "수동",
-      "addr": "부산 영도구 남항로 22 1층",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12610208"
-  },{"no": "6",
-      "storeName": "세진전자통신",
+      "addr": "서울 동대문구 왕산로40길 6 건물 앞쪽 가판점 청량리역 5번출구 앞쪽",
+      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=11100891"
+    },{"no": "2",
+      "storeName": "돈벼락 하단점",
       "gubun": "자동",
-      "addr": "대구 서구 서대구로 156",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12700270"
-  },{"no": "7",
-      "storeName": "성진마트",
+      "addr": "부산 사하구 낙동남로 1401-1",
+      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12610025"
+    },{"no": "3",
+      "storeName": "미금헤리츠점",
       "gubun": "자동",
-      "addr": "경기 부천시 수도로 123,(내동)",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14100417"
-  },{"no": "8",
-      "storeName": "일등로또판매점",
+      "addr": "경기 성남시 분당구 성남대로 151 엠코헤리츠 1층110호",
+      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14190079"
+    },{"no": "4",
+      "storeName": "대박명당",
       "gubun": "자동",
-      "addr": "경기 파주시 교하로 1417",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14130157"
-  },{"no": "9",
-      "storeName": "잘찍어로또방",
+      "addr": "경기 양주시 옥정동로5길 6",
+      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14140860"
+    },{"no": "5",
+      "storeName": "D-마트 담배",
       "gubun": "자동",
-      "addr": "경기 평택시 안현로서5길 62",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14110322"
-  },{"no": "10",
-      "storeName": "행복",
-      "gubun": "자동",
-      "addr": "경기 하남시 덕풍동로 111-21 105호",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14140996"
-  },{"no": "11",
-      "storeName": "대박로또방",
-      "gubun": "자동",
-      "addr": "전북 장수군 장천로 170",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14520012"
-  },{"no": "12",
-      "storeName": "왕대박 나눔로또645",
-      "gubun": "자동",
-      "addr": "경북 경주시 금성로 334 1층 중앙점포",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14720004"
-  },{"no": "13",
-      "storeName": "진양상회",
-      "gubun": "자동",
-      "addr": "경북 영주시 선비로 68",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14700010"
-  },{"no": "14",
-      "storeName": "무지개로또복권",
-      "gubun": "자동",
-      "addr": "경남 양산시 덕계2길 17 좌측 복권판매점",
-      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14840319"
-  }]
+      "addr": "강원 속초시 조양상가길 25 롯데마트속초점, 1층 복권판매점",
+      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14200134"
+    }]
   }
 ]

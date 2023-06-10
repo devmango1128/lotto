@@ -4966,8 +4966,13 @@ div.store-lotto-list div.store-gubun {
 div.store-lotto-list img.store-img {
   width:13px;
   height:18px;
+  float:right;
 }
 
+div.store-lotto-list div.store-sub-empty-div {
+  text-align: center;
+  padding: 200px 0px 200px 0px;
+}
 
 div button.btn {
   border-radius: 4px;
