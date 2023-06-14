@@ -406,6 +406,8 @@ let LOTTO = {
 
         const _this = this;
 
+        localStorage.removeItem('adfit.storage.test');
+
         //초기화
         document.getElementById('saveLottoList').innerHTML = '';
 
