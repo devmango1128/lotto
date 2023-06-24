@@ -5067,6 +5067,12 @@ div button.red {
 .mg-b30 {
   margin-bottom: 30px;
 }
+.mg-b50 {
+  margin-bottom: 50px;
+}
+.mg-b100 {
+  margin-bottom: 100px;
+}
 
 /*text color*/
 .f-c-w {
