@@ -5083,6 +5083,10 @@ div button.red {
   color:#fff;
 }
 
+.f-c-b {
+  color: #0d6efd;
+}
+
 /*display*/
 .dp-ib {
   display: inline-block;
@@ -5733,6 +5737,11 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
 }
 .modal-backdrop.show {
   opacity: var(--bs-backdrop-opacity);
+}
+
+.modal-max-height {
+  max-height: 620px;
+  overflow: auto;
 }
 
 .modal-header {

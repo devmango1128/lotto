@@ -42,39 +42,39 @@
         </nav>
         <div id="contents" class="contents">
             <!-- Page Content-->
-            <section id="mainSection" class="section pt-4">
+            <section id="mainSection" class="section">
                 <div class="container px-lg-5">
                     <!-- Page Features-->
                     <div class="row gx-lg-5">
-                        <div class="col-lg-3 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('A')">
+                        <div class="col-lg-3 col-xxl-4 mb-2 cur-p" onclick="LOTTO.fn_modal_page('A')">
                             <div class="card bg-light border-0 h-100">
-                                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
-                                        <i class="fa-solid fa-circle-dot"></i>
-                                    </div>
-                                    <h2 class="fs-4 fw-bold">번호 추천</h2>
+                                <div class="card-body text-center p-2 p-lg-5 pt-lg-0">
+<!--                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">-->
+<!--                                        <i class="fa-solid fa-circle-dot"></i>-->
+<!--                                    </div>-->
+                                    <h2 class="fs-4 fw-bold f-c-b">번호 추천</h2>
                                     <p class="mb-0">자동으로 당첨 예상 번호를 추천해드려요.<br />(반자동 기능 포함)</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('V')">
+                        <div class="col-lg-3 col-xxl-4 mb-2 cur-p" onclick="LOTTO.fn_modal_page('V')">
                             <div class="card bg-light border-0 h-100">
-                                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
-                                        <i class="fa-solid fa-download"></i>
-                                    </div>
-                                    <h2 class="fs-4 fw-bold">관심번호 즐겨찾기</h2>
+                                <div class="card-body text-center p-2 p-lg-5 pt-lg-0">
+<!--                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">-->
+<!--                                        <i class="fa-solid fa-download"></i>-->
+<!--                                    </div>-->
+                                    <h2 class="fs-4 fw-bold f-c-b">관심번호 즐겨찾기</h2>
                                     <p class="mb-0">저장 해놓은 추천 번호를 확인할 수 있어요.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-xxl-4 mb-5 cur-p" onclick="LOTTO.fn_modal_page('W')">
+                        <div class="col-lg-3 col-xxl-4 mb-2 cur-p" onclick="LOTTO.fn_modal_page('W')">
                             <div class="card bg-light border-0 h-100">
-                                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
-                                        <i class="fa-solid fa-arrow-down-1-9"></i>
-                                    </div>
-                                    <h2 class="fs-4 fw-bold">당첨번호 분석</h2>
+                                <div class="card-body text-center p-2 p-lg-5 pt-lg-0">
+<!--                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">-->
+<!--                                        <i class="fa-solid fa-arrow-down-1-9"></i>-->
+<!--                                    </div>-->
+                                    <h2 class="fs-4 fw-bold f-c-b">당첨번호 분석</h2>
                                     <p class="mb-0">당첨률 높은 번호를 분석해서 보여줘요.</p>
                                 </div>
                                 <ins class="kakao_ad_area" style="display:none;"
@@ -86,11 +86,11 @@
                         </div>
                         <div class="col-lg-3 col-xxl-4 cur-p mg-b150" onclick="LOTTO.fn_modal_page('S')">
                             <div class="card bg-light border-0 h-100">
-                                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
+                                <div class="card-body text-center p-2 p-lg-5 pt-lg-0">
+                                    <!--<div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
                                         <i class="fa-solid fa-location-dot"></i>
-                                    </div>
-                                    <h2 class="fs-4 fw-bold">1등 판매점 정보</h2>
+                                    </div>-->
+                                    <h2 class="fs-4 fw-bold f-c-b">1등 판매점 정보</h2>
                                     <p class="mb-0">1등 판매점 정보를 보여줘요.</p>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
         </div>
         <!-- 저장한 번호 보기 modal -->
         <div id="saveNumberSection-modal" class="modal">
-            <div id="saveNumberSection" class="modal-content">
+            <div id="saveNumberSection" class="modal-content modal-max-height">
                 <span id="saveNumberTitle" class="title">번호 관리</span>
                 <span class="close" onclick="LOTTO.fn_modal_close('saveNumberSection-modal')">&times;</span>
                 <div class="container px-lg-5 mg-t20">
@@ -139,7 +139,7 @@
         </div>
         <!-- 당첨률 높은 번호 보기 modal -->
         <div id="winRateSection-modal" class="modal">
-            <div id="winRateSection" class="modal-content">
+            <div id="winRateSection" class="modal-content modal-max-height">
                 <span id="winRateTitle" class="title">당첨번호 분석</span>
                 <span class="close" onclick="LOTTO.fn_modal_close('winRateSection-modal')">&times;</span>
                 <div class="container px-lg-5 mg-t20">
@@ -165,7 +165,7 @@
         </div>
         <!-- 1등 로또점 modal -->
         <div id="storeSection-modal" class="modal">
-            <div id="storeSection" class="modal-content mg-b100">
+            <div id="storeSection" class="modal-content mg-b100 modal-max-height">
                 <span id="storeTitle" class="title">1등 판매점</span>
                 <span class="close" onclick="LOTTO.fn_modal_close('storeSection-modal')">&times;</span>
                 <div class="container px-lg-5 mg-t20">
