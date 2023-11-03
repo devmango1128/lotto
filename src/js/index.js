@@ -167,6 +167,9 @@ let LOTTO = {
                 _this.fn_get_store_data();
                 _this.fn_display_show('storeSection-modal');
                 break;
+            case 'C' :
+                alert('작업중입니다. 12월 오픈 예정');
+                break;
         }
     },
     //모달 타이틀 설정
