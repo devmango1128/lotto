@@ -11960,7 +11960,11 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   font-size: 2rem;
+}
+
+.ver_middle {
+  vertical-align: middle;
 }
