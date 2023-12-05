@@ -718,9 +718,12 @@ let LOTTO = {
         document.getElementById('calculator').style.display = 'inline-block';
         document.getElementById('calculator').value = '';
         document.getElementById('calculator-btn').style.display = 'inline-block';
-        if(document.getElementById('calculator-table') !== null) {
-            document.getElementById('calculator-table').innerHTML = '';
-        }
+
+        const elementsToDelete = document.querySelectorAll('.calculator-btn');
+
+        elementsToDelete.forEach(function(element) {
+            element.remove();
+        });
     }
     //로또 수령금 계산하기
     , fn_calculator : function() {
@@ -743,14 +746,14 @@ let LOTTO = {
 
             // 테이블 요소를 생성
             let table = document.createElement('table');
-            table.id = 'calculator-table';
+            table.classList.add('calculator-table');
 
             let tax = 0;
 
-            if(money > 200 && money <= 300000000) {
-                tax = (money - 1000) * 0.22
-            } else if ( money > 300000000) {
-                tax = (money - 1000) * 0.33
+            if(Number(money) > 200 && Number(money) <= 300000000) {
+                tax = (Number(money) - 1000) * 0.22
+            } else if ( Number(money) > 300000000) {
+                tax = (Number(money) - 1000) * 0.33
             }
 
             let receivedAmount = money - tax;
