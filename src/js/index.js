@@ -171,13 +171,11 @@ let LOTTO = {
                 alert('작업중입니다. 12월 오픈 예정');
                 break;
             case 'C' :
-                alert('작업중입니다. 12월 오픈 예정');
-                break;
-                // _this.fn_set_modal_title('calculatorTitle', '실수령액 계산기');
-                // _this.fn_modal_page_init(page);
-                // _this.fn_calculator_init();
-                // _this.fn_display_show('calculatorSection-modal');
-                // break;
+                 _this.fn_set_modal_title('calculatorTitle', '실수령액 계산기');
+                 _this.fn_modal_page_init(page);
+                 _this.fn_calculator_init();
+                 _this.fn_display_show('calculatorSection-modal');
+                 break;
         }
     },
     //모달 타이틀 설정
@@ -716,6 +714,7 @@ let LOTTO = {
             storeDiv.appendChild(storeSubDiv);
         }
     }
+    //로또 수령금 초기화
     , fn_calculator_init : function() {
         document.getElementById('calculator').style.display = 'inline-block';
         document.getElementById('calculator').value = '';
@@ -751,23 +750,19 @@ let LOTTO = {
             table.classList.add('calculator-table');
 
             let tax = 0;
-            let money2 = money;
+            let salary = Number(money.replace(/,/g, ''));
 
-            if(money2 > 300000000) {
-                money2 = money2 - 30000000;
+            let receivedAmount = 0;
 
-                if(Number(money) > 200 && Number(money) <= 300000000) {
-                    tax = (Number(money) - 1000) * 0.22
-                } else if ( Number(money2) > 300000000) {
-                    tax = (Number(money2) - 1000) * 0.33
-                }
+            if (salary <= 2000000){
+                tax = 0;
+            }else if (salary <= 300000000) {
+                tax = (salary-1000) * 0.22;
             } else {
-                if(Number(money) > 200 && Number(money) <= 300000000) {
-                    tax = (Number(money) - 1000) * 0.22
-                }
+                tax = (300000000*0.22)+((salary-300000000-1000) * 0.33);
             }
 
-            let receivedAmount = Number(money) - Number(tax);
+            receivedAmount = Number(salary) - Number(tax);
 
             for (let i = 0; i < 3; i++) {
 
@@ -778,15 +773,17 @@ let LOTTO = {
                     if(i === 0 && j === 0) {
                         cell.textContent = '당첨금';
                     } else if(i === 0 && j == 1) {
-                        cell.textContent = Number(money).toLocaleString('ko-KR') + '원'
+                        cell.textContent = Number(money.replace(/,/g, '')).toLocaleString('ko-KR') + '원'
                     } else if(i === 1 && j === 0) {
                         cell.textContent = '세금';
                     } else if(i === 1 && i === 1) {
                         cell.textContent = tax.toLocaleString('ko-KR') + '원';
                     } else if(i === 2 && j === 0) {
-                        cell.textContent = '실수령액';
+                        cell.textContent = '예상 실수령액';
+                        cell.classList.add('total-amount');
                     } else if(i === 2  && j === 1 ) {
                         cell.textContent = receivedAmount.toLocaleString('ko-KR') + '원';
+                        cell.classList.add('total-amount');
                     }
                     cell.classList.add('table-cell');
                 }
@@ -796,6 +793,18 @@ let LOTTO = {
         }
 
         console.log(money);
+    }
+    //로또 수령금 숫자만 입력 및 천단위로 콤마 찍기
+    ,fn_formatNumber : function(input) {
+
+        input.value = input.value.replace(/[^0-9]/g, '');
+
+        const inputValue = input.value.replace(/,/g, '');
+
+        if (!isNaN(Number(inputValue))) {
+            const formattedValue = Number(inputValue).toLocaleString();
+            input.value = formattedValue;
+        }
     }
 }
 

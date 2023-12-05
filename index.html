@@ -207,7 +207,7 @@
                 <div class="container px-lg-5 mg-t20">
                     <div class="row gx-lg-5">
                         <div class="mg-t10 w-100 lotto-calculator" id="lotto-calculator">
-                            <input type="number" class="calculator" id="calculator" placeholder="당첨금액을 입력하세요." maxlength="11" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
+                            <input type="text" class="calculator" id="calculator" placeholder="당첨금액을 입력하세요." maxlength="14" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); LOTTO.fn_formatNumber(this);"/>
                         </div>
                         <div class="bottom-btn">
                             <button class="btn bottom-btn-gray" onclick="LOTTO.fn_modal_close('calculatorSection-modal')">닫기</button>
