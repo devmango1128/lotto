@@ -171,11 +171,13 @@ let LOTTO = {
                 alert('작업중입니다. 12월 오픈 예정');
                 break;
             case 'C' :
-                _this.fn_set_modal_title('calculatorTitle', '실수령액 계산기');
-                _this.fn_modal_page_init(page);
-                _this.fn_calculator_init();
-                _this.fn_display_show('calculatorSection-modal');
+                alert('작업중입니다. 12월 오픈 예정');
                 break;
+                // _this.fn_set_modal_title('calculatorTitle', '실수령액 계산기');
+                // _this.fn_modal_page_init(page);
+                // _this.fn_calculator_init();
+                // _this.fn_display_show('calculatorSection-modal');
+                // break;
         }
     },
     //모달 타이틀 설정
