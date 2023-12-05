@@ -754,14 +754,14 @@ let LOTTO = {
             if(money2 > 300000000) {
                 money2 = money2 - 30000000;
 
-                if(Number(money2) > 200 && Number(money2) <= 300000000) {
-                    tax = (Number(money2) - 1000) * 0.22
+                if(Number(money) > 200 && Number(money) <= 300000000) {
+                    tax = (Number(money) - 1000) * 0.22
                 } else if ( Number(money2) > 300000000) {
                     tax = (Number(money2) - 1000) * 0.33
                 }
             } else {
-                if(Number(money2) > 200 && Number(money2) <= 300000000) {
-                    tax = (Number(money2) - 1000) * 0.22
+                if(Number(money) > 200 && Number(money) <= 300000000) {
+                    tax = (Number(money) - 1000) * 0.22
                 }
             }
 
