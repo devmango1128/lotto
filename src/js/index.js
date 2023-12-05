@@ -749,11 +749,20 @@ let LOTTO = {
             table.classList.add('calculator-table');
 
             let tax = 0;
+            let money2 = money;
 
-            if(Number(money) > 200 && Number(money) <= 300000000) {
-                tax = (Number(money) - 1000) * 0.22
-            } else if ( Number(money) > 300000000) {
-                tax = (Number(money) - 1000) * 0.33
+            if(money2 > 300000000) {
+                money2 = money2 - 30000000;
+
+                if(Number(money2) > 200 && Number(money2) <= 300000000) {
+                    tax = (Number(money2) - 1000) * 0.22
+                } else if ( Number(money2) > 300000000) {
+                    tax = (Number(money2) - 1000) * 0.33
+                }
+            } else {
+                if(Number(money2) > 200 && Number(money2) <= 300000000) {
+                    tax = (Number(money2) - 1000) * 0.22
+                }
             }
 
             let receivedAmount = Number(money) - Number(tax);
