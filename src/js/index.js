@@ -719,9 +719,9 @@ let LOTTO = {
         document.getElementById('calculator').value = '';
         document.getElementById('calculator-btn').style.display = 'inline-block';
 
-        const elementsToDelete = document.querySelectorAll('.calculator-btn');
+        const elementsToDelete = document.getElementsByClassName('calculator-table');
 
-        elementsToDelete.forEach(function(element) {
+        Array.from(elementsToDelete).forEach(function(element) {
             element.remove();
         });
     }
@@ -756,7 +756,7 @@ let LOTTO = {
                 tax = (Number(money) - 1000) * 0.33
             }
 
-            let receivedAmount = money - tax;
+            let receivedAmount = Number(money) - Number(tax);
 
             for (let i = 0; i < 3; i++) {
 
