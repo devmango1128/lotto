@@ -719,7 +719,7 @@ let LOTTO = {
         document.getElementById('calculator').value = '';
         document.getElementById('calculator-btn').style.display = 'inline-block';
         if(document.getElementById('calculator-table') !== null) {
-            document.getElementById('calculator-table').style.display = 'none';
+            document.getElementById('calculator-table').innerHTML = '';
         }
     }
     //로또 수령금 계산하기
