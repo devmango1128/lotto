@@ -167,8 +167,14 @@ let LOTTO = {
                 _this.fn_get_store_data();
                 _this.fn_display_show('storeSection-modal');
                 break;
-            case 'C' :
+            case 'D' :
                 alert('작업중입니다. 12월 오픈 예정');
+                break;
+            case 'C' :
+                _this.fn_set_modal_title('calculatorTitle', '실수령액 계산기');
+                _this.fn_modal_page_init(page);
+                _this.fn_calculator_init();
+                _this.fn_display_show('calculatorSection-modal');
                 break;
         }
     },
@@ -707,6 +713,75 @@ let LOTTO = {
             storeSubDiv.textContent = '등록된 데이터가 없습니다.';
             storeDiv.appendChild(storeSubDiv);
         }
+    }
+    , fn_calculator_init : function() {
+        document.getElementById('calculator').style.display = 'inline-block';
+        document.getElementById('calculator').value = '';
+        document.getElementById('calculator-btn').style.display = 'inline-block';
+        if(document.getElementById('calculator-table') !== null) {
+            document.getElementById('calculator-table').style.display = 'none';
+        }
+    }
+    //로또 수령금 계산하기
+    , fn_calculator : function() {
+
+        const _this = this;
+        const money = document.getElementById('calculator').value;
+
+        if(money === '') {
+
+            alert('당첨금액을 입력하세요.');
+            document.getElementById('calculator').focus();
+            return;
+        } else {
+
+            _this.fn_set_modal_title('calculatorTitle', '실수령액 확인');
+            document.getElementById('calculator').style.display = 'none';
+            document.getElementById('calculator-btn').style.display = 'none';
+
+            let container = document.getElementById('lotto-calculator');
+
+            // 테이블 요소를 생성
+            let table = document.createElement('table');
+            table.id = 'calculator-table';
+
+            let tax = 0;
+
+            if(money > 200 && money <= 300000000) {
+                tax = (money - 1000) * 0.22
+            } else if ( money > 300000000) {
+                tax = (money - 1000) * 0.33
+            }
+
+            let receivedAmount = money - tax;
+
+            for (let i = 0; i < 3; i++) {
+
+                let row = table.insertRow();
+
+                for (let j = 0; j < 2; j++) {
+                    let cell = row.insertCell();
+                    if(i === 0 && j === 0) {
+                        cell.textContent = '당첨금';
+                    } else if(i === 0 && j == 1) {
+                        cell.textContent = Number(money).toLocaleString('ko-KR') + '원'
+                    } else if(i === 1 && j === 0) {
+                        cell.textContent = '세금';
+                    } else if(i === 1 && i === 1) {
+                        cell.textContent = tax.toLocaleString('ko-KR') + '원';
+                    } else if(i === 2 && j === 0) {
+                        cell.textContent = '실수령액';
+                    } else if(i === 2  && j === 1 ) {
+                        cell.textContent = receivedAmount.toLocaleString('ko-KR') + '원';
+                    }
+                    cell.classList.add('table-cell');
+                }
+            }
+
+            container.appendChild(table);
+        }
+
+        console.log(money);
     }
 }
 

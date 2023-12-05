@@ -4938,6 +4938,58 @@ div.store-lotto-search button.turn-btn-blue {
   width:80px;
 }
 
+.lotto-calculator {
+  display: inline-block;
+  text-align: center;
+}
+
+.lotto-calculator table{
+  border: 1px solid #ececec;
+  width: 100%;
+}
+
+.lotto-calculator table tr{
+  border: 1px solid #ececec;
+}
+
+.lotto-calculator table td{
+  border: 1px solid #ececec;
+  padding: 10px 5px;
+}
+
+.lotto-calculator input.calculator {
+  line-height: 30px;
+  height: 50px;
+  width: 290px;
+}
+
+div.bottom-btn {
+  display: inline-block;
+  margin-top: 300px;
+}
+
+div.bottom-btn button.bottom-btn-gray {
+  border: 1px solid #adadad;
+  background-color: #adadad;
+  color: #ffffff;
+  height: 40px;
+  line-height: 15px;
+  display: inline-block;
+  margin-top: -1px;
+  width:140px;
+}
+
+div.bottom-btn button.bottom-btn-blue {
+  border: 1px solid #0d6efd;
+  background-color: #0d6efd;
+  color: #ffffff;
+  height: 40px;
+  line-height: 15px;
+  display: inline-block;
+  margin-top: -1px;
+  width:140px;
+}
+
 div.store-lotto-search select.turn-list-select {
   width:180px;
   height:30px;

@@ -99,27 +99,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-xxl-4 mb-2 cur-p" onclick="LOTTO.fn_modal_page('C')">
+                        <div class="col-lg-3 col-xxl-4 mb-2 cur-p" onclick="LOTTO.fn_modal_page('D')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-start p-2 p-lg-5 pt-lg-0">
-                                    <!--<div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
-                                        <i class="fa-solid c"></i>
-                                    </div>-->
                                     <div class="feature bg-primary bg-gradient text-white rounded-3"><i class="fa-regular fa-compass"></i></div>
                                     <h2 class="fs-4 fw-bold col-dark figure ver_middle">정통사주 복권 추천일</h2>
-                                    <!--<p class="mb-0">1등 판매점 정보를 보여줘요.</p>-->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-xxl-4 cur-p mg-b150" onclick="LOTTO.fn_modal_page('C')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-start p-2 p-lg-5 pt-lg-0">
-                                    <!--<div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4">
-                                        <i class="fa-solid c"></i>
-                                    </div>-->
                                     <div class="feature bg-primary bg-gradient text-white rounded-3"><i class="fa-solid fa-calculator"></i></div>
                                     <h2 class="fs-4 fw-bold col-dark figure ver_middle">로또 실수령액 계산기</h2>
-                                    <!--<p class="mb-0">1등 판매점 정보를 보여줘요.</p>-->
                                 </div>
                             </div>
                         </div>
@@ -203,6 +195,25 @@
                             <button class="btn turn-btn-blue" onclick="LOTTO.fn_modal_page_init('S'); LOTTO.fn_create_store_list()">조회</button>
                         </div>
                         <div id="storeList" class="mg-t10 store-lotto-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--로또 실수령액 계산 model-->
+        <div id="calculatorSection-modal" class="modal">
+            <div id="calculatorSection" class="modal-content mg-b100 modal-max-height">
+                <span id="calculatorTitle" class="title">로또 실수령액 계산기</span>
+                <span class="close" onclick="LOTTO.fn_modal_close('calculatorSection-modal')">&times;</span>
+                <div class="container px-lg-5 mg-t20">
+                    <div class="row gx-lg-5">
+                        <div class="mg-t10 w-100 lotto-calculator" id="lotto-calculator">
+                            <input type="number" class="calculator" id="calculator" placeholder="당첨금액을 입력하세요." maxlength="11" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
+                        </div>
+                        <div class="bottom-btn">
+                            <button class="btn bottom-btn-gray" onclick="LOTTO.fn_modal_close('calculatorSection-modal')">닫기</button>
+                            <button id="calculator-btn" class="btn bottom-btn-blue" onclick="LOTTO.fn_modal_page_init('C'); LOTTO.fn_calculator()">계산하기</button>
+                        </div>
+                        <div id="calculatorList" class="mg-t10 store-lotto-list"></div>
                     </div>
                 </div>
             </div>
