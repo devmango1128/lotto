@@ -777,12 +777,13 @@ let LOTTO = {
                     } else if(i === 1 && j === 0) {
                         cell.textContent = '세금';
                     } else if(i === 1 && i === 1) {
-                        cell.textContent = tax.toLocaleString('ko-KR') + '원';
+                        cell.textContent = Math.floor(tax).toLocaleString('ko-KR') + '원';
                     } else if(i === 2 && j === 0) {
                         cell.textContent = '예상 실수령액';
                         cell.classList.add('total-amount');
                     } else if(i === 2  && j === 1 ) {
-                        cell.textContent = receivedAmount.toLocaleString('ko-KR') + '원';
+                        //cell.textContent = receivedAmount.toLocaleString('ko-KR') + '원';
+                        cell.textContent = Math.floor(receivedAmount).toLocaleString('ko-KR') + '원';
                         cell.classList.add('total-amount');
                     }
                     cell.classList.add('table-cell');
