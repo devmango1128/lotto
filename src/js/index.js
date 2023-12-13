@@ -168,7 +168,7 @@ let LOTTO = {
                 _this.fn_display_show('storeSection-modal');
                 break;
             case 'D' :
-                alert('작업중입니다. 12월 오픈 예정');
+                alert('작업중입니다.');
                 break;
             case 'C' :
                  _this.fn_set_modal_title('calculatorTitle', '실수령액 계산기');
