@@ -24,8 +24,7 @@ let LOTTO = {
                 const response = JSON.parse(xhr.responseText);
 
                 _this.perpData = response;
-                console.log('perpData 로딩완료!!!!');
-                alert('perpData 로딩 완료...');
+                console.log('perpData 로딩완료....');
 
             } else {
                 console.error('Error:', xhr.status);
