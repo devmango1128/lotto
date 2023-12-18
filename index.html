@@ -99,7 +99,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-xxl-4 mb-2 cur-p" onclick="LOTTO.fn_modal_page('D')">
+                        <div class="col-lg-3 col-xxl-4 mb-2 cur-p" onclick="LOTTO.fn_modal_page('F')">
                             <div class="card bg-light border-0 h-100">
                                 <div class="card-body text-start p-2 p-lg-5 pt-lg-0">
                                     <div class="feature bg-primary bg-gradient text-white rounded-3"><i class="fa-regular fa-compass"></i></div>
@@ -195,6 +195,56 @@
                             <button class="btn turn-btn-blue" onclick="LOTTO.fn_modal_page_init('S'); LOTTO.fn_create_store_list()">조회</button>
                         </div>
                         <div id="storeList" class="mg-t10 store-lotto-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 정통사주 복권 추천일 modal -->
+        <div id="fiveSection-modal" class="modal">
+            <div id="fiveSection" class="modal-content mg-b100 modal-max-height">
+                <span id="fiveTitle" class="title">정통사주 복권 추천일</span>
+                <span class="close" onclick="LOTTO.fn_modal_close('fiveSection-modal')">&times;</span>
+                <div class="container px-lg-5 mg-t20">
+                    <div class="row gx-lg-5">
+                        <div class="mg-t10 w-100 five-lotto-search" id="five-lotto-search">
+                            <input type="number" id="birth" class="birth" placeholder="양력생일을 8자리로 입력하세요.ex)20020101" maxlength="8" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
+                            <br />
+                            <br />
+                            <!--출생시간-->
+                            <select name="birthTime" id="birth-time" class="birth-time">
+                                <option value="">출생시간을 선택하세요.</option>
+                                <option value="0">자시&nbsp;&nbsp;23:30 ~ 01:30</option>
+                                <option value="1">축시&nbsp;&nbsp;01:30 ~ 03:30</option>
+                                <option value="2">인시&nbsp;&nbsp;03:30 ~ 05:30</option>
+                                <option value="3">묘시&nbsp;&nbsp;05:30 ~ 07:30</option>
+                                <option value="4">진시&nbsp;&nbsp;07:30 ~ 09:30</option>
+                                <option value="5">사시&nbsp;&nbsp;09:30 ~ 11:30</option>
+                                <option value="6">오시&nbsp;&nbsp;11:30 ~ 13:30</option>
+                                <option value="7">미시&nbsp;&nbsp;13:30 ~ 15:30</option>
+                                <option value="8">술시&nbsp;&nbsp;15:30 ~ 17:30</option>
+                                <option value="9">유시&nbsp;&nbsp;17:30 ~ 19:30</option>
+                                <option value="10">술시&nbsp;&nbsp;19:30 ~ 21:30</option>
+                                <option value="11">해시&nbsp;&nbsp;21:30 ~ 23:30</option>
+                                <option value="12">모름</option>
+                            </select>
+                            <br />
+                            <!--성별-->
+                            <select name="sex" id="sex" class="sex">
+                                <option value="">성별을 선택하세요.</option>
+                                <option value="0">남자</option>
+                                <option value="1">여자</option>
+                            </select>
+                            <br/>
+                            <div class="bottom-btn">
+                                <button class="btn bottom-btn-gray" onclick="LOTTO.fn_modal_close('fiveSection-modal')">닫기</button>
+                                <button id="five-btn" class="btn bottom-btn-blue" onclick="LOTTO.fn_modal_page_init('F'); LOTTO.fn_five_day_view()">추천일 보기</button>
+                            </div>
+                        </div>
+                        <div class="mg-t10 w-100 five-lotto-result" id="five-lotto-result">
+                            <div id="loadingSpinner" class="loader"></div>
+                            <div class="loading-msg-1" id="loading-msg-1">잠시만 기다려주세요. <br /><span class="point">개인정보 저장 없이</span><br/> 사주를 분석하고 있어요.</div>
+                            <div class="loading-msg-2" id="loading-msg-2">잠시만 기다려주세요. <br /> 정통사주 만세력으로<br/> 복권 추천일을 확인하고 있어요.</div>
+                        </div>
                     </div>
                 </div>
             </div>

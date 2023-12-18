@@ -4968,6 +4968,70 @@ div.store-lotto-search button.turn-btn-blue {
   width: 290px;
 }
 
+.five-lotto-search input.birth {
+  line-height: 30px;
+  height: 50px;
+  width: 310px;
+}
+
+.five-lotto-search select.birth-time, select.sex {
+  line-height: 30px;
+  height: 50px;
+  width: 310px;
+  margin-top: 5px;
+}
+
+.five-lotto-result {
+  display: none;
+}
+
+.five-lotto-result .loading-msg-1 {
+  display: none;
+}
+
+.five-lotto-result .loading-msg-1 span.point {
+  color:#0d6efd;
+  font-weight: bold;
+}
+
+.five-lotto-result .loading-msg-2 {
+  display: none;
+}
+
+.five-result-msg {
+  text-align: left;
+}
+
+table.five-table{
+  border: 1px solid #ececec;
+  width: 100%;
+}
+
+.five-table tr{
+  border: 1px solid #ececec;
+}
+
+.five-table td{
+  border: 1px solid #ececec;
+  padding: 10px 5px;
+}
+
+/* 로딩 바 스타일 */
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #0d6efd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 div.bottom-btn {
   display: inline-block;
   margin-top: 170px;

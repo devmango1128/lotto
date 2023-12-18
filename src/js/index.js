@@ -5,13 +5,41 @@ let LOTTO = {
     fixedList : [], //반자동 선택 수
     isNumberCreate : false, //번호 생성 여부
     storeData : null,   //판매점데이터
+    perpData : null,    //오행 데이터
     //시작
     init : function() {
+        this.fn_five_day_result_data();
         this.fn_lotto_turn_change();
         this.fn_create_fixed_number_ball();
     },
+    fn_five_day_result_data : function() {
+        let _this = this;
+
+        const url = '/lotto/perpCal.json?date=' + new Date();
+        const xhr = new XMLHttpRequest();
+
+        xhr.open('GET', url, true);
+        xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 400) {
+                const response = JSON.parse(xhr.responseText);
+
+                _this.perpData = response;
+                console.log('perpData 로딩완료!!!!');
+                alert('perpData 로딩 완료...');
+
+            } else {
+                console.error('Error:', xhr.status);
+            }
+        };
+
+        xhr.onerror = function() {
+            console.error('Request failed');
+        };
+
+        xhr.send();
+    }
     //로또 회차별 데이터 조회
-    fn_lotto_turn_change : function() {
+    , fn_lotto_turn_change : function() {
         let _this = this;
 
         const url = '/lotto/turnHistory.json?date=' + new Date();
@@ -167,13 +195,17 @@ let LOTTO = {
                 _this.fn_get_store_data();
                 _this.fn_display_show('storeSection-modal');
                 break;
-            case 'D' :
+            case 'F' :
                 alert('작업중입니다.');
+                _this.fn_set_modal_title('fiveTitle', '정통사주 복권 추천일');
+                _this.fn_modal_page_init(page);
+                _this.fn_five_init();
+                _this.fn_display_show('fiveSection-modal');
                 break;
             case 'C' :
                  _this.fn_set_modal_title('calculatorTitle', '실수령액 계산기');
                  _this.fn_modal_page_init(page);
-                 _this.fn_calculator_init();
+                _this.fn_calculator_init();
                  _this.fn_display_show('calculatorSection-modal');
                  break;
         }
@@ -205,6 +237,8 @@ let LOTTO = {
             case 'S' :
                 document.getElementById('storeList').innerHTML = '';
                 break;
+            case 'C' : break;
+            case 'F' : break;
         }
     },
     //모달 페이지 보이기
@@ -792,8 +826,6 @@ let LOTTO = {
 
             container.appendChild(table);
         }
-
-        console.log(money);
     }
     //로또 수령금 숫자만 입력 및 천단위로 콤마 찍기
     ,fn_formatNumber : function(input) {
@@ -806,6 +838,155 @@ let LOTTO = {
             const formattedValue = Number(inputValue).toLocaleString();
             input.value = formattedValue;
         }
+    }
+    //정통사주 복권 추천일 초기화
+    ,fn_five_init : function() {
+        document.getElementById('birth').value = '';
+        document.getElementById('birth-time').value = '';
+        document.getElementById('sex').value = '';
+    }
+    //오행보기
+    ,fn_five_day_view : function() {
+
+        const birth = document.getElementById('birth').value;
+
+        if(birth === '') {
+
+            alert('생년월일을 입력하세요.');
+            document.getElementById('birth').focus();
+            return;
+        }
+
+        const birthTime = document.getElementById('birth-time').value;
+
+        if(birthTime === '') {
+
+            alert('출생시간을 선택하세요.');
+            document.getElementById('birth-time').focus();
+            return;
+        }
+
+        const sex = document.getElementById('sex').value;
+
+        if(sex === '') {
+
+            alert('성별을 선택하세요.');
+            document.getElementById('sex').focus();
+            return;
+        }
+
+        this.fn_five_day_result_view_init();
+    }
+    //modal 화면 다시 그리기
+    ,fn_five_day_result_view_init : function() {
+
+        const _this = this;
+        const loadingSpinner = document.getElementById("loadingSpinner");
+
+        // 로딩 바를 표시
+        loadingSpinner.style.display = 'block';
+
+        document.getElementById('five-lotto-search').style.display = 'none';
+        document.getElementById('five-lotto-result').style.display = 'inline-block';
+        document.getElementById('loading-msg-1').style.display = 'inline-block';
+
+        setTimeout(function() {
+            document.getElementById('loading-msg-1').style.display = 'none';
+            document.getElementById('loading-msg-2').style.display = 'inline-block';
+
+            setTimeout(function() {
+                document.getElementById('loading-msg-2').style.display = 'none';
+                loadingSpinner.style.display = 'none';
+                _this.fn_five_day_result_view();
+            }, 5000);
+        }, 5000);
+    }
+    //결과 보여주기
+    ,fn_five_day_result_view : function() {
+
+        const _this = this;
+
+        _this.fn_set_modal_title('fiveTitle', '정통사주 추천일 확인결과');
+
+        let container = document.getElementById('five-lotto-result');
+
+        //오늘 날짜
+        const today = _this.fn_get_today();
+
+        console.log(_this.perpData);
+
+        setTimeout(function() {
+
+            let msgDiv = document.createElement('div');
+            msgDiv.classList.add('five-result-msg');
+            msgDiv.innerText = '회원님의\n' + today + ' 기준\n 5일간의 추천일입니다.'
+            container.appendChild(msgDiv);
+
+            // 테이블 요소를 생성
+            let table = document.createElement('table');
+            table.classList.add('five-table');
+
+            // 현재 날짜 가져오기
+            let tbToday = new Date();
+
+            // 5일치 날짜를 저장할 배열 생성
+            let dateArray = [];
+
+            for (let i = 0; i < 5; i++) {
+
+                let row = table.insertRow();
+
+                let currentDate = new Date(tbToday);
+                currentDate.setDate(tbToday.getDate() + i);
+                dateArray.push(currentDate.toISOString().split('T')[0]);
+
+                for (let j = 0; j < 2; j++) {
+                    let cell = row.insertCell();
+                    if(i === 0 && j === 0) {
+                        cell.textContent = dateArray[0];
+                    } else if(i === 0 && j == 1) {
+
+                    } else if(i === 1 && j === 0) {
+                        cell.textContent = dateArray[1];
+                    } else if(i === 1 && i === 1) {
+
+                    } else if(i === 2 && j === 0) {
+                        cell.textContent = dateArray[2];
+                    } else if(i === 2  && j === 1 ) {
+
+                    } else if(i === 3  && j === 0 ) {
+                        cell.textContent = dateArray[3];
+                    } else if(i === 3  && j === 1 ) {
+
+                    } else if(i === 4  && j === 0 ) {
+                        cell.textContent = dateArray[4];
+                    } else if(i === 4  && j === 1 ) {
+
+                    }
+
+                    cell.classList.add('table-cell');
+                }
+            }
+
+            container.appendChild(table);
+        }, 100);
+    }
+    , fn_get_today : function() {
+        // 현재 날짜 객체 생성
+        let today = new Date();
+
+        // 년, 월, 일 정보 가져오기
+        let year = today.getFullYear();
+        let month = today.getMonth() + 1; // 월은 0부터 시작하므로 1을 더해줌
+        let day = today.getDate();
+
+        // 날짜를 원하는 형식으로 표시
+        let formattedDate = year + '년 ' + (month < 10 ? '0' + month : month) + '월 ' + (day < 10 ? '0' + day : day) + '일';
+
+        // 결과 출력
+        console.log("오늘 날짜: " + formattedDate);
+
+        return formattedDate;
     }
 }
 
