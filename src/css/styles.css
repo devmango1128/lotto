@@ -5002,6 +5002,12 @@ div.store-lotto-search button.turn-btn-blue {
   text-align: left;
 }
 
+.five-result-today-msg {
+  text-align: left;
+  font-weight: bold;
+  color: #0d6efd;
+}
+
 table.five-table{
   border: 1px solid #ececec;
   width: 100%;

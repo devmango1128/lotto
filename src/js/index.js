@@ -6,6 +6,9 @@ let LOTTO = {
     isNumberCreate : false, //번호 생성 여부
     storeData : null,   //판매점데이터
     perpData : null,    //오행 데이터
+    inputBirth : "",    //오행 생일
+    fiveResult : null, //오행 결과
+    fiveResultIdx : -1,
     //시작
     init : function() {
         this.fn_five_day_result_data();
@@ -36,6 +39,28 @@ let LOTTO = {
         };
 
         xhr.send();
+
+        const url2 = '/lotto/fiveResult.json?date=' + new Date();
+        const xhr2 = new XMLHttpRequest();
+
+        xhr2.open('GET', url2, true);
+        xhr2.onload = function() {
+            if (xhr2.status >= 200 && xhr2.status < 400) {
+
+                const response = JSON.parse(xhr2.responseText);
+
+                _this.fiveResult = response;
+                console.log('fiveResult 로딩완료....');
+            } else {
+                console.error('Error:', xhr2.status);
+            }
+        };
+
+        xhr2.onerror = function() {
+            console.error('Request failed');
+        };
+
+        xhr2.send();
     }
     //로또 회차별 데이터 조회
     , fn_lotto_turn_change : function() {
@@ -874,6 +899,7 @@ let LOTTO = {
             return;
         }
 
+        this.inputBirth = birth;
         this.fn_five_day_result_view_init();
     }
     //modal 화면 다시 그리기
@@ -912,61 +938,73 @@ let LOTTO = {
         //오늘 날짜
         const today = _this.fn_get_today();
 
-        console.log(_this.perpData);
+        //테이블에서 사용 할 현재 날짜 가져오기
+        let tbToday = new Date();
+
+        // 5일치 날짜를 저장할 배열 생성
+        let dateArray = [];
+
+        //오행 데이터 들고오기
+        _this.fn_get_five_day_result_data();
 
         setTimeout(function() {
 
             let msgDiv = document.createElement('div');
             msgDiv.classList.add('five-result-msg');
-            msgDiv.innerText = '회원님의\n' + today + ' 기준\n 5일간의 추천일입니다.'
+
+            let msgSpan = document.createElement('span');
+            msgSpan.classList.add('five-result-today-msg');
+            msgSpan.innerHTML = today;
+
+            msgDiv.innerHTML = '<br/> 회원님의 <br/>';
+            msgDiv.appendChild(msgSpan); // msgSpan을 msgDiv에 추가
+            msgDiv.innerHTML += '기준 <br/> 5일간의 추천일입니다.'; // HTML 형식의 줄바꿈 추가
             container.appendChild(msgDiv);
 
             // 테이블 요소를 생성
             let table = document.createElement('table');
             table.classList.add('five-table');
 
-            // 현재 날짜 가져오기
-            let tbToday = new Date();
-
-            // 5일치 날짜를 저장할 배열 생성
-            let dateArray = [];
-
             for (let i = 0; i < 5; i++) {
 
                 let row = table.insertRow();
+                // UTC 날짜로 변환하여 사용
+                let currentDate = new Date(tbToday.getTime() + i * 24 * 60 * 60 * 1000);
+                // 월과 일을 가져와서 2자리 숫자로 만들기
+                let mm = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+                let dd = currentDate.getDate().toString().padStart(2, '0');
 
-                let currentDate = new Date(tbToday);
-                currentDate.setDate(tbToday.getDate() + i);
-                dateArray.push(currentDate.toISOString().split('T')[0]);
+                // mm-dd 형식으로 조합
+                let formattedDate = `${mm}-${dd}`;
+
+                dateArray.push(formattedDate);
 
                 for (let j = 0; j < 2; j++) {
                     let cell = row.insertCell();
                     if(i === 0 && j === 0) {
                         cell.textContent = dateArray[0];
                     } else if(i === 0 && j == 1) {
-
+                        cell.textContent = _this.fiveResult[_this.fiveResultIdx].Result;
                     } else if(i === 1 && j === 0) {
                         cell.textContent = dateArray[1];
                     } else if(i === 1 && i === 1) {
-
+                        cell.textContent = _this.fiveResult[_this.fiveResultIdx + 1].Result;
                     } else if(i === 2 && j === 0) {
                         cell.textContent = dateArray[2];
                     } else if(i === 2  && j === 1 ) {
-
+                        cell.textContent = _this.fiveResult[_this.fiveResultIdx + 2].Result;
                     } else if(i === 3  && j === 0 ) {
                         cell.textContent = dateArray[3];
                     } else if(i === 3  && j === 1 ) {
-
+                        cell.textContent = _this.fiveResult[_this.fiveResultIdx + 3].Result;
                     } else if(i === 4  && j === 0 ) {
                         cell.textContent = dateArray[4];
                     } else if(i === 4  && j === 1 ) {
-
+                        cell.textContent = _this.fiveResult[_this.fiveResultIdx + 4].Result;
                     }
-
                     cell.classList.add('table-cell');
                 }
             }
-
             container.appendChild(table);
         }, 100);
     }
@@ -982,10 +1020,45 @@ let LOTTO = {
         // 날짜를 원하는 형식으로 표시
         let formattedDate = year + '년 ' + (month < 10 ? '0' + month : month) + '월 ' + (day < 10 ? '0' + day : day) + '일';
 
-        // 결과 출력
-        console.log("오늘 날짜: " + formattedDate);
-
         return formattedDate;
+    }
+    //오행 데이터 찾아오기
+    ,fn_get_five_day_result_data : function() {
+
+        const _this = this;
+
+        const birth = this.inputBirth;
+        const perp = this.perpData;
+        let fiveElem = '';
+
+        let yyyy = Number(birth.slice(0, 4));
+        let mm = Number(birth.slice(4, 6));
+        let dd = Number(birth.slice(6, 8));
+
+        for(let i = 0; i < perp.length; i++) {
+            if(perp[i].year === yyyy && perp[i].month === mm && perp[i].day === dd) {
+                fiveElem = perp[i].fiveElem;
+                break;
+            }
+        }
+
+        // 현재 날짜 객체 생성
+        let today = new Date();
+
+        // getDay() 메서드를 사용하여 요일(0~6) 가져오기
+        let dayOfWeek = today.getDay();
+
+        // 요일을 문자열로 변환
+        let days = ["일", "월", "화", "수", "목", "금", "토"];
+        let todayStr= days[dayOfWeek];
+
+        for(let i = 0; i < _this.fiveResult.length; i++) {
+
+            if(_this.fiveResult[i].Birth == fiveElem && _this.fiveResult[i].Today === todayStr ) {
+                _this.fiveResultIdx = i;
+                break;
+            }
+        }
     }
 }
 
