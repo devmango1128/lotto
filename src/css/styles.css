@@ -5054,6 +5054,17 @@ div.bottom-btn button.bottom-btn-gray {
   width:140px;
 }
 
+div.five-lotto-result button.bottom-btn-gray {
+  border: 1px solid #adadad;
+  background-color: #adadad;
+  color: #ffffff;
+  height: 40px;
+  line-height: 15px;
+  display: inline-block;
+  margin-top: -1px;
+  width:140px;
+}
+
 div.bottom-btn button.bottom-btn-blue {
   border: 1px solid #0d6efd;
   background-color: #0d6efd;

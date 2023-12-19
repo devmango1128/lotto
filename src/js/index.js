@@ -882,6 +882,18 @@ let LOTTO = {
         Array.from(elementsToDelete).forEach(function(element) {
             element.remove();
         });
+
+        const closeBtn = document.getElementsByClassName('result-close-btn');
+
+        Array.from(closeBtn).forEach(function(element) {
+            element.remove();
+        });
+
+        const list = document.getElementsByClassName('list');
+
+        Array.from(list).forEach(function(element) {
+            element.remove();
+        });
     }
     //오행보기
     ,fn_five_day_view : function() {
@@ -915,7 +927,7 @@ let LOTTO = {
         }
         if (!_this.fn_isValid_date(birth)) {
 
-            alert(`${birth}은(는) 올바른 yyyymmdd 형식이 아닙니다.`);
+            alert(`${birth}은(는) 올바른 생년월일 형식이 아닙니다.`);
             document.getElementById('birth').focus();
             document.getElementById('birth').innerText = '';
             return;
@@ -976,7 +988,7 @@ let LOTTO = {
         //오행 데이터 들고오기
         _this.fn_get_five_day_result_data();
 
-        if(_this.fiveResultIdx == -1) {
+        if(_this.fiveResultIdx === -1) {
             //데이터가 없는 경우
             let listDiv = document.createElement('div');
 
@@ -991,72 +1003,90 @@ let LOTTO = {
 
             let noDataDiv = document.createElement('div');
             noDataDiv.classList.add('mg-t10');
-            noDataDiv.textContent = '조호된 된 데이터가 없습니다.';
+            noDataDiv.textContent = '조회된 된 데이터가 없습니다.';
 
             listDiv.appendChild(noDataDiv);
             container.appendChild(listDiv);
-        }
+            container.appendChild(_this.fn_close_btn());
 
-        setTimeout(function() {
+        } else {
+            setTimeout(function() {
 
-            let msgDiv = document.createElement('div');
-            msgDiv.classList.add('five-result-msg');
+                let msgDiv = document.createElement('div');
+                msgDiv.classList.add('five-result-msg');
 
-            let msgSpan = document.createElement('span');
-            msgSpan.classList.add('five-result-today-msg');
-            msgSpan.innerHTML = today;
+                let msgSpan = document.createElement('span');
+                msgSpan.classList.add('five-result-today-msg');
+                msgSpan.innerHTML = today;
 
-            msgDiv.innerHTML = '<br/> 회원님의 <br/>';
-            msgDiv.appendChild(msgSpan); // msgSpan을 msgDiv에 추가
-            msgDiv.innerHTML += '기준 <br/> 5일간의 추천일입니다.'; // HTML 형식의 줄바꿈 추가
-            container.appendChild(msgDiv);
+                msgDiv.innerHTML = '<br/> 회원님의 <br/>';
+                msgDiv.appendChild(msgSpan); // msgSpan을 msgDiv에 추가
+                msgDiv.innerHTML += '기준 <br/> 5일간의 추천일입니다.'; // HTML 형식의 줄바꿈 추가
+                container.appendChild(msgDiv);
 
-            // 테이블 요소를 생성
-            let table = document.createElement('table');
-            table.classList.add('five-table');
+                // 테이블 요소를 생성
+                let table = document.createElement('table');
+                table.classList.add('five-table');
+                table.classList.add('mg-b10');
 
-            for (let i = 0; i < 5; i++) {
+                for (let i = 0; i < 5; i++) {
 
-                let row = table.insertRow();
-                // UTC 날짜로 변환하여 사용
-                let currentDate = new Date(tbToday.getTime() + i * 24 * 60 * 60 * 1000);
-                // 월과 일을 가져와서 2자리 숫자로 만들기
-                let mm = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-                let dd = currentDate.getDate().toString().padStart(2, '0');
+                    let row = table.insertRow();
+                    // UTC 날짜로 변환하여 사용
+                    let currentDate = new Date(tbToday.getTime() + i * 24 * 60 * 60 * 1000);
+                    // 월과 일을 가져와서 2자리 숫자로 만들기
+                    let mm = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+                    let dd = currentDate.getDate().toString().padStart(2, '0');
 
-                // mm-dd 형식으로 조합
-                let formattedDate = `${mm}월${dd}일`;
+                    // mm-dd 형식으로 조합
+                    let formattedDate = `${mm}월${dd}일`;
 
-                dateArray.push(formattedDate);
+                    dateArray.push(formattedDate);
 
-                for (let j = 0; j < 2; j++) {
-                    let cell = row.insertCell();
-                    if(i === 0 && j === 0) {
-                        cell.textContent = dateArray[0];
-                    } else if(i === 0 && j == 1) {
-                        cell.textContent = _this.fiveResult[_this.fiveResultIdx].Result;
-                    } else if(i === 1 && j === 0) {
-                        cell.textContent = dateArray[1];
-                    } else if(i === 1 && i === 1) {
-                        cell.textContent = _this.fiveResult[_this.fiveResultIdx + 1].Result;
-                    } else if(i === 2 && j === 0) {
-                        cell.textContent = dateArray[2];
-                    } else if(i === 2  && j === 1 ) {
-                        cell.textContent = _this.fiveResult[_this.fiveResultIdx + 2].Result;
-                    } else if(i === 3  && j === 0 ) {
-                        cell.textContent = dateArray[3];
-                    } else if(i === 3  && j === 1 ) {
-                        cell.textContent = _this.fiveResult[_this.fiveResultIdx + 3].Result;
-                    } else if(i === 4  && j === 0 ) {
-                        cell.textContent = dateArray[4];
-                    } else if(i === 4  && j === 1 ) {
-                        cell.textContent = _this.fiveResult[_this.fiveResultIdx + 4].Result;
+                    for (let j = 0; j < 2; j++) {
+                        let cell = row.insertCell();
+                        if(i === 0 && j === 0) {
+                            cell.textContent = dateArray[0];
+                        } else if(i === 0 && j == 1) {
+                            cell.textContent = _this.fiveResult[_this.fiveResultIdx].Result;
+                        } else if(i === 1 && j === 0) {
+                            cell.textContent = dateArray[1];
+                        } else if(i === 1 && i === 1) {
+                            cell.textContent = _this.fiveResult[_this.fiveResultIdx + 1].Result;
+                        } else if(i === 2 && j === 0) {
+                            cell.textContent = dateArray[2];
+                        } else if(i === 2  && j === 1 ) {
+                            cell.textContent = _this.fiveResult[_this.fiveResultIdx + 2].Result;
+                        } else if(i === 3  && j === 0 ) {
+                            cell.textContent = dateArray[3];
+                        } else if(i === 3  && j === 1 ) {
+                            cell.textContent = _this.fiveResult[_this.fiveResultIdx + 3].Result;
+                        } else if(i === 4  && j === 0 ) {
+                            cell.textContent = dateArray[4];
+                        } else if(i === 4  && j === 1 ) {
+                            cell.textContent = _this.fiveResult[_this.fiveResultIdx + 4].Result;
+                        }
+                        cell.classList.add('table-cell');
                     }
-                    cell.classList.add('table-cell');
                 }
-            }
-            container.appendChild(table);
-        }, 100);
+                container.appendChild(table);
+                container.appendChild(_this.fn_close_btn());
+
+            }, 100);
+        }
+    }
+    , fn_close_btn : function() {
+
+        let newButton = document.createElement('button');
+        newButton.className = 'btn bottom-btn-gray result-close-btn';
+        newButton.textContent = '닫기';
+
+        // 클릭 이벤트 핸들러 추가 (LOTTO.fn_modal_close 함수 호출)
+        newButton.addEventListener('click', function() {
+            LOTTO.fn_modal_close('fiveSection-modal');
+        });
+
+        return newButton;
     }
     , fn_get_today : function() {
         // 현재 날짜 객체 생성
