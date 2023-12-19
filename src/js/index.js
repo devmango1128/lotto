@@ -220,7 +220,6 @@ let LOTTO = {
                 _this.fn_display_show('storeSection-modal');
                 break;
             case 'F' :
-                alert('작업중입니다.');
                 _this.fn_set_modal_title('fiveTitle', '정통사주 복권 추천일');
                 _this.fn_modal_page_init(page);
                 _this.fn_five_init();
@@ -868,10 +867,26 @@ let LOTTO = {
         document.getElementById('birth').value = '';
         document.getElementById('birth-time').value = '';
         document.getElementById('sex').value = '';
+        document.getElementById('five-lotto-search').style.display = 'inline-block';
+        document.getElementById('five-lotto-result').style.display = 'none';
+
+        let msgElements = Array.from(document.getElementsByClassName('five-result-msg'));
+
+        // 배열의 각 요소를 순회하면서 제거
+        msgElements.forEach(element => {
+            element.remove();
+        });
+
+        const elementsToDelete = document.getElementsByClassName('five-table');
+
+        Array.from(elementsToDelete).forEach(function(element) {
+            element.remove();
+        });
     }
     //오행보기
     ,fn_five_day_view : function() {
 
+        const _this = this;
         const birth = document.getElementById('birth').value;
 
         if(birth === '') {
@@ -880,27 +895,41 @@ let LOTTO = {
             document.getElementById('birth').focus();
             return;
         }
-
         const birthTime = document.getElementById('birth-time').value;
 
         if(birthTime === '') {
 
             alert('출생시간을 선택하세요.');
+
             document.getElementById('birth-time').focus();
             return;
         }
-
         const sex = document.getElementById('sex').value;
 
         if(sex === '') {
 
             alert('성별을 선택하세요.');
+
             document.getElementById('sex').focus();
+            return;
+        }
+        if (!_this.fn_isValid_date(birth)) {
+
+            alert(`${birth}은(는) 올바른 yyyymmdd 형식이 아닙니다.`);
+            document.getElementById('birth').focus();
+            document.getElementById('birth').innerText = '';
             return;
         }
 
         this.inputBirth = birth;
         this.fn_five_day_result_view_init();
+    }
+    , fn_isValid_date : function(inputDate) {
+        // yyyymmdd 형식의 정규식
+        const regex = /^\d{4}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])$/;
+
+        // 정규식과 매치되는지 확인
+        return regex.test(inputDate);
     }
     //modal 화면 다시 그리기
     ,fn_five_day_result_view_init : function() {
@@ -947,6 +976,27 @@ let LOTTO = {
         //오행 데이터 들고오기
         _this.fn_get_five_day_result_data();
 
+        if(_this.fiveResultIdx == -1) {
+            //데이터가 없는 경우
+            let listDiv = document.createElement('div');
+
+            listDiv.classList.add('list');
+            listDiv.classList.add('mg-t100');
+
+            let iEle = document.createElement('i');
+            iEle.classList.add('fa-solid');
+            iEle.classList.add('fa-circle-exclamation');
+            iEle.classList.add('fa-2xl');
+            listDiv.appendChild(iEle);
+
+            let noDataDiv = document.createElement('div');
+            noDataDiv.classList.add('mg-t10');
+            noDataDiv.textContent = '조호된 된 데이터가 없습니다.';
+
+            listDiv.appendChild(noDataDiv);
+            container.appendChild(listDiv);
+        }
+
         setTimeout(function() {
 
             let msgDiv = document.createElement('div');
@@ -975,7 +1025,7 @@ let LOTTO = {
                 let dd = currentDate.getDate().toString().padStart(2, '0');
 
                 // mm-dd 형식으로 조합
-                let formattedDate = `${mm}-${dd}`;
+                let formattedDate = `${mm}월${dd}일`;
 
                 dateArray.push(formattedDate);
 
