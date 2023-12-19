@@ -907,6 +907,22 @@ let LOTTO = {
             document.getElementById('birth').focus();
             return;
         }
+
+        // 현재 날짜 생성
+        const today = new Date();
+        const birthDateString = birth.toString();
+        const formattedBirthDate = `${birthDateString.substring(0, 4)}-${birthDateString.substring(4, 6)}-${birthDateString.substring(6, 8)}`;
+        const birthDate = new Date(formattedBirthDate);
+
+        // 오늘 이후의 날짜인지 체크
+        if (birthDate > today) {
+            alert('입력된 날짜는 오늘 이후의 날짜입니다.');
+            document.getElementById('birth').focus();
+            return;
+
+        }
+
+
         const birthTime = document.getElementById('birth-time').value;
 
         if(birthTime === '') {
