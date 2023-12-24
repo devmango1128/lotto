@@ -1003,7 +1003,7 @@ let LOTTO = {
 
         //오행 데이터 들고오기
         _this.fn_get_five_day_result_data();
-
+        console.log(_this.fiveResultIdx);
         if(_this.fiveResultIdx === -1) {
             //데이터가 없는 경우
             let listDiv = document.createElement('div');
@@ -1153,15 +1153,21 @@ let LOTTO = {
         let today = new Date();
 
         // getDay() 메서드를 사용하여 요일(0~6) 가져오기
-        let dayOfWeek = today.getDay();
+        let year = today.getFullYear();
+        let month = today.getMonth() + 1;
+        let day = today.getDate();
 
-        // 요일을 문자열로 변환
-        let days = ["일", "월", "화", "수", "목", "금", "토"];
-        let todayStr= days[dayOfWeek];
+        let fiveElem2 = '';
+
+        for(let i = 0; i < perp.length; i++) {
+            if(perp[i].year === year && perp[i].month === month && perp[i].day === day) {
+                fiveElem2 = perp[i].fiveElem;
+                break;
+            }
+        }
 
         for(let i = 0; i < _this.fiveResult.length; i++) {
-
-            if(_this.fiveResult[i].Birth == fiveElem && _this.fiveResult[i].Today === todayStr ) {
+            if(_this.fiveResult[i].Birth == fiveElem && _this.fiveResult[i].Today === fiveElem2 ) {
                 _this.fiveResultIdx = i;
                 break;
             }
