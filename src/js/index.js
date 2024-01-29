@@ -473,6 +473,7 @@ let LOTTO = {
         const _this = this;
 
         localStorage.removeItem('adfit.storage.test');
+        localStorage.removeItem('adfit.ba.creativeCacheItems');
 
         //초기화
         document.getElementById('saveLottoList').innerHTML = '';
@@ -545,6 +546,7 @@ let LOTTO = {
             lottoNumberDivs.classList.add('lotto-number-list');
 
             //key storage 안에 로또 번호 데이터 row 를 생성
+
             for (let j = 0; j < lottoData.lottoData.length; j++) {
                 let lottoNumbers = document.createElement('div');
                 lottoNumbers.classList.add('save-ball-list');
