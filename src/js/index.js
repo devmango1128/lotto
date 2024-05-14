@@ -474,6 +474,7 @@ let LOTTO = {
 
         localStorage.removeItem('adfit.storage.test');
         localStorage.removeItem('adfit.ba.creativeCacheItems');
+        localStorage.removeItem('adfit.ba.lazyLoadingOptions');
 
         //초기화
         document.getElementById('saveLottoList').innerHTML = '';
