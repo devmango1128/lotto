@@ -4704,17 +4704,30 @@ textarea.form-control-lg {
   color: #101214;
 }
 
-div.lotto-area div, .auto-ball-list div div, .fixed-number-list div, .save-ball-list div,  div.win-rate-list-group div {
+.auto-ball-list div div, .fixed-number-list div, .save-ball-list div,  div.win-rate-list-group div {
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: 800;
-  color:#ffffff;
-  width: 27px;
-  height: 27px;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
-  line-height: 25px;
+  line-height: 30px;
+}
+
+div.lotto-area div {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
 }
 
 div.lotto-area span {
@@ -4731,7 +4744,11 @@ select.lotto-turn {
 }
 
 div.lotto-area div.bonus {
-  width: 10px;
+  width: 20px;
+}
+
+div.total-area, div.top-area {
+  font-size: 1.2rem;
 }
 
 div.lotto-area div.ball-0, div.auto-ball-area div.ball-0, div.auto-ball-list div.ball-0, div.fixed-number-list div.ball-0, div.save-ball-list div.ball-0, div.win-rate-list-group div.ball-0 {
@@ -4852,16 +4869,16 @@ div.save-lotto-list, div.win-rete-list {
 
 div.save-lotto-list div.save-date {
   text-align: left;
-  font-size: 16px;
+  font-size: 1.2rem;
   width: 100%;
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
   margin-bottom: 8px;
-  padding: 5px 0px 5px 2px;
+  padding: 5px 0 5px 2px;
 }
 
 div.save-lotto-list div.save-ball-list div {
-  margin: 0px 10px 0px 0px;
+  margin: 0 10px 0 0;
 }
 
 div.save-lotto-list button.delete-btn {
@@ -4869,14 +4886,14 @@ div.save-lotto-list button.delete-btn {
   height: 24px;
   line-height: 12px;
   padding: 5px;
-  font-size: 12px;
+  font-size: 1rem;
 }
 
 div.win-rate-list-group {
   float: left;
-  margin: 10px 0 5px 0px;
+  margin: 10px 0 5px 0;
   border-bottom: 1px solid #e2e2e2;
-  padding-bottom: 5px;;
+  padding-bottom: 5px;
 }
 
 div.win-rate-list-group div.win-rate-cnt-div {
@@ -4884,7 +4901,7 @@ div.win-rate-list-group div.win-rate-cnt-div {
   display: inline-block;
   width: 70px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1.2rem;
 }
 div.win-rate-detail-search {
   display: inline-block;
@@ -4894,13 +4911,13 @@ div.win-rate-detail-search {
 div.win-rate-detail-search select.win-rate-select {
   width:180px;
   height:30px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 div.win-rate-detail-search select.has-bonus {
   width:100px;
   height:30px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 div.win-rate-detail-search button.bonus-btn-blue {
