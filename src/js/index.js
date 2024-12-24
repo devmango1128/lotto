@@ -1172,7 +1172,7 @@ let LOTTO = {
         }
 
         for(let i = 0; i < _this.fiveResult.length; i++) {
-            if(_this.fiveResult[i].Birth == fiveElem && _this.fiveResult[i].Today === fiveElem2 ) {
+            if(_this.fiveResult[i].Birth === fiveElem && _this.fiveResult[i].Today === fiveElem2 ) {
                 _this.fiveResultIdx = i;
                 break;
             }
