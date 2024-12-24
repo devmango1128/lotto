@@ -1180,7 +1180,9 @@ let LOTTO = {
     }
     //QR카메라
     , fn_qr_camera_show : function() {
-
+        if (window.Android && Android.openQRScanner) {
+            Android.openQRScanner();
+        }
     }
 }
 
