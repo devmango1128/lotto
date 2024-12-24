@@ -228,9 +228,11 @@ let LOTTO = {
             case 'C' :
                  _this.fn_set_modal_title('calculatorTitle', '실수령액 계산기');
                  _this.fn_modal_page_init(page);
-                _this.fn_calculator_init();
+                 _this.fn_calculator_init();
                  _this.fn_display_show('calculatorSection-modal');
                  break;
+            case 'Q' :
+                _this.fn_qr_camera_show(); break;
         }
     },
     //모달 타이틀 설정
@@ -1175,6 +1177,10 @@ let LOTTO = {
                 break;
             }
         }
+    }
+    //QR카메라
+    , fn_qr_camera_show : function() {
+
     }
 }
 
