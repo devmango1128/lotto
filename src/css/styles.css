@@ -12153,3 +12153,26 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
 .mg-l5 {
   margin-left: 5px;
 }
+
+
+.main-container {
+  background: #ffbf34;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container div {
+  font-family: 'NanumGothicExtraBold', sans-serif;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.main-container .main-smail-text {
+  font-size: 1em;
+}

@@ -12,13 +12,17 @@
         <link href="src/css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-white bg-white logo-nav">
+        <div id="main-container" class="main-container">
+            <div>조상님로또</div>
+            <div class="main-smail-text">이번엔 당신 차례입니다.</div>
+        </div>
+        <nav id="front-bar" class="navbar navbar-expand-lg navbar-white bg-white logo-nav" style="display: none">
             <div class="logo px-lg-5 cur-p" onclick="LOTTO.fn_modal_page('M')">
                 조상님 LOTTO
             </div>
         </nav>
         <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mg-b30 mg-t40 top-area">
+        <nav id="front-contents" class="navbar navbar-expand-lg navbar-dark bg-dark mg-b30 mg-t40 top-area">
             <div class="container px-lg-5">
                 <div class="lotto-area top-area">
                     <select id="lottoTurn" class="lotto-turn" onchange="LOTTO.fn_lotto_turn_change()"></select>
@@ -280,3 +284,11 @@
     </body>
     <script src="src/js/index.js"></script>
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', async function() {
+        setTimeout(function () {
+            document.getElementById('front-bar').style.display = 'inline';
+            document.getElementById('main-container').style.display = 'none';
+        }, 2500);
+    });
+</script>
