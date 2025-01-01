@@ -1,0 +1,1917 @@
+[{"drwNo":"1067",
+  "list": [{"no": "1",
+    "storeName": "사당명당 복권방",
+    "gubun": "자동",
+    "addr": "서울 동작구 동작대로7길 74 1층 103호",
+    "point": ""
+  },{"no": "2",
+    "storeName": "오케이상사",
+    "gubun": "수동",
+    "addr": "서울 서초구 신반포로 176 센트럴시티내100호매점",
+    "point": ""
+  },{"no": "3",
+    "storeName": "가판14호",
+    "gubun": "수동",
+    "addr": "서울 중구 퇴계로 37",
+    "point": ""
+  },{"no": "4",
+    "storeName": "세종로또방",
+    "gubun": "자동",
+    "addr": "세종 용포로 32",
+    "point": ""
+  },{"no": "5",
+    "storeName": "로또.토토.블루베리",
+    "gubun": "자동",
+    "addr": "경기 평택시 안현로서6길 7 대건빌딩 105호",
+    "point": ""
+  },{"no": "6",
+    "storeName": "동해복권전문점",
+    "gubun": "수동",
+    "addr": "강원 동해시 발한로 226-1",
+    "point": ""
+  },{"no": "7",
+    "storeName": "오창돼지토토",
+    "gubun": "자동",
+    "addr": "충북 청주시 청원구 2산단3로 12 101호",
+    "point": ""
+  },{"no": "8",
+    "storeName": "로또매점",
+    "gubun": "수동",
+    "addr": "충남 당진시 송산로 723",
+    "point": ""
+  },{"no": "9",
+    "storeName": "로또명당인주점",
+    "gubun": "수동",
+    "addr": "충남 아산시 서해로 519-2",
+    "point": ""
+  },{"no": "10",
+    "storeName": "한남마트 왔다복권",
+    "gubun": "수동",
+    "addr": "충남 천안시 서북구 서부16길 9",
+    "point": ""
+  },{"no": "11",
+    "storeName": "복조리복권방",
+    "gubun": "수동",
+    "addr": "전북 장수군 장계면 장계천변길 55-4",
+    "point": ""
+  },{"no": "12",
+    "storeName": "로또복권맥",
+    "gubun": "수동",
+    "addr": "전남 여수시 여문1로 52",
+    "point": ""
+  },{"no": "13",
+    "storeName": "로또판매점",
+    "gubun": "자동",
+    "addr": "경남 창원시 마산합포구 문화북1길 37 1층",
+    "point": ""
+  }]},
+  {"drwNo":"1068",
+  "list": [{"no": "1",
+    "storeName": "인동상회",
+    "gubun": "자동",
+    "addr": "서울 노원구 한글비석로 396 벽산아파트상가108-116",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=11100641"
+  },{"no": "2",
+    "storeName": "동아슈퍼",
+    "gubun": "자동",
+    "addr": "서울 노원구 노원로 522 9단지유치원104호",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=11100642"
+  },{"no": "3",
+    "storeName": "인터넷 복권판매사이트",
+    "gubun": "수동",
+    "addr": "동행복권(dhlottery.co.kr)",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=51100000"
+  },{"no": "4",
+    "storeName": "인터넷 복권판매사이트",
+    "gubun": "반자동",
+    "addr": "동행복권(dhlottery.co.kr)",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=51100000"
+  },{"no": "5",
+    "storeName": "씨유석촌역점복권점",
+    "gubun": "자동",
+    "addr": "서울 송파구 송파대로 408 하림빌딩 1층",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=11140925"
+  },{"no": "6",
+    "storeName": "복권방",
+    "gubun": "자동",
+    "addr": "부산 사하구 장림번영로 25",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12600063"
+  },{"no": "7",
+    "storeName": "일등복권편의점",
+    "gubun": "자동",
+    "addr": "대구 달서구 대명천로 220 1층",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12710129"
+  },{"no": "8",
+    "storeName": "노다지복권방진월점",
+    "gubun": "자동",
+    "addr": "광주 남구 서문대로 649 백두장식 1층2호",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12990016"
+  },{"no": "9",
+    "storeName": "대박로또",
+    "gubun": "수동",
+    "addr": "울산 남구 번영로75번길 38",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=13120002"
+  },{"no": "10",
+    "storeName": "대박로또",
+    "gubun": "수동",
+    "addr": "울산 남구 번영로75번길 38",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=13120002"
+  },{"no": "11",
+    "storeName": "진우행운복권방",
+    "gubun": "자동",
+    "addr": "경기 광주시 도척로 327 1층",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14140280"
+  },{"no": "12",
+    "storeName": "서현로또",
+    "gubun": "자동",
+    "addr": "경기 성남시 분당구 서현로180번길 19 비전월드 101-3호",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14140038"
+  },{"no": "13",
+    "storeName": "버스가판대",
+    "gubun": "수동",
+    "addr": "경기 성남시 중원구 성남대로 1144",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14100495"
+  },{"no": "14",
+    "storeName": "화랑로또판매점",
+    "gubun": "자동",
+    "addr": "경기 화성시 푸른들판로 660 정수상가",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14130185"
+  },{"no": "15",
+    "storeName": "복권명가",
+    "gubun": "자동",
+    "addr": "강원 동해시 송정로 47-1 102호",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14200031"
+  },{"no": "16",
+    "storeName": "로또스튜디오",
+    "gubun": "자동",
+    "addr": "충북 청주시 청원구 사뜸로 48-1 1층",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14310083"
+  },{"no": "17",
+    "storeName": "문화럭키 판매점",
+    "gubun": "자동",
+    "addr": "충북 충주시 사직로 257-1 1층 2호",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14340126"
+  },{"no": "18",
+    "storeName": "이마트24시 R신대부적점",
+    "gubun": "수동",
+    "addr": "경북 경산시 대학로 386 1층",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14740062"
+  },{"no": "19",
+    "storeName": "로또통신",
+    "gubun": "자동",
+    "addr": "경남 김해시 함박로101번길 22 삼우빌딩104호 복권판매점",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14800031"
+  }]
+  },{"drwNo":"1069",
+  "list": [{"no": "1",
+    "storeName": "행운의집",
+    "gubun": "자동",
+    "addr": "서울 광진구 능동로19길 7",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=11100270"
+  },{"no": "2",
+    "storeName": "행복로또",
+    "gubun": "자동",
+    "addr": "서울 마포구 마포대로 173 마포현대하이엘 101호",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=11140265"
+  },{"no": "3",
+    "storeName": "공항상회로또판매점",
+    "gubun": "수동",
+    "addr": "부산 강서구 평강로 185-1",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12630017"
+  },{"no": "4",
+    "storeName": "복권천국",
+    "gubun": "수동",
+    "addr": "부산 서구 구덕로 207-1",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12600067"
+  },{"no": "5",
+    "storeName": "대박스타",
+    "gubun": "자동",
+    "addr": "인천 미추홀구 경인로 348 1층",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12840009"
+  },{"no": "6",
+    "storeName": "천하명당복권전문점",
+    "gubun": "자동",
+    "addr": "광주 광산구 사암로216번길 10-9",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12990015"
+  },{"no": "7",
+    "storeName": "태양정보통신",
+    "gubun": "자동",
+    "addr": "경기 광주시 고불로 56 상가1층",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14100021"
+  },{"no": "8",
+    "storeName": "태양로또복권",
+    "gubun": "수동",
+    "addr": "경기 군포시 송부로96번길 13 상가동 104호(도마교동, 금강펜테리움센트럴파크)",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14140627"
+  },{"no": "9",
+    "storeName": "로또대박",
+    "gubun": "반자동",
+    "addr": "경기 부천시 석천로177번길 11 제이클래스중동 1층 105호",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14110512"
+  },{"no": "10",
+    "storeName": "주택복권방",
+    "gubun": "자동",
+    "addr": "경기 용인시 수지구 풍덕천로 144-1 103호",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14190142"
+  },{"no": "11",
+    "storeName": "노다지복권",
+    "gubun": "수동",
+    "addr": "강원 횡성군 문정로 52",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14210053"
+  },{"no": "12",
+    "storeName": "시민슈퍼",
+    "gubun": "자동",
+    "addr": "충남 서산시 문화로 51",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14490001"
+  },{"no": "13",
+    "storeName": "대박찬스",
+    "gubun": "자동",
+    "addr": "전북 군산시 칠성로 164",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14500011"
+  },{"no": "14",
+    "storeName": "세븐일레븐 성주대교점",
+    "gubun": "수동",
+    "addr": "경북 성주군 소학2길 34 1층 세븐일레븐 편의점",
+    "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14740103"
+  }]},
+  {
+    "drwNo": "1070",
+    "list": [
+      {
+        "no": "1",
+        "storeName": "복권나라",
+        "gubun": "수동",
+        "addr": "서울 관악구 남부순환로 1739-9",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=11100244"
+      },
+      {
+        "no": "2",
+        "storeName": "세븐일레븐 가야한신점",
+        "gubun": "자동",
+        "addr": "부산 부산진구 가야대로589번길 3 1층",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12610097"
+      },
+      {
+        "no": "3",
+        "storeName": "황금코끼리로또점",
+        "gubun": "자동",
+        "addr": "부산 북구 금곡대로 318",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12630012"
+      },
+      {
+        "no": "4",
+        "storeName": "복드림 복권방",
+        "gubun": "자동",
+        "addr": "부산 북구 기찰로 155 (덕천동)",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12640426"
+      },
+      {
+        "no": "5",
+        "storeName": "나나복권",
+        "gubun": "수동",
+        "addr": "부산 영도구 남항로 22 1층",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12610208"
+      },
+      {
+        "no": "6",
+        "storeName": "세진전자통신",
+        "gubun": "자동",
+        "addr": "대구 서구 서대구로 156",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12700270"
+      },
+      {
+        "no": "7",
+        "storeName": "성진마트",
+        "gubun": "자동",
+        "addr": "경기 부천시 수도로 123,(내동)",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14100417"
+      },
+      {
+        "no": "8",
+        "storeName": "일등로또판매점",
+        "gubun": "자동",
+        "addr": "경기 파주시 교하로 1417",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14130157"
+      },
+      {
+        "no": "9",
+        "storeName": "잘찍어로또방",
+        "gubun": "자동",
+        "addr": "경기 평택시 안현로서5길 62",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14110322"
+      },
+      {
+        "no": "10",
+        "storeName": "행복",
+        "gubun": "자동",
+        "addr": "경기 하남시 덕풍동로 111-21 105호",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14140996"
+      },
+      {
+        "no": "11",
+        "storeName": "대박로또방",
+        "gubun": "자동",
+        "addr": "전북 장수군 장천로 170",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14520012"
+      },
+      {
+        "no": "12",
+        "storeName": "왕대박 나눔로또645",
+        "gubun": "자동",
+        "addr": "경북 경주시 금성로 334 1층 중앙점포",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14720004"
+      },
+      {
+        "no": "13",
+        "storeName": "진양상회",
+        "gubun": "자동",
+        "addr": "경북 영주시 선비로 68",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14700010"
+      },
+      {
+        "no": "14",
+        "storeName": "무지개로또복권",
+        "gubun": "자동",
+        "addr": "경남 양산시 덕계2길 17 좌측 복권판매점",
+        "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14840319"
+   }]},
+  {"drwNo":"1071",
+    "list": [{"no": "1",
+      "storeName": "종합가판점",
+      "gubun": "자동",
+      "addr": "서울 동대문구 왕산로40길 6 건물 앞쪽 가판점 청량리역 5번출구 앞쪽",
+      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=11100891"
+    },{"no": "2",
+      "storeName": "돈벼락 하단점",
+      "gubun": "자동",
+      "addr": "부산 사하구 낙동남로 1401-1",
+      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=12610025"
+    },{"no": "3",
+      "storeName": "미금헤리츠점",
+      "gubun": "자동",
+      "addr": "경기 성남시 분당구 성남대로 151 엠코헤리츠 1층110호",
+      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14190079"
+    },{"no": "4",
+      "storeName": "대박명당",
+      "gubun": "자동",
+      "addr": "경기 양주시 옥정동로5길 6",
+      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14140860"
+    },{"no": "5",
+      "storeName": "D-마트 담배",
+      "gubun": "자동",
+      "addr": "강원 속초시 조양상가길 25 롯데마트속초점, 1층 복권판매점",
+      "point": "https://m.dhlottery.co.kr/store.do?method=topStoreLocation&gbn=lotto&rtlrId=14200134"
+  }]},
+  {"drwNo":"1072",
+    "list": [{"no": "1",
+      "storeName": "버스카드충전소",
+      "gubun": "자동",
+      "addr": "서울 서초구 신반포로 205 반포쇼핑타운 6동쇼핑앞",
+      "point": ""
+    },{"no": "2",
+      "storeName": "사당역14번출구로또판매점",
+      "gubun": "자동",
+      "addr": "서울 서초구 방배천로2길 10 1층 남쪽상가(방배동)",
+      "point": ""
+    },{"no": "3",
+      "storeName": "대박로또방",
+      "gubun": "수동",
+      "addr": "인천 미추홀구 낙섬서로 46",
+      "point": ""
+    },{"no": "4",
+      "storeName": "복권천국",
+      "gubun": "수동",
+      "addr": "인천 부평구 평천로 306 양영빌딩1층",
+      "point": ""
+    },{"no": "5",
+      "storeName": "명당골복권방",
+      "gubun": "자동",
+      "addr": "경기 수원시 권선구 동수원로242번길 15 104호",
+      "point": ""
+    },{"no": "6",
+      "storeName": "천하명당복권방",
+      "gubun": "자동",
+      "addr": "경기 수원시 팔달구 매산로 2",
+      "point": ""
+    },{"no": "7",
+      "storeName": "인제복권방",
+      "gubun": "수동",
+      "addr": "강원 인제군 비봉로 11-1",
+      "point": ""
+    },{"no": "8",
+      "storeName": "터미널복권방",
+      "gubun": "자동",
+      "addr": "전북 정읍시 연지8길 6",
+      "point": ""
+    },{"no": "9",
+      "storeName": "정원로또",
+      "gubun": "자동",
+      "addr": "경북 경주시 구부랑길 42 에이동(남쪽 끝편2번?상가)",
+      "point": ""
+    },{"no": "10",
+      "storeName": "왕대박복권방",
+      "gubun": "자동",
+      "addr": "경북 문경시 중앙로 15,(모전동)",
+      "point": ""
+    },{"no": "11",
+      "storeName": "천하명당",
+      "gubun": "자동",
+      "addr": "경남 창원시 의창구 읍성로 70 1층 4호,25호",
+      "point": ""
+    },{"no": "12",
+      "storeName": "돌하르방복권",
+      "gubun": "자동",
+      "addr": "제주 서귀포시 태평로353번길 9",
+      "point": ""
+    }]},
+    {"drwNo":"1073",
+    "list": [{"no": "1",
+      "storeName": "인터넷 복권판매사이트",
+      "gubun": "수동",
+      "addr": "동행복권(dhlottery.co.kr)",
+      "point": ""
+    },{"no": "2",
+      "storeName": "영광정보통신",
+      "gubun": "수동",
+      "addr": "서울 성북구 화랑로 92 1층 우측1호",
+      "point": ""
+    },{"no": "3",
+      "storeName": "지에스25 월성파크",
+      "gubun": "자동",
+      "addr": "대구 달서구 상원로 195 GS25월성파크점",
+      "point": ""
+    },{"no": "4",
+      "storeName": "지에스25 계산브래뉴점",
+      "gubun": "자동",
+      "addr": "인천 계양구 계양대로 215 1층 107호",
+      "point": ""
+    },{"no": "5",
+      "storeName": "주인공",
+      "gubun": "자동",
+      "addr": "인천 서구 원당대로 853 1층",
+      "point": ""
+    },{"no": "6",
+      "storeName": "알리바이",
+      "gubun": "자동",
+      "addr": "광주 광산구 수등로 253 1층 알리바이",
+      "point": ""
+    },{"no": "7",
+      "storeName": "노다지복권방",
+      "gubun": "자동",
+      "addr": "충북 음성군 장감로 161-1 1층복권방",
+      "point": ""
+    },{"no": "8",
+      "storeName": "청룡로또판매점",
+      "gubun": "자동",
+      "addr": "충남 당진시 청룡길 159 용기빌딩",
+      "point": ""
+    },{"no": "9",
+      "storeName": "777천하명당",
+      "gubun": "자동",
+      "addr": "충남 서천군 충절로 54",
+      "point": ""
+    },{"no": "10",
+      "storeName": "로또명당인주점",
+      "gubun": "자동",
+      "addr": "충남 아산시 서해로 519-2",
+      "point": ""
+    },{"no": "11",
+      "storeName": "로또명당 신마산점",
+      "gubun": "자동",
+      "addr": "경남 창원시 마산합포구 문화동7길 3 1층",
+      "point": ""
+    }]},
+  {"drwNo":"1074",
+    "list": [{"no": "1",
+      "storeName": "인터넷 복권판매사이트",
+      "gubun": "자동",
+      "addr": "동행복권(dhlottery.co.kr)",
+      "point": ""
+    },{"no": "2",
+      "storeName": "로그인편의점",
+      "gubun": "수동",
+      "addr": "서울 성동구 천호대로 430 103호 로그인편의점",
+      "point": ""
+    },{"no": "3",
+      "storeName": "제일복권",
+      "gubun": "자동",
+      "addr": "인천 동구 송림로162번길 10 B107",
+      "point": ""
+    },{"no": "4",
+      "storeName": "또로또",
+      "gubun": "자동",
+      "addr": "울산 남구 신정로68번길 47",
+      "point": ""
+    },{"no": "5",
+      "storeName": "행운로또",
+      "gubun": "자동",
+      "addr": "울산 남구 대공원로 95",
+      "point": ""
+    },{"no": "6",
+      "storeName": "로또명가",
+      "gubun": "자동",
+      "addr": "세종 새내로 84",
+      "point": ""
+    },{"no": "7",
+      "storeName": "문구백화점",
+      "gubun": "자동",
+      "addr": "경기 광주시 중앙로 120",
+      "point": ""
+    },{"no": "8",
+      "storeName": "나눔로또 판교역점",
+      "gubun": "자동",
+      "addr": "경기 성남시 분당구 대왕판교로606번길 39 107호",
+      "point": ""
+    },{"no": "9",
+      "storeName": "노다지복권",
+      "gubun": "자동",
+      "addr": "강원 횡성군 문정로 52",
+      "point": ""
+    },{"no": "10",
+      "storeName": "콕콕로또명당옥천점",
+      "gubun": "자동",
+      "addr": "충북 옥천군 서대구일로 265-19 옥천하휴게소",
+      "point": ""
+    },{"no": "11",
+      "storeName": "대동도기상사",
+      "gubun": "자동",
+      "addr": "경북 영천시 금완로 30",
+      "point": ""
+    },{"no": "12",
+      "storeName": "노다지복권방",
+      "gubun": "자동",
+      "addr": "경남 창녕군 창녕읍 명덕로 49",
+      "point": ""
+    }]},
+  {"drwNo":"1075",
+    "list": [{"no": "1",
+      "storeName": "스파",
+      "gubun": "자동",
+      "addr": "서울 노원구 동일로 1493 상계주공아파트(10단지) 주공10단지종합상가111",
+      "point": ""
+    },{"no": "2",
+      "storeName": "오늘로또복권판매점",
+      "gubun": "자동",
+      "addr": "서울 동대문구 한천로 133 건물우측기준 2번째점포 복권방",
+      "point": ""
+    },{"no": "3",
+      "storeName": "로또명당(유가테크노점)",
+      "gubun": "자동",
+      "addr": "대구 달성군 테크노상업로4길 7-4 1층 신참떡복이 내",
+      "point": ""
+    },{"no": "4",
+      "storeName": "대박복권",
+      "gubun": "자동",
+      "addr": "인천 부평구 경인로 973",
+      "point": ""
+    },{"no": "5",
+      "storeName": "케이케이물류",
+      "gubun": "자동",
+      "addr": "경기 수원시 팔달구 동말로 60",
+      "point": ""
+    },{"no": "6",
+      "storeName": "다니엘사",
+      "gubun": "자동",
+      "addr": "경기 안산시 단원구 원선1로 38 두산위브아파트 101호",
+      "point": ""
+    },{"no": "7",
+      "storeName": "복권왕국",
+      "gubun": "자동",
+      "addr": "충북 제천시 풍양로 108 중앙시장상가 지하145",
+      "point": ""
+    },{"no": "8",
+      "storeName": "완산로또방",
+      "gubun": "자동",
+      "addr": "경북 영천시 역전로 21-1",
+      "point": ""
+    },{"no": "9",
+      "storeName": "GS25(덕산제일점)",
+      "gubun": "자동",
+      "addr": "경남 창원시 진해구 충장로 505",
+      "point": ""
+    }]},
+  {"drwNo":"1076",
+    "list": [{"no": "1",
+      "storeName": "복권마을",
+      "gubun": "자동",
+      "addr": "서울 구로구 구로동로 72",
+      "point": ""
+    },{"no": "2",
+      "storeName": "영광생활유통",
+      "gubun": "자동",
+      "addr": "서울 금천구 범안로 1186",
+      "point": ""
+    },{"no": "3",
+      "storeName": "돈벼락맞는곳",
+      "gubun": "수동",
+      "addr": "부산 기장군 읍내로 109",
+      "point": ""
+    },{"no": "4",
+      "storeName": "1등로또방",
+      "gubun": "자동",
+      "addr": "광주 동구 중앙로 249-2",
+      "point": ""
+    },{"no": "5",
+      "storeName": "대박복권판매점",
+      "gubun": "자동",
+      "addr": "경기 고양시 덕양구 충장로 8 115호 일부",
+      "point": ""
+    },{"no": "6",
+      "storeName": "대운",
+      "gubun": "수동",
+      "addr": "경기 김포시 대명항로 209",
+      "point": ""
+    },{"no": "7",
+      "storeName": "금강복권",
+      "gubun": "수동",
+      "addr": "경기 김포시 율생로 3",
+      "point": ""
+    },{"no": "8",
+      "storeName": "왕대박 복권방",
+      "gubun": "반자동",
+      "addr": "전남 나주시 문화로 226 1층 102호(빛가람동, 키움해피라움2차)",
+      "point": ""
+    },{"no": "9",
+      "storeName": "로터리편의마트",
+      "gubun": "자동",
+      "addr": "경북 포항시 북구 서동로 85 육거리",
+      "point": ""
+    }]},
+  {"drwNo":"1077",
+    "list": [{"no": "1",
+      "storeName": "최강복권&아이스크림",
+      "gubun": "자동",
+      "addr": "경기 고양시 덕양구 삼송로 176-1",
+      "point": ""
+    },{"no": "2",
+      "storeName": "복권닷컴",
+      "gubun": "수동",
+      "addr": "강원 양양군 양양로 62",
+      "point": ""
+    },{"no": "3",
+      "storeName": "복권닷컴",
+      "gubun": "수동",
+      "addr": "강원 양양군 양양로 62",
+      "point": ""
+    },{"no": "4",
+      "storeName": "좋은날 복권방",
+      "gubun": "수동",
+      "addr": "전북 남원시 의총로 78 메이커스쿨,용남건재,용남삼베,대동지업사",
+      "point": ""
+    },{"no": "5",
+      "storeName": "현대장미슈퍼",
+      "gubun": "자동",
+      "addr": "전북 익산시 동서로61길 41 현대아파트1층108호",
+      "point": ""
+    },{"no": "6",
+      "storeName": "옥좌로또점",
+      "gubun": "수동",
+      "addr": "경북 경주시 내외로 10 좌측4번째상가",
+      "point": ""
+    },{"no": "7",
+      "storeName": "로또복권애니타임점",
+      "gubun": "자동",
+      "addr": "경북 구미시 인동중앙로11길 24 애니타임편의점 내",
+      "point": ""
+    }]},
+  {"drwNo":"1078",
+    "list": [{"no": "1",
+      "storeName": "로또 명당 가판점",
+      "gubun": "자동",
+      "addr": "서울 금천구 남부순환로 1390 전영수내과의원 가판",
+      "point": ""
+    },{"no": "2",
+      "storeName": "골든 메가 복권판매점",
+      "gubun": "자동",
+      "addr": "서울 동작구 동작대로 89 1층",
+      "point": ""
+    },{"no": "3",
+      "storeName": "우리은행금호동지점앞가판",
+      "gubun": "자동",
+      "addr": "서울 성동구 장터길 46",
+      "point": ""
+    },{"no": "4",
+      "storeName": "대박이네",
+      "gubun": "수동",
+      "addr": "광주 동구 제봉로 84",
+      "point": ""
+    },{"no": "5",
+      "storeName": "훼미리마트",
+      "gubun": "자동",
+      "addr": "경기 포천시 중앙로 148 신읍동",
+      "point": ""
+    },{"no": "6",
+      "storeName": "복돼지복권방",
+      "gubun": "자동",
+      "addr": "경기 화성시 3.1만세로 43",
+      "point": ""
+    },{"no": "7",
+      "storeName": "복권명당(이마트24 온천대로점)",
+      "gubun": "자동",
+      "addr": "충남 아산시 곡교천로 161 101호",
+      "point": ""
+    },{"no": "8",
+      "storeName": "청룡마트",
+      "gubun": "반자동",
+      "addr": "충남 천안시 동남구 풍세로 1010-31 현대아파트상가B-102호",
+      "point": ""
+    },{"no": "9",
+      "storeName": "피씨마트",
+      "gubun": "자동",
+      "addr": "전북 군산시 경기장로 20",
+      "point": ""
+    },{"no": "10",
+      "storeName": "제철로또대리점",
+      "gubun": "자동",
+      "addr": "충남 아산시 곡교천로 161 101호",
+      "point": ""
+    },{"no": "11",
+      "storeName": "코리아25시",
+      "gubun": "자동",
+      "addr": "경북 구미시 형곡동로 115",
+      "point": ""
+    },{"no": "12",
+      "storeName": "지에스(GS)25 진동에이스점",
+      "gubun": "자동",
+      "addr": "경남 창원시 마산합포구 신서촌1길 49 1층 GS편의점내",
+      "point": ""
+    }]},
+  {"drwNo":"1079",
+    "list": [{"no": "1",
+      "storeName": "신영슈퍼",
+      "gubun": "수동",
+      "addr": "서울 강남구 광평로51길 27 삼익아파트상가101호",
+      "point": ""
+    },{"no": "2",
+      "storeName": "인터넷 복권판매사이트",
+      "gubun": "자동",
+      "addr": "동행복권(dhlottery.co.kr)",
+      "point": ""
+    },{"no": "3",
+      "storeName": "로또킹",
+      "gubun": "수동",
+      "addr": "서울 영등포구 영중로 2 1층(영등포동3가)",
+      "point": ""
+    },{"no": "4",
+      "storeName": "위너로또 더킹전자담배 구월점",
+      "gubun": "자동",
+      "addr": "인천 남동구 구월남로 212 동원프라자 101호",
+      "point": ""
+    },{"no": "5",
+      "storeName": "드림복권방",
+      "gubun": "수동",
+      "addr": "인천 중구 인중로 97-1 삼익아파트",
+      "point": ""
+    },{"no": "6",
+      "storeName": "행운복권방",
+      "gubun": "자동",
+      "addr": "경기 광주시 양벌로 329",
+      "point": ""
+    },{"no": "7",
+      "storeName": "복권방",
+      "gubun": "자동",
+      "addr": "경기 수원시 팔달구 권광로 213",
+      "point": ""
+    },{"no": "8",
+      "storeName": "1등로또",
+      "gubun": "수동",
+      "addr": "경기 오산시 수청로 30 108호",
+      "point": ""
+    },{"no": "9",
+      "storeName": "복권백화점",
+      "gubun": "수동",
+      "addr": "경기 파주시 평화로 70",
+      "point": ""
+    }]},
+  {"drwNo":"1080",
+    "list": [{"no": "1",
+      "storeName": "빅세일복권방",
+      "gubun": "자동",
+      "addr": "부산 부산진구 서면문화로 6",
+      "point": ""
+    },{"no": "2",
+      "storeName": "공원슈퍼",
+      "gubun": "자동",
+      "addr": "경기 수원시 장안구 팔달로 255 1층(영화동)",
+      "point": ""
+    },{"no": "3",
+      "storeName": "복권백화점",
+      "gubun": "자동",
+      "addr": "경기 파주시 평화로 70",
+      "point": ""
+    },{"no": "4",
+      "storeName": "천하명당",
+      "gubun": "자동",
+      "addr": "경기 평택시 탄현로 224",
+      "point": ""
+    },{"no": "5",
+      "storeName": "떡두꺼비복권방",
+      "gubun": "자동",
+      "addr": "강원 원주시 원문로 641 1층",
+      "point": ""
+    },{"no": "6",
+      "storeName": "현대장미슈퍼",
+      "gubun": "자동",
+      "addr": "전북 익산시 동서로61길 41 현대아파트1층108호",
+      "point": ""
+    },{"no": "7",
+      "storeName": "금당로또복권",
+      "gubun": "자동",
+      "addr": "전남 순천시 대석길 8",
+      "point": ""
+    }]},
+  {"drwNo":"1081",
+    "list": [{"no": "1",
+      "storeName": "강서스포츠",
+      "gubun": "자동",
+      "addr": "서울 강서구 곰달래로 156-1",
+      "point": ""
+    },{"no": "2",
+      "storeName": "우주문화사",
+      "gubun": "자동",
+      "addr": "서울 서초구 사평대로2길 10",
+      "point": ""
+    },{"no": "3",
+      "storeName": "인터넷 복권판매사이트",
+      "gubun": "자동",
+      "addr": "동행복권(dhlottery.co.kr)",
+      "point": ""
+    },{"no": "4",
+      "storeName": "드림공인중개사사무소",
+      "gubun": "자동",
+      "addr": "서울 양천구 목동중앙북로16길 3 광진상가1층104",
+      "point": ""
+    },{"no": "5",
+      "storeName": "로또 앤 모바일",
+      "gubun": "수동",
+      "addr": "인천 계양구 장제로 998 1층",
+      "point": ""
+    },{"no": "6",
+      "storeName": "꽃길로또방",
+      "gubun": "자동",
+      "addr": "경기 고양시 덕양구 꽃내음1길 21 1층 110호(향동동, 청우프라자)",
+      "point": ""
+    },{"no": "7",
+      "storeName": "천하명당",
+      "gubun": "자동",
+      "addr": "경기 평택시 탄현로 224",
+      "point": ""
+    },{"no": "8",
+      "storeName": "로또명당인주점",
+      "gubun": "자동",
+      "addr": "충남 아산시 서해로 519-2",
+      "point": ""
+    },{"no": "9",
+      "storeName": "대박복권",
+      "gubun": "자동",
+      "addr": "충남 홍성군 충서로 2423 세븐일레븐",
+      "point": ""
+    },{"no": "10",
+      "storeName": "씨스페이스 어방점",
+      "gubun": "자동",
+      "addr": "경남 김해시 인제로170번길 15-6 편의점 내",
+      "point": ""
+    },{"no": "11",
+      "storeName": "양덕복권방",
+      "gubun": "수동",
+      "addr": "경남 창원시 마산회원구 합성옛길 23 1층",
+      "point": ""
+    }]},
+  {"drwNo":"1082",
+    "list": [{"no": "1",
+      "storeName": "지원물산",
+      "gubun": "자동",
+      "addr": "서울 노원구 공릉로 108,(공릉동)",
+      "point": ""
+    },{"no": "2",
+      "storeName": "복권방",
+      "gubun": "자동",
+      "addr": "부산 사하구 낙동대로 332",
+      "point": ""
+    },{"no": "3",
+      "storeName": "무궁화슈퍼",
+      "gubun": "수동",
+      "addr": "인천 남동구 남동대로 702 1층 1호",
+      "point": ""
+    },{"no": "4",
+      "storeName": "오케이마트",
+      "gubun": "자동",
+      "addr": "경기 성남시 중원구 광명로 80 1층 101호(성남동)",
+      "point": ""
+    },{"no": "5",
+      "storeName": "심마니대박복권방",
+      "gubun": "자동",
+      "addr": "충북 충주시 국원대로 68",
+      "point": ""
+    },{"no": "6",
+      "storeName": "남해공인중개사",
+      "gubun": "수동",
+      "addr": "전남 목포시 용당로 59 A08호",
+      "point": ""
+    },{"no": "7",
+      "storeName": "행운복권방/해피하우스",
+      "gubun": "자동",
+      "addr": "경남 양산시 덕계로 27",
+      "point": ""
+    }]},
+  {"drwNo":"1083",
+    "list": [{"no": "1",
+      "storeName": "로또 골드 뱅크",
+      "gubun": "수동",
+      "addr": "서울 은평구 진관3로 77 916동 1층상가 111호",
+      "point": ""
+    },{"no": "2",
+      "storeName": "동성당",
+      "gubun": "수동",
+      "addr": "서울 종로구 청계천로 261",
+      "point": ""
+    },{"no": "3",
+      "storeName": "뉴빅마트",
+      "gubun": "자동",
+      "addr": "부산 기장군 정관중앙로 48 106호",
+      "point": ""
+    },{"no": "4",
+      "storeName": "G마트",
+      "gubun": "자동",
+      "addr": "부산 북구 백양대로 1024",
+      "point": ""
+    },{"no": "5",
+      "storeName": "토토복권",
+      "gubun": "수동",
+      "addr": "대구 서구 달서로12길 9",
+      "point": ""
+    },{"no": "6",
+      "storeName": "토토복권",
+      "gubun": "수동",
+      "addr": "대구 서구 달서로12길 9",
+      "point": ""
+    },{"no": "7",
+      "storeName": "토토복권",
+      "gubun": "수동",
+      "addr": "대구 서구 달서로12길 9",
+      "point": ""
+    },{"no": "8",
+      "storeName": "타임마트",
+      "gubun": "자동",
+      "addr": "대전 서구 동서대로 696 프라임빌딩2차 1층 102호",
+      "point": ""
+    },{"no": "9",
+      "storeName": "씨유 트윈시티",
+      "gubun": "자동",
+      "addr": "경기 고양시 일산동구 위시티로 75 113호",
+      "point": ""
+    },{"no": "10",
+      "storeName": "로또대박",
+      "gubun": "수동",
+      "addr": "경기 부천시 석천로177번길 11 제이클래스중동 1층 105호",
+      "point": ""
+    },{"no": "11",
+      "storeName": "디딤슈퍼",
+      "gubun": "자동",
+      "addr": "경기 부천시 도약로 279",
+      "point": ""
+    },{"no": "12",
+      "storeName": "로또대박",
+      "gubun": "수동",
+      "addr": "경기 부천시 석천로177번길 11 제이클래스중동 1층 105호",
+      "point": ""
+    },{"no": "13",
+      "storeName": "로또통신",
+      "gubun": "자동",
+      "addr": "경기 안성시 장기로 36",
+      "point": ""
+    },{"no": "14",
+      "storeName": "씨유 파주운천점",
+      "gubun": "자동",
+      "addr": "경기 파주시 통일로 2038-2 씨유 파주운천점",
+      "point": ""
+    },{"no": "15",
+      "storeName": "구담쌀슈퍼",
+      "gubun": "자동",
+      "addr": "경북 안동시 경동로 908",
+      "point": ""
+    }]},
+  {"drwNo":"1084",
+    "list": [{"no": "1",
+      "storeName": "몽유호가(夢有好家)",
+      "gubun": "자동",
+      "addr": "서울 강동구 올림픽로 552 1층5호",
+      "point": ""
+    },{"no": "2",
+      "storeName": "가판점",
+      "gubun": "자동",
+      "addr": "서울 서초구 효령로 283 가판",
+      "point": ""
+    },{"no": "3",
+      "storeName": "가판대20호",
+      "gubun": "수동",
+      "addr": "서울 송파구 송파대로 365 석촌농협앞가판대20호",
+      "point": ""
+    },{"no": "4",
+      "storeName": "복권방",
+      "gubun": "자동",
+      "addr": "부산 사하구 장림번영로 25",
+      "point": ""
+    },{"no": "5",
+      "storeName": "행운복권방",
+      "gubun": "자동",
+      "addr": "대구 북구 학정동로 47",
+      "point": ""
+    },{"no": "6",
+      "storeName": "노다지로또",
+      "gubun": "수동",
+      "addr": "인천 서구 완정로 179 검단제이원빌딩 108호",
+      "point": ""
+    },{"no": "7",
+      "storeName": "알리바이",
+      "gubun": "자동",
+      "addr": "광주 광산구 수등로 253 1층 알리바이",
+      "point": ""
+    },{"no": "8",
+      "storeName": "행운로또방",
+      "gubun": "자동",
+      "addr": "광주 서구 풍암순환로 183 우미아파트상가117동101호",
+      "point": ""
+    },{"no": "9",
+      "storeName": "미니스톱 울산동진점",
+      "gubun": "자동",
+      "addr": "울산 동구 동진로 4 동서아트빌 1층 편의점",
+      "point": ""
+    },{"no": "10",
+      "storeName": "수원명당복권방",
+      "gubun": "자동",
+      "addr": "경기 수원시 팔달구 경수대로507번길 14 107호(인계동)",
+      "point": ""
+    },{"no": "11",
+      "storeName": "주택복권방",
+      "gubun": "수동",
+      "addr": "강원 원주시 우산초교길 29 1층",
+      "point": ""
+    },{"no": "12",
+      "storeName": "복권나라",
+      "gubun": "수동",
+      "addr": "충북 증평군 중앙로 199-1",
+      "point": ""
+    },{"no": "13",
+      "storeName": "로또",
+      "gubun": "자동",
+      "addr": "충남 아산시 번영로 18 미니스톱 아산파라뷰점",
+      "point": ""
+    },{"no": "14",
+      "storeName": "신천하명당",
+      "gubun": "자동",
+      "addr": "충남 예산군 발연로 1 이마트 24 내",
+      "point": ""
+    },{"no": "15",
+      "storeName": "씨스페이스 어방점",
+      "gubun": "자동",
+      "addr": "경남 김해시 인제로170번길 15-6 편의점 내",
+      "point": ""
+    }]},
+  {"drwNo":"1085",
+    "list": [{"no": "1",
+      "storeName": "복권마을(사당점)",
+      "gubun": "자동",
+      "addr": "서울 동작구 사당로 215 101호",
+      "point": ""
+    },{"no": "2",
+      "storeName": "에스비 상사",
+      "gubun": "자동",
+      "addr": "서울 중구 퇴계로86길 29 1층",
+      "point": ""
+    },{"no": "3",
+      "storeName": "행운복권방",
+      "gubun": "자동",
+      "addr": "부산 사상구 모라로 90-7",
+      "point": ""
+    },{"no": "4",
+      "storeName": "로또공인중개사사무소",
+      "gubun": "자동",
+      "addr": "대구 중구 대봉로 212 1층 공인중개사사무소",
+      "point": ""
+    },{"no": "5",
+      "storeName": "당하복권명당",
+      "gubun": "수동",
+      "addr": "인천 서구 서곶로 788",
+      "point": ""
+    },{"no": "6",
+      "storeName": "우타코비",
+      "gubun": "수동",
+      "addr": "인천 서구 승학로 470 1층 105호",
+      "point": ""
+    },{"no": "7",
+      "storeName": "삼성로또",
+      "gubun": "자동",
+      "addr": "인천 연수구 학나래로6번길 56",
+      "point": ""
+    },{"no": "8",
+      "storeName": "1등로또방",
+      "gubun": "자동",
+      "addr": "광주 동구 중앙로 249-2",
+      "point": ""
+    },{"no": "9",
+      "storeName": "영화복권(버들점)",
+      "gubun": "자동",
+      "addr": "광주 서구 상무버들로 32",
+      "point": ""
+    },{"no": "10",
+      "storeName": "로또대박",
+      "gubun": "수동",
+      "addr": "세종 장척로 571",
+      "point": ""
+    },{"no": "11",
+      "storeName": "로또대박",
+      "gubun": "수동",
+      "addr": "세종 장척로 571",
+      "point": ""
+    },{"no": "12",
+      "storeName": "행운드림로또&토토",
+      "gubun": "수동",
+      "addr": "경기 김포시 초당로16번길 77 1층 106호",
+      "point": ""
+    },{"no": "13",
+      "storeName": "삐삐문구",
+      "gubun": "반자동",
+      "addr": "경기 남양주시 사릉로 403",
+      "point": ""
+    },{"no": "14",
+      "storeName": "또와복권",
+      "gubun": "수동",
+      "addr": "경기 수원시 권선구 구운로 46-1 1층 103호",
+      "point": ""
+    },{"no": "15",
+      "storeName": "대박 로또",
+      "gubun": "자동",
+      "addr": "경기 수원시 장안구 수성로261번길 81 신협 1층(정자동)",
+      "point": ""
+    },{"no": "16",
+      "storeName": "예원로또복권판매점",
+      "gubun": "자동",
+      "addr": "경기 안양시 만안구 만안로 461 제1호",
+      "point": ""
+    },{"no": "17",
+      "storeName": "로또휴게실",
+      "gubun": "자동",
+      "addr": "경기 용인시 기흥구 용구대로 1885",
+      "point": ""
+    },{"no": "18",
+      "storeName": "행복로또판매점",
+      "gubun": "수동",
+      "addr": "경기 의정부시 오목로 219 106호",
+      "point": ""
+    },{"no": "19",
+      "storeName": "럭키 복권방",
+      "gubun": "자동",
+      "addr": "경기 의정부시 의정로22번길 29 1층(의정부동)",
+      "point": ""
+    },{"no": "20",
+      "storeName": "행복로또판매점",
+      "gubun": "수동",
+      "addr": "경기 의정부시 오목로 219 106호",
+      "point": ""
+    },{"no": "21",
+      "storeName": "복터졌다 복권방",
+      "gubun": "자동",
+      "addr": "충남 아산시 온천대로 1510-10",
+      "point": ""
+    },{"no": "22",
+      "storeName": "로또복권두정점",
+      "gubun": "자동",
+      "addr": "충남 천안시 서북구 두정로 251 대원빌딩104호",
+      "point": ""
+    },{"no": "23",
+      "storeName": "천하명당복권방",
+      "gubun": "자동",
+      "addr": "경북 포항시 남구 중섬로 26",
+      "point": ""
+    }]},
+  {"drwNo":"1086",
+    "list": [{"no": "1",
+      "storeName": "신성복권",
+      "gubun": "자동",
+      "addr": "서울 강남구 학동로 503 한성빌딩\t",
+      "point": ""
+    },{"no": "2",
+      "storeName": "6/45 로또",
+      "gubun": "수동",
+      "addr": "서울 강동구 아리수로93가길 87 상가 105호",
+      "point": ""
+    },{"no": "3",
+      "storeName": "복권방 담배",
+      "gubun": "자동",
+      "addr": "서울 도봉구 도당로 91,(방학동)",
+      "point": ""
+    },{"no": "4",
+      "storeName": "평화슈퍼",
+      "gubun": "수동",
+      "addr": "서울 은평구 연서로 198-1,(대조동)",
+      "point": ""
+    },{"no": "5",
+      "storeName": "백금당",
+      "gubun": "자동",
+      "addr": "부산 중구 중구로29번길 26",
+      "point": ""
+    },{"no": "6",
+      "storeName": "왕대박",
+      "gubun": "자동",
+      "addr": "대구 남구 대명로 51 A동1층7호(데명동,삼아맨션)",
+      "point": ""
+    },{"no": "7",
+      "storeName": "대박로또판매점",
+      "gubun": "자동",
+      "addr": "경기 수원시 장안구 서부로 2129-1 태양공예가구",
+      "point": ""
+    },{"no": "8",
+      "storeName": "주택복권방",
+      "gubun": "자동",
+      "addr": "경기 용인시 수지구 풍덕천로 144-1 103호",
+      "point": ""
+    },{"no": "9",
+      "storeName": "드림복권방",
+      "gubun": "자동",
+      "addr": "경기 의정부시 청사로5번길 8-17 1층 112호(신곡동,센타프라자)",
+      "point": ""
+    },{"no": "10",
+      "storeName": "혁신대박",
+      "gubun": "수동",
+      "addr": "충북 음성군 원중로 1434 103호(에스타워)",
+      "point": ""
+    },{"no": "11",
+      "storeName": "신불당 아이캔로또",
+      "gubun": "자동",
+      "addr": "충남 천안시 서북구 불당25로 226 골든스퀘어빌딩 118호",
+      "point": ""
+    },{"no": "12",
+      "storeName": "로또복권판매도통점",
+      "gubun": "자동",
+      "addr": "전북 남원시 용성로 232,(도통동)",
+      "point": ""
+    },{"no": "13",
+      "storeName": "행운복권방 보생당건강원",
+      "gubun": "자동",
+      "addr": "전북 익산시 무왕로 1268",
+      "point": ""
+    },{"no": "14",
+      "storeName": "행운복권나라",
+      "gubun": "수동",
+      "addr": "전남 광양시 대림오성로 146-1",
+      "point": ""
+    },{"no": "15",
+      "storeName": "복권세상",
+      "gubun": "자동",
+      "addr": "전남 목포시 청호로 139 1층 복권세상",
+      "point": ""
+    },{"no": "16",
+      "storeName": "복권왕국",
+      "gubun": "수동",
+      "addr": "전남 여수시 여수산단로 48 1층101호",
+      "point": ""
+    },{"no": "17",
+      "storeName": "신세계",
+      "gubun": "자동",
+      "addr": "제주 제주시 고마로14길 7",
+      "point": ""
+    }]},
+  {"drwNo":"1087",
+    "list": [{"no": "1",
+      "storeName": "골드리치",
+      "gubun": "자동",
+      "addr": "서울 강남구 자곡로 192 1층 102호(강남푸르지오시티 2차)",
+      "point": ""
+    },{"no": "2",
+      "storeName": "한마음",
+      "gubun": "자동",
+      "addr": "서울 관악구 관악로 211 봉천중앙시장라열4호",
+      "point": ""
+    },{"no": "3",
+      "storeName": "강원슈퍼",
+      "gubun": "자동",
+      "addr": "서울 서대문구 모래내로 355",
+      "point": ""
+    },{"no": "4",
+      "storeName": "나눔로또 석촌점",
+      "gubun": "자동",
+      "addr": "서울 송파구 백제고분로27길 34 1층",
+      "point": ""
+    },{"no": "5",
+      "storeName": "잠실매점",
+      "gubun": "자동",
+      "addr": "서울 송파구 올림픽로 269 잠실역 8번출구 앞 가판",
+      "point": ""
+    },{"no": "6",
+      "storeName": "무지개상점",
+      "gubun": "반자동",
+      "addr": "부산 해운대구 좌동로91번길 45",
+      "point": ""
+    },{"no": "7",
+      "storeName": "찬스센터",
+      "gubun": "자동",
+      "addr": "인천 남동구 남동대로370번길 114 동보아파트상가 상가동 1층 101호",
+      "point": ""
+    },{"no": "8",
+      "storeName": "대박복권판매점",
+      "gubun": "자동",
+      "addr": "경기 고양시 덕양구 충장로 8 115호 일부",
+      "point": ""
+    },{"no": "9",
+      "storeName": "키즈월드",
+      "gubun": "자동",
+      "addr": "경기 고양시 일산동구 중산로 241 해태쇼핑1층146호",
+      "point": ""
+    },{"no": "10",
+      "storeName": "노다지복권방",
+      "gubun": "자동",
+      "addr": "경기 시흥시 복지로 103-1 1층상가",
+      "point": ""
+    },{"no": "11",
+      "storeName": "복권명당",
+      "gubun": "자동",
+      "addr": "경기 안성시 승두길 62",
+      "point": ""
+    },{"no": "12",
+      "storeName": "행운로또방",
+      "gubun": "자동",
+      "addr": "강원 화천군 상승로 46 1층",
+      "point": ""
+    },{"no": "13",
+      "storeName": "백석로또복권방",
+      "gubun": "수동",
+      "addr": "충남 천안시 서북구 한들3로 85-85 메디컬센터 109호",
+      "point": ""
+    },{"no": "14",
+      "storeName": "팡팡복권마트.잡화슈퍼",
+      "gubun": "자동",
+      "addr": "전북 전주시 덕진구 가리내로 26",
+      "point": ""
+    },{"no": "15",
+      "storeName": "어느멋진날",
+      "gubun": "자동",
+      "addr": "경남 양산시 덕계10길 11 복권판매점",
+      "point": ""
+    },{"no": "16",
+      "storeName": "소답시내버스매표소",
+      "gubun": "자동",
+      "addr": "경남 창원시 의창구 의안로2번길 17 가판",
+      "point": ""
+    }]},
+  {"drwNo":"1088",
+    "list": [{"no": "1",
+      "storeName": "종로3가1호선역2번출구가로판매점82호",
+      "gubun": "자동",
+      "addr": "서울 종로구 돈화문로 23 가판",
+      "point": ""
+    },{"no": "2",
+      "storeName": "뉴빅마트",
+      "gubun": "자동",
+      "addr": "부산 기장군 정관중앙로 48 106호",
+      "point": ""
+    },{"no": "3",
+      "storeName": "행운복권방",
+      "gubun": "자동",
+      "addr": "부산 중구 구덕로 47",
+      "point": ""
+    },{"no": "4",
+      "storeName": "좋은터",
+      "gubun": "자동",
+      "addr": "인천 계양구 효서로 204 1층",
+      "point": ""
+    },{"no": "5",
+      "storeName": "용꿈돼지꿈",
+      "gubun": "자동",
+      "addr": "인천 부평구 동암남로 11",
+      "point": ""
+    },{"no": "6",
+      "storeName": "천하명당복권방",
+      "gubun": "자동",
+      "addr": "경기 수원시 팔달구 매산로 2",
+      "point": ""
+    },{"no": "7",
+      "storeName": "씨유(CU)포천호국로점",
+      "gubun": "수동",
+      "addr": "경기 포천시 호국로 1382 CU편의점",
+      "point": ""
+    },{"no": "8",
+      "storeName": "복권나라",
+      "gubun": "자동",
+      "addr": "강원 속초시 중앙로 28",
+      "point": ""
+    },{"no": "9",
+      "storeName": "로또복권명당방",
+      "gubun": "자동",
+      "addr": "전남 무안군 삼향읍 남악3로82번길 20 백석프라자 104호 GS편의점 내",
+      "point": ""
+    },{"no": "10",
+      "storeName": "지-아트",
+      "gubun": "자동",
+      "addr": "경남 김해시 율하2로 98-1 복권판매점",
+      "point": ""
+    },{"no": "11",
+      "storeName": "매물도 복권",
+      "gubun": "자동",
+      "addr": "경남 통영시 통영해안로 225-1",
+      "point": ""
+    }]},
+  {"drwNo":"1089",
+    "list": [{"no": "1",
+      "storeName": "돈벼락맞는곳",
+      "gubun": "수동",
+      "addr": "부산 기장군 읍내로 109",
+      "point": ""
+    },{"no": "2",
+      "storeName": "황금복권방",
+      "gubun": "자동",
+      "addr": "부산 부산진구 가야대로 613 상가동1층114호",
+      "point": ""
+    },{"no": "3",
+      "storeName": "대산슈퍼",
+      "gubun": "자동",
+      "addr": "부산 북구 만덕대로 166",
+      "point": ""
+    },{"no": "4",
+      "storeName": "행복드림로또판매점",
+      "gubun": "수동",
+      "addr": "인천 강화군 중앙로 68 1층 101-1호 하나로마트",
+      "point": ""
+    },{"no": "5",
+      "storeName": "행운 마트",
+      "gubun": "자동",
+      "addr": "인천 남동구 만수로 65",
+      "point": ""
+    },{"no": "6",
+      "storeName": "대한유통",
+      "gubun": "자동",
+      "addr": "울산 북구 박상진11로 1 1층112호",
+      "point": ""
+    },{"no": "7",
+      "storeName": "광교호수공원 복권명당점",
+      "gubun": "수동",
+      "addr": "경기 수원시 영통구 광교호수공원로 20 1층 114호(원천동, 더샵 광교레이크시티)",
+      "point": ""
+    },{"no": "8",
+      "storeName": "세븐일레븐 화성봉담대로점",
+      "gubun": "자동",
+      "addr": "경기 화성시 삼천병마로 894-4 1층",
+      "point": ""
+    },{"no": "9",
+      "storeName": "자수정슈퍼",
+      "gubun": "자동",
+      "addr": "전북 전주시 완산구 용머리로 152",
+      "point": ""
+    }]},
+  {"drwNo":"1090",
+    "list": [{"no": "1",
+      "storeName": "경성식품",
+      "gubun": "수동",
+      "addr": "서울 동대문구 망우로21길 52",
+      "point": ""
+    },{"no": "2",
+      "storeName": "주아킹 목동점",
+      "gubun": "자동",
+      "addr": "서울 양천구 목동로 213 1층",
+      "point": ""
+    },{"no": "3",
+      "storeName": "복권명당(서부점)",
+      "gubun": "자동",
+      "addr": "대구 달서구 월배로 452",
+      "point": ""
+    },{"no": "4",
+      "storeName": "천하명당복권",
+      "gubun": "자동",
+      "addr": "대구 북구 칠곡중앙대로 545",
+      "point": ""
+    },{"no": "5",
+      "storeName": "평화(북구사수점)",
+      "gubun": "자동",
+      "addr": "대구 북구 한강로 92 1층 101호",
+      "point": ""
+    },{"no": "6",
+      "storeName": "버스표판매소",
+      "gubun": "자동",
+      "addr": "경기 고양시 덕양구 화신로 76 샘터마을1단지아파트 971번지선",
+      "point": ""
+    },{"no": "7",
+      "storeName": "인생로또 645",
+      "gubun": "자동",
+      "addr": "경기 남양주시 다산순환로 356 다산푸리마타워 1층 102호",
+      "point": ""
+    },{"no": "8",
+      "storeName": "노다지복권방",
+      "gubun": "자동",
+      "addr": "경기 부천시 양지로 205 1층 118호",
+      "point": ""
+    },{"no": "9",
+      "storeName": "왕대박유통",
+      "gubun": "자동",
+      "addr": "충북 청주시 흥덕구 서현동로 25 화인프라자 1층",
+      "point": ""
+    },{"no": "10",
+      "storeName": "채널큐",
+      "gubun": "수동",
+      "addr": "경남 창원시 마산합포구 산호남로 11-1",
+      "point": ""
+    },{"no": "11",
+      "storeName": "행운&빈센트",
+      "gubun": "자동",
+      "addr": "제주 서귀포시 동문로 64",
+      "point": ""
+    }]},
+  {"drwNo":"1091",
+    "list": [{"no": "1",
+      "storeName": "광산마트",
+      "gubun": "자동",
+      "addr": "서울 강북구 한천로 1078-1",
+      "point": ""
+    },{"no": "2",
+      "storeName": "행운복권방",
+      "gubun": "자동",
+      "addr": "서울 서대문구 신촌로 235-1",
+      "point": ""
+    },{"no": "3",
+      "storeName": "쌍둥이네 로또판매점",
+      "gubun": "자동",
+      "addr": "서울 양천구 화곡로 41 1층",
+      "point": ""
+    },{"no": "4",
+      "storeName": "진우복권",
+      "gubun": "자동",
+      "addr": "부산 연제구 월드컵대로 119 204호(연산동)",
+      "point": ""
+    },{"no": "5",
+      "storeName": "일등복권방",
+      "gubun": "자동",
+      "addr": "인천 계양구 임학동로 12 1층",
+      "point": ""
+    },{"no": "6",
+      "storeName": "가야홀인원복권방",
+      "gubun": "자동",
+      "addr": "경기 의정부시 체육로 306-14,(녹양동)",
+      "point": ""
+    },{"no": "7",
+      "storeName": "로또하복대두진점",
+      "gubun": "자동",
+      "addr": "충북 청주시 흥덕구 증안로 33 두진백로상가1층102호",
+      "point": ""
+    },{"no": "8",
+      "storeName": "문경로또",
+      "gubun": "자동",
+      "addr": "경북 문경시 문희로 19-1",
+      "point": ""
+    },{"no": "9",
+      "storeName": "행운의집제1호점",
+      "gubun": "자동",
+      "addr": "경북 안동시 영가로 24",
+      "point": ""
+    }]},
+  {"drwNo":"1092",
+    "list": [{"no": "1",
+      "storeName": "대박슈퍼",
+      "gubun": "수동",
+      "addr": "서울 강동구 올림픽로 800 1층 106호",
+      "point": ""
+    },{"no": "2",
+      "storeName": "대박슈퍼",
+      "gubun": "수동",
+      "addr": "서울 강동구 올림픽로 800 1층 106호",
+      "point": ""
+    },{"no": "3",
+      "storeName": "연초2호 쇼케이스7호",
+      "gubun": "자동",
+      "addr": "서울 서초구 신반포로 194 강남고속버스터미널 쇼케이스7호",
+      "point": ""
+    },{"no": "4",
+      "storeName": "대박복권&크로플박사",
+      "gubun": "자동",
+      "addr": "서울 영등포구 도신로 119 1층(도림동)",
+      "point": ""
+    },{"no": "5",
+      "storeName": "돈벼락맞는곳",
+      "gubun": "자동",
+      "addr": "부산 기장군 읍내로 109",
+      "point": ""
+    },{"no": "6",
+      "storeName": "행운복권",
+      "gubun": "수동",
+      "addr": "인천 미추홀구 인하로 354",
+      "point": ""
+    },{"no": "7",
+      "storeName": "운수대통",
+      "gubun": "자동",
+      "addr": "인천 미추홀구 경인로34번길 35 1층 (숭의동)",
+      "point": ""
+    },{"no": "8",
+      "storeName": "프렌드24시",
+      "gubun": "자동",
+      "addr": "광주 광산구 첨단중앙로 164 빌리오네2 제1층 106호",
+      "point": ""
+    },{"no": "9",
+      "storeName": "버스표판매소",
+      "gubun": "자동",
+      "addr": "경기 고양시 덕양구 화신로 76 샘터마을1단지아파트 971번지선",
+      "point": ""
+    },{"no": "10",
+      "storeName": "행복드림로또",
+      "gubun": "수동",
+      "addr": "경기 고양시 일산서구 일산로 662 101호",
+      "point": ""
+    },{"no": "11",
+      "storeName": "복덩이로또",
+      "gubun": "수동",
+      "addr": "경기 양주시 개나리길 58",
+      "point": ""
+    },{"no": "12",
+      "storeName": "강남슈퍼",
+      "gubun": "자동",
+      "addr": "경기 의정부시 의정로 193",
+      "point": ""
+    },{"no": "13",
+      "storeName": "대관령복권방",
+      "gubun": "자동",
+      "addr": "강원 평창군 대관령로 74-4 1층 B호",
+      "point": ""
+    },{"no": "14",
+      "storeName": "힐링복권",
+      "gubun": "자동",
+      "addr": "충남 당진시 신복운로2길 13 1층 청소나라 옆",
+      "point": ""
+    },{"no": "15",
+      "storeName": "흥건슈퍼",
+      "gubun": "자동",
+      "addr": "전북 전주시 완산구 거마평로 25 흥건1차아파트상가 흥건슈퍼",
+      "point": ""
+    },{"no": "16",
+      "storeName": "이마트24 순천산단점",
+      "gubun": "자동",
+      "addr": "전남 순천시 산단1길 6 중앙정밀기계,마트",
+      "point": ""
+    }]},
+  {"drwNo":"1093",
+    "list": [{"no": "1",
+      "storeName": "피터팬",
+      "gubun": "자동",
+      "addr": "서울 은평구 은평로 193",
+      "point": ""
+    },{"no": "2",
+      "storeName": "일등복권편의점",
+      "gubun": "자동",
+      "addr": "대구 달서구 대명천로 220 1층",
+      "point": ""
+    },{"no": "3",
+      "storeName": "세진전자통신",
+      "gubun": "자동",
+      "addr": "대구 서구 서대구로 156",
+      "point": ""
+    },{"no": "4",
+      "storeName": "메트로센터",
+      "gubun": "자동",
+      "addr": "대구 중구 달구벌대로 지하 2100 메트로센터C412호",
+      "point": ""
+    },{"no": "5",
+      "storeName": "교통카드충전소",
+      "gubun": "수동",
+      "addr": "경기 고양시 덕양구 화정로 지하 60 화정역 2번출구",
+      "point": ""
+    },{"no": "6",
+      "storeName": "초월대박복권방",
+      "gubun": "자동",
+      "addr": "경기 광주시 경충대로 1252",
+      "point": ""
+    },{"no": "7",
+      "storeName": "둘리복권방",
+      "gubun": "자동",
+      "addr": "경기 시흥시 중심상가2길 12-6 한강프라자제1층101호",
+      "point": ""
+    },{"no": "8",
+      "storeName": "안성맞춤",
+      "gubun": "반자동",
+      "addr": "경기 안성시 안성맞춤대로 1099-1",
+      "point": ""
+    },{"no": "9",
+      "storeName": "행운복권방",
+      "gubun": "반자동",
+      "addr": "경기 의정부시 충의로 55",
+      "point": ""
+    },{"no": "10",
+      "storeName": "행운복권방",
+      "gubun": "자동",
+      "addr": "경기 의정부시 충의로 55",
+      "point": ""
+    },{"no": "11",
+      "storeName": "대흥복권",
+      "gubun": "자동",
+      "addr": "경기 화성시 행정서로3길 4-46 101호",
+      "point": ""
+    },{"no": "12",
+      "storeName": "떴다GO 1등",
+      "gubun": "자동",
+      "addr": "경기 화성시 동탄반석로 172 1층 138호(동탄 파라곤점)",
+      "point": ""
+    },{"no": "13",
+      "storeName": "금전산복권방",
+      "gubun": "반자동",
+      "addr": "전남 순천시 연향1로 17-1 금전산복권방",
+      "point": ""
+    }]},
+  {"drwNo":"1094",
+    "list": [{"no": "1",
+      "storeName": "엘도라도복권점문점",
+      "gubun": "수동",
+      "addr": "서울 광진구 용마산로 47",
+      "point": ""
+    },{"no": "2",
+      "storeName": "제이복권방",
+      "gubun": "자동",
+      "addr": "서울 종로구 종로 225-1 평창빌딩 1층 103호",
+      "point": ""
+    },{"no": "3",
+      "storeName": "에스비 상사",
+      "gubun": "수동",
+      "addr": "서울 중구 퇴계로86길 29 1층",
+      "point": ""
+    },{"no": "4",
+      "storeName": "서면문화로또",
+      "gubun": "자동",
+      "addr": "부산 부산진구 신천대로65번길 59",
+      "point": ""
+    },{"no": "5",
+      "storeName": "한꿈복권방",
+      "gubun": "자동",
+      "addr": "울산 중구 번영로 586",
+      "point": ""
+    },{"no": "6",
+      "storeName": "세븐일레븐구리한성점",
+      "gubun": "자동",
+      "addr": "경기 구리시 이문안로 49 한성1차아파트상가102호",
+      "point": ""
+    },{"no": "7",
+      "storeName": "민준복권",
+      "gubun": "자동",
+      "addr": "경기 군포시 삼성로 5 해피시티 104호(부곡동 해피시티)",
+      "point": ""
+    },{"no": "8",
+      "storeName": "운좋은 복권방",
+      "gubun": "자동",
+      "addr": "경기 수원시 장안구 덕영대로425번길 34 1층(율전동)",
+      "point": ""
+    },{"no": "9",
+      "storeName": "정통복권방",
+      "gubun": "자동",
+      "addr": "경기 수원시 팔달구 매산로116번길 32",
+      "point": ""
+    },{"no": "10",
+      "storeName": "신천하명당",
+      "gubun": "자동",
+      "addr": "충남 예산군 발연로 1 이마트 24 내",
+      "point": ""
+    },{"no": "11",
+      "storeName": "복권나라",
+      "gubun": "수동",
+      "addr": "경북 포항시 북구 장량로140번길 9",
+      "point": ""
+    },{"no": "12",
+      "storeName": "로또복권판매 초전점",
+      "gubun": "수동",
+      "addr": "경남 진주시 대신로457번길 9 1층",
+      "point": ""
+    }]},
+  {"drwNo":"1095",
+    "list": [{"no": "1",
+      "storeName": "다모아",
+      "gubun": "자동",
+      "addr": "서울 구로구 공원로6나길 39-1",
+      "point": ""
+    },{"no": "2",
+      "storeName": "인터넷 복권판매사이트",
+      "gubun": "자동",
+      "addr": "동행복권(dhlottery.co.kr)",
+      "point": ""
+    },{"no": "3",
+      "storeName": "묵동식품",
+      "gubun": "자동",
+      "addr": "서울 중랑구 동일로 919",
+      "point": ""
+    },{"no": "4",
+      "storeName": "드림복권",
+      "gubun": "수동",
+      "addr": "인천 연수구 신송로118번길 6 송도풍림아이원1단지아파트 1층 103호",
+      "point": ""
+    },{"no": "5",
+      "storeName": "스타복권",
+      "gubun": "자동",
+      "addr": "경기 의정부시 호국로 1075 1층(가능동)",
+      "point": ""
+    },{"no": "6",
+      "storeName": "황금로또복권판매",
+      "gubun": "자동",
+      "addr": "충남 당진시 동부로 223 B동 108호 한빛부동산",
+      "point": ""
+    },{"no": "7",
+      "storeName": "복돼지복권방",
+      "gubun": "자동",
+      "addr": "전북 익산시 선화로1길 4 배산시티프라자 배산시티프라자 1층 107호",
+      "point": ""
+    },{"no": "8",
+      "storeName": "진빈레코드",
+      "gubun": "자동",
+      "addr": "경남 밀양시 북성로 7",
+      "point": ""
+    },{"no": "9",
+      "storeName": "로또명당",
+      "gubun": "자동",
+      "addr": "경남 창원시 의창구 도계로 49",
+      "point": ""
+    },{"no": "10",
+      "storeName": "일등복권방",
+      "gubun": "자동",
+      "addr": "제주 제주시 신대로 119",
+      "point": ""
+    }]},
+  {"drwNo":"1096",
+    "list": [{"no": "1",
+      "storeName": "또와식품",
+      "gubun": "자동",
+      "addr": "서울 강서구 양천로 694",
+      "point": ""
+    },{"no": "2",
+      "storeName": "알리바이",
+      "gubun": "자동",
+      "addr": "광주 광산구 수등로 253 1층 알리바이",
+      "point": ""
+    },{"no": "3",
+      "storeName": "씨유 대전반석역점",
+      "gubun": "자동",
+      "addr": "대전 유성구 반석로 10 반석역프라자",
+      "point": ""
+    },{"no": "4",
+      "storeName": "주몽동명",
+      "gubun": "자동",
+      "addr": "경기 용인시 수지구 포은대로 319 중앙빌딩 104호",
+      "point": ""
+    },{"no": "5",
+      "storeName": "용꿈돼지꿈복권전문점",
+      "gubun": "자동",
+      "addr": "강원 동해시 중앙로 234 이주민상가1층15호",
+      "point": ""
+    },{"no": "6",
+      "storeName": "횡성터미널로또",
+      "gubun": "자동",
+      "addr": "강원 횡성군 앞들서로19번길 10 1층 101호",
+      "point": ""
+    },{"no": "7",
+      "storeName": "여기있었네복권방",
+      "gubun": "자동",
+      "addr": "전북 김제시 남북로 171",
+      "point": ""
+    },{"no": "8",
+      "storeName": "진우복권명당",
+      "gubun": "자동",
+      "addr": "경북 경산시 경산로15길 1-11",
+      "point": ""
+    },{"no": "9",
+      "storeName": "로그인복권방",
+      "gubun": "자동",
+      "addr": "경북 구미시 상사동로 149-4 사곡동",
+      "point": ""
+    },{"no": "10",
+      "storeName": "로또GS송림점",
+      "gubun": "자동",
+      "addr": "경남 밀양시 삼문중앙로 48 GS편의점 내",
+      "point": ""
+    }]},
+  {"drwNo":"1097",
+    "list": [{"no": "1",
+      "storeName": "인터넷 복권판매사이트",
+      "gubun": "자동",
+      "addr": "동행복권(dhlottery.co.kr)",
+      "point": ""
+    },{"no": "2",
+      "storeName": "자갈치 도깨비명당",
+      "gubun": "자동",
+      "addr": "부산 중구 자갈치로 33 501,502호",
+      "point": ""
+    },{"no": "3",
+      "storeName": "NBA(엔비에이)",
+      "gubun": "자동",
+      "addr": "인천 중구 신도시남로142번길 6 1동 1층 128호",
+      "point": ""
+    },{"no": "4",
+      "storeName": "백송마트",
+      "gubun": "자동",
+      "addr": "광주 광산구 월계로 110 104호",
+      "point": ""
+    },{"no": "5",
+      "storeName": "용꿈돼지꿈복권방",
+      "gubun": "자동",
+      "addr": "경기 시흥시 하중로 235 법조타운103호",
+      "point": ""
+    },{"no": "6",
+      "storeName": "용이복권방",
+      "gubun": "자동",
+      "addr": "경기 평택시 현신3길 44",
+      "point": ""
+    },{"no": "7",
+      "storeName": "세븐일레븐화성봉담수기점",
+      "gubun": "자동",
+      "addr": "경기 화성시 세자로 358",
+      "point": ""
+    }]}
+]

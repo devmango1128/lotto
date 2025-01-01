@@ -24,9 +24,7 @@ let LOTTO = {
         xhr.open('GET', url, true);
         xhr.onload = function() {
             if (xhr.status >= 200 && xhr.status < 400) {
-                const response = JSON.parse(xhr.responseText);
-
-                _this.perpData = response;
+                _this.perpData = JSON.parse(xhr.responseText);
                 console.log('perpData 로딩완료....');
 
             } else {
@@ -47,9 +45,7 @@ let LOTTO = {
         xhr2.onload = function() {
             if (xhr2.status >= 200 && xhr2.status < 400) {
 
-                const response = JSON.parse(xhr2.responseText);
-
-                _this.fiveResult = response;
+                _this.fiveResult = JSON.parse(xhr2.responseText);
                 console.log('fiveResult 로딩완료....');
             } else {
                 console.error('Error:', xhr2.status);
@@ -72,9 +68,7 @@ let LOTTO = {
         xhr.open('GET', url, true);
         xhr.onload = function() {
             if (xhr.status >= 200 && xhr.status < 400) {
-                const response = JSON.parse(xhr.responseText);
-
-                _this.lottoData = response;
+                _this.lottoData = JSON.parse(xhr.responseText);
                 _this.fn_lotto_turn(_this.lottoData.length);
 
                 const selectElement = document.getElementById('lottoTurn');
@@ -141,8 +135,7 @@ let LOTTO = {
         if (number < 10) {
             return 0;
         } else if (number >= 10 && number < 100) {
-            const tensDigit = Math.floor(number / 10) * 1;
-            return tensDigit;
+            return Math.floor(number / 10);
         }
     },
     //반자동(고정수)안에 볼 그리기
@@ -233,6 +226,8 @@ let LOTTO = {
                  break;
             case 'Q' :
                 _this.fn_qr_camera_show(); break;
+            case 'E' :
+                _this.fn_send_mail(); break;
         }
     },
     //모달 타이틀 설정
@@ -331,7 +326,7 @@ let LOTTO = {
         const checkbox = document.getElementById('fixedCheckbox');
 
         //반자동 체크가 되어있으면서 숫자가 선택 안 된 경우
-        if (checkbox.checked && _this.fixedList.length == 0) {
+        if (checkbox.checked && _this.fixedList.length === 0) {
             alert('반자동 숫자를 선택해주세요.');
             return;
         }
@@ -401,13 +396,13 @@ let LOTTO = {
                 let alp = document.createElement('div');
                 alp.classList.add('alp');
 
-                if (i == 0) alp.innerHTML = 'A';
-                else if (i == 1) alp.innerHTML = 'B';
-                else if (i == 2) alp.innerHTML = 'C';
-                else if (i == 3) alp.innerHTML = 'D';
-                else if (i == 4) alp.innerHTML = 'E';
+                if (i === 0) alp.innerHTML = 'A';
+                else if (i === 1) alp.innerHTML = 'B';
+                else if (i === 2) alp.innerHTML = 'C';
+                else if (i === 3) alp.innerHTML = 'D';
+                else if (i === 4) alp.innerHTML = 'E';
 
-                if(j == 0) listDiv.appendChild(alp);
+                if(j === 0) listDiv.appendChild(alp);
                 ballDiv.className = 'ball-' + _this.fn_digitNumber(lottoData[i][j]);
                 ballDiv.textContent = lottoData[i][j];
                 listDiv.appendChild(ballDiv);
@@ -423,7 +418,7 @@ let LOTTO = {
 
         const _this = this;
 
-        if(_this.autoLottoData.length == 0) {
+        if(_this.autoLottoData.length === 0) {
             alert('저장 할 로또 번호를 생성해주세요.');
             return;
         }
@@ -494,7 +489,7 @@ let LOTTO = {
         const saveLottoList = document.getElementById('saveLottoList');
 
         //데이터가 없는 경우
-        if(keyArr.length == 0) {
+        if(keyArr.length === 0) {
 
             let listDiv = document.createElement('div');
 
@@ -602,7 +597,7 @@ let LOTTO = {
                         drwtNoCnt[lottoData[`drwtNo${j}`]]++;
                     }
                 }
-                if(hasBonus=='Y') {
+                if(hasBonus === 'Y') {
                     drwtNoCnt[lottoData[`bnusNo`]]++;
                 }
             }
@@ -834,7 +829,7 @@ let LOTTO = {
                     let cell = row.insertCell();
                     if(i === 0 && j === 0) {
                         cell.textContent = '당첨금';
-                    } else if(i === 0 && j == 1) {
+                    } else if(i === 0 && j === 1) {
                         cell.textContent = Number(money.replace(/,/g, '')).toLocaleString('ko-KR') + '원'
                     } else if(i === 1 && j === 0) {
                         cell.textContent = '세금';
@@ -863,8 +858,7 @@ let LOTTO = {
         const inputValue = input.value.replace(/,/g, '');
 
         if (!isNaN(Number(inputValue))) {
-            const formattedValue = Number(inputValue).toLocaleString();
-            input.value = formattedValue;
+            input.value = Number(inputValue).toLocaleString();
         }
     }
     //정통사주 복권 추천일 초기화
@@ -1183,6 +1177,10 @@ let LOTTO = {
         if (window.Android && Android.openQRScanner) {
             Android.openQRScanner();
         }
+    }
+    , fn_send_mail : function() {
+        const subject = encodeURIComponent('조상님로또 의견/문의글입니다.');
+        window.location.href = `mailto:devmango1128@gmail.com?subject=${subject}`;
     }
 }
 
