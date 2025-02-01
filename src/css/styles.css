@@ -98,6 +98,11 @@
   }
 }
 
+html, body {
+  -webkit-text-size-adjust: none; /* iOS와 Android의 시스템 글자 크기 조정 비활성화 */
+  text-size-adjust: none;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
