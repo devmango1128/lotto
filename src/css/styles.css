@@ -4815,7 +4815,7 @@ div.logo {
   width: 100%;
   font-weight: bold;
   font-family: 'NanumGothicExtraBold', 'NanumGothic', sans-serif; !important;
-  font-size: 17px;
+  font-size: 17px !important;
 }
 
 div.navigate {
@@ -4823,7 +4823,7 @@ div.navigate {
   text-align: left;
   margin-top: -40px;
   position: absolute;
-  font-size: 13px;
+  font-size: 13px !important;
 }
 
 div.contents {
@@ -4893,7 +4893,7 @@ div.save-lotto-list, div.win-rete-list {
 
 div.save-lotto-list div.save-date {
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 15px !important;
   width: 100%;
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
@@ -4910,7 +4910,7 @@ div.save-lotto-list button.delete-btn {
   height: 24px;
   line-height: 12px;
   padding: 5px;
-  font-size: 1rem;
+  font-size: 14px !important;
 }
 
 div.win-rate-list-group {
@@ -4925,7 +4925,7 @@ div.win-rate-list-group div.win-rate-cnt-div {
   display: inline-block;
   width: 65px;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 16px !important;
 }
 div.win-rate-detail-search {
   display: inline-block;
@@ -4935,13 +4935,13 @@ div.win-rate-detail-search {
 div.win-rate-detail-search select.win-rate-select {
   width:180px;
   height:30px;
-  font-size: 1rem;
+  font-size: 14px !important;
 }
 
 div.win-rate-detail-search select.has-bonus {
   width: 90px;
   height:30px;
-  font-size: 1rem;
+  font-size: 14px !important;
 }
 
 div.win-rate-detail-search button.bonus-btn-blue {
