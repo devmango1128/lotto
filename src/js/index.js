@@ -1191,6 +1191,8 @@ let LOTTO = {
         newFontSize = Math.max(9, Math.min(16, newFontSize));
         localStorage.setItem("fontSize", newFontSize);
         html.style.fontSize = `${newFontSize}px`;
+        document.body.style.minHeight = "100vh";
+        document.body.style.minWidth = "100vw";
     }
     //화면사이즈변경
     , fn_view_size_change : function(factor) {
