@@ -1191,8 +1191,7 @@ let LOTTO = {
         let baseFontSize = parseInt(html.dataset.fontSize) || parseInt(getComputedStyle(html).fontSize);
         let newFontSize = baseFontSize + factor;
 
-        // 최소/최대 폰트 크기 설정 (12px ~ 24px)
-        newFontSize = Math.max(12, Math.min(24, newFontSize));
+        newFontSize = Math.max(10, Math.min(16, newFontSize));
 
         // 새 폰트 크기 저장 (웹뷰에서 크기가 반대로 증가하는 문제 방지)
         html.dataset.fontSize = newFontSize;
