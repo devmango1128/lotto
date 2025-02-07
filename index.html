@@ -52,10 +52,10 @@
                     <div class="row gx-lg-5">
                         <div class="col-lg-3 col-xxl-4 mb-2 cur-p">
                             <div class="btn-group">
-                                <div class="feature bg-warning bg-gradient text-white rounded-3 top-btn font-min" onClick="LOTTO.fn_font_size_change(-0.1)">
+                                <div class="feature bg-warning bg-gradient text-white rounded-3 top-btn font-min" onClick="LOTTO.fn_font_size_change(-1)">
                                     글씨작게
                                 </div>
-                                <div class="feature bg-warning bg-gradient text-white rounded-3 top-btn font-max" onClick="LOTTO.fn_font_size_change(0.1)">
+                                <div class="feature bg-warning bg-gradient text-white rounded-3 top-btn font-max" onClick="LOTTO.fn_font_size_change(1)">
                                     글씨크게
                                 </div>
                                 <div class="feature bg-warning bg-gradient text-white rounded-3 top-btn view-min" onClick="LOTTO.fn_view_size_change(-0.1)">
@@ -294,7 +294,7 @@
                 <div class="container px-lg-5 mg-t20">
                     <div class="row gx-lg-5">
                         <div class="mg-t10 w-100 lotto-calculator" id="lotto-calculator">
-                            <input type="text" class="calculator" id="calculator" placeholder="당첨금액을 입력하세요." maxlength="14" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); LOTTO.fn_formatNumber(this);"/>
+                            <input type="text" class="calculator" id="calculator" placeholder="당첨금액을 입력하세요." maxlength="14" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); LOTTO.fn_formatNumber(this);"/>
                         </div>
                         <div class="bottom-btn">
                             <button class="btn bottom-btn-gray" onclick="LOTTO.fn_modal_close('calculatorSection-modal')">닫기</button>
@@ -310,7 +310,7 @@
 </html>
 <script>
     document.addEventListener('DOMContentLoaded', async function() {
-        document.getElementById('main-container').style.fontSize = '14px';
+        document.getElementById('main-container').style.fontSize = '12px';
         setTimeout(function () {
             document.getElementById('front-bar').style.display = 'inline';
             document.getElementById('main-container').style.display = 'none';
