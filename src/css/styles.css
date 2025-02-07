@@ -12194,3 +12194,12 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
   width: 100%;
   font-size: 1rem;
 }
+
+.lotto-ball-area {
+  display: flex;
+  gap: 5px;
+}
+
+.lotto-total-area {
+  display: inline-block;
+}
