@@ -1188,7 +1188,6 @@ let LOTTO = {
         let html = document.documentElement;
         let currentSize = parseFloat(window.getComputedStyle(html).fontSize);
         let newSize = currentSize + size;
-        if (newSize < 12 || newSize > 24) return;
         html.style.fontSize = newSize + 'px';
     }
     //화면사이즈변경
