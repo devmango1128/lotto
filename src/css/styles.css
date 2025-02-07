@@ -4815,7 +4815,7 @@ div.logo {
   width: 100%;
   font-weight: bold;
   font-family: 'NanumGothicExtraBold', 'NanumGothic', sans-serif; !important;
-  font-size: 17px !important;
+  font-size: 1.2rem;
 }
 
 div.navigate {
@@ -12181,7 +12181,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
 }
 
 .main-container .main-smail-text {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .btn-group {
@@ -12192,5 +12192,5 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
 
 .top-btn {
   width: 100%;
-  font-size: 14px;
+  font-size: 1rem;
 }
