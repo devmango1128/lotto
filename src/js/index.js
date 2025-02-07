@@ -11,10 +11,20 @@ let LOTTO = {
     fiveResultIdx : -1,
     //시작
     init : function() {
+        this.fn_font_size_check();
         this.fn_five_day_result_data();
         this.fn_lotto_turn_change();
         this.fn_create_fixed_number_ball();
     },
+    //폰트 사이즈 체크
+    fn_font_size_check : function() {
+        let html = document.documentElement;
+        let currentSize = parseFloat(window.getComputedStyle(html).fontSize);
+        if(currentSize > 16) {
+            html.style.fontSize = '16px';
+        }
+    },
+    //오행
     fn_five_day_result_data : function() {
         let _this = this;
 
@@ -1181,6 +1191,31 @@ let LOTTO = {
     , fn_send_mail : function() {
         const subject = encodeURIComponent('조상님로또 의견/문의글입니다.');
         window.location.href = `mailto:devmango1128@gmail.com?subject=${subject}`;
+    }
+    //폰트사이즈변경
+    , fn_font_size_change : function(size) {
+        let html = document.documentElement;
+        let currentSize = parseFloat(window.getComputedStyle(html).fontSize);
+        let newSize = currentSize + size;
+        if(newSize > 16) return;
+        html.style.fontSize = newSize + 'px';
+    }
+    //화면사이즈변경
+    , fn_view_size_change : function(factor) {
+        let body = document.body;
+        let currentScale = parseFloat(body.dataset.scale) || 1;
+        let newScale = currentScale + factor;
+
+        if(newScale > 1) return;
+
+        body.style.transform = `scale(${newScale})`;
+        body.style.transformOrigin = "0 0";
+        body.style.position = "fixed";
+        body.style.width = "100vw";
+        body.style.height = "100vh";
+        body.style.overflow = "hidden";
+
+        body.dataset.scale = newScale;
     }
 }
 

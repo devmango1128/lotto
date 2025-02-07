@@ -12183,3 +12183,14 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
 .main-container .main-smail-text {
   font-size: 1em;
 }
+
+.btn-group {
+  display: flex;
+  gap:5px;
+  width:100%;
+}
+
+.top-btn {
+  width: 100%;
+  font-size: 14px;
+}
