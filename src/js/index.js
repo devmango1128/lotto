@@ -1003,7 +1003,7 @@ let LOTTO = {
 
         //오행 데이터 들고오기
         _this.fn_get_five_day_result_data();
-        console.log(_this.fiveResultIdx);
+
         if(_this.fiveResultIdx === -1) {
             //데이터가 없는 경우
             let listDiv = document.createElement('div');
@@ -1191,8 +1191,13 @@ let LOTTO = {
         newFontSize = Math.max(9, Math.min(16, newFontSize));
         localStorage.setItem("fontSize", newFontSize);
         html.style.fontSize = `${newFontSize}px`;
-        document.body.style.minHeight = "100vh";
-        document.body.style.minWidth = "100vw";
+
+        let body = document.body;
+        body.style.transformOrigin = "0 0";
+        body.style.position = "fixed";
+        body.style.width = "100vw";
+        body.style.height = "100vh";
+        body.style.overflow = "hidden";
     }
     //화면사이즈변경
     , fn_view_size_change : function(factor) {

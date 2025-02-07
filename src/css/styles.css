@@ -12198,6 +12198,8 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
 .lotto-ball-area {
   display: flex;
   gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .lotto-total-area {
