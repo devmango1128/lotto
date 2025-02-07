@@ -1184,7 +1184,7 @@ let LOTTO = {
         window.location.href = `mailto:devmango1128@gmail.com?subject=${subject}`;
     }
     //폰트사이즈변경
-    fn_font_size_change: function(factor) {
+    , fn_font_size_change: function(factor) {
         let html = document.documentElement;
         let baseFontSize = parseInt(localStorage.getItem("fontSize")) || 16;
         let newFontSize = baseFontSize + factor;
