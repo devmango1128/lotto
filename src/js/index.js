@@ -11,18 +11,9 @@ let LOTTO = {
     fiveResultIdx : -1,
     //시작
     init : function() {
-        this.fn_font_size_check();
         this.fn_five_day_result_data();
         this.fn_lotto_turn_change();
         this.fn_create_fixed_number_ball();
-    },
-    //폰트 사이즈 체크
-    fn_font_size_check : function() {
-        let html = document.documentElement;
-        let currentSize = parseFloat(window.getComputedStyle(html).fontSize);
-        if(currentSize > 16) {
-            html.style.fontSize = '16px';
-        }
     },
     //오행
     fn_five_day_result_data : function() {
