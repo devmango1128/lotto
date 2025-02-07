@@ -1184,11 +1184,11 @@ let LOTTO = {
         window.location.href = `mailto:devmango1128@gmail.com?subject=${subject}`;
     }
     //폰트사이즈변경
-    , fn_font_size_change : function(size) {
+    , fn_font_size_change: function(size) {
         let html = document.documentElement;
         let currentSize = parseFloat(window.getComputedStyle(html).fontSize);
         let newSize = currentSize + size;
-        if(newSize > 16) return;
+        if (newSize < 12 || newSize > 24) return;
         html.style.fontSize = newSize + 'px';
     }
     //화면사이즈변경

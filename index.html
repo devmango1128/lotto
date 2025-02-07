@@ -310,9 +310,8 @@
 </html>
 <script>
     document.addEventListener('DOMContentLoaded', async function() {
-        let html = document.documentElement;
-        let currentSize = parseFloat(window.getComputedStyle(html).fontSize);
-        if(currentSize > 16) html.style.fontSize = '16px';
+        let currentSize = parseFloat(document.getElementById('main-container').fontSize);
+        if(currentSize >= 16) document.getElementById('main-container').style.fontSize = '14px';
 
         setTimeout(function () {
             document.getElementById('front-bar').style.display = 'inline';
