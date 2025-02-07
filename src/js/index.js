@@ -1187,14 +1187,18 @@ let LOTTO = {
     , fn_font_size_change: function(factor) {
         let html = document.documentElement;
 
-        // 현재 font-size 가져오기
-        let currentFontSize = parseFloat(getComputedStyle(html).fontSize);
-        let newFontSize = currentFontSize + factor;
-        newFontSize = Math.max(8, Math.min(16, newFontSize));
-        if (factor < 0 && newFontSize >= currentFontSize) return;
-        setTimeout(() => {
-            html.style.fontSize = `${newFontSize}px`;
-        }, 0);
+        // 현재 font-size 가져오기 (웹뷰 대응)
+        let baseFontSize = parseInt(html.dataset.fontSize) || parseInt(getComputedStyle(html).fontSize);
+        let newFontSize = baseFontSize + factor;
+
+        // 최소/최대 폰트 크기 설정 (12px ~ 24px)
+        newFontSize = Math.max(12, Math.min(24, newFontSize));
+
+        // 새 폰트 크기 저장 (웹뷰에서 크기가 반대로 증가하는 문제 방지)
+        html.dataset.fontSize = newFontSize;
+
+        // 폰트 크기 적용
+        html.style.fontSize = `${newFontSize}px`;
     }
     //화면사이즈변경
     , fn_view_size_change : function(factor) {
