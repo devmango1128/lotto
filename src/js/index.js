@@ -1187,7 +1187,7 @@ let LOTTO = {
     , fn_font_size_change: function(factor) {
         let html = document.documentElement;
         html.dataset.fontSize = parseInt(html.dataset.fontSize) + factor;
-        html.style.fontSize = parseInt(getComputedStyle(html).fontSize) + factor + 'px';
+        html.style.fontSize = (parseInt(getComputedStyle(html).fontSize) + factor) + 'px';
     }
     //화면사이즈변경
     , fn_view_size_change : function(factor) {
