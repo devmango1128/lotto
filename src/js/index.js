@@ -1188,8 +1188,6 @@ let LOTTO = {
         let html = document.documentElement;
         let baseFontSize = parseInt(html.dataset.fontSize) || parseInt(getComputedStyle(html).fontSize);
         let newFontSize = baseFontSize + factor;
-
-        newFontSize = Math.max(10, Math.min(16, newFontSize));
         html.dataset.fontSize = `${newFontSize}px`;
         html.style.fontSize = `${newFontSize}px`;
     }
