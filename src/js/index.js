@@ -1186,10 +1186,15 @@ let LOTTO = {
     //폰트사이즈변경
     , fn_font_size_change: function(factor) {
         let html = document.documentElement;
-        let currentFontSize = parseFloat(getComputedStyle(html).fontSize) || 16;
+
+        // 현재 font-size 가져오기
+        let currentFontSize = parseFloat(getComputedStyle(html).fontSize);
         let newFontSize = currentFontSize + factor;
-        alert(newFontSize);
-        html.style.fontSize = `${newFontSize}px`;
+        newFontSize = Math.max(8, Math.min(16, newFontSize));
+        if (factor < 0 && newFontSize >= currentFontSize) return;
+        setTimeout(() => {
+            html.style.fontSize = `${newFontSize}px`;
+        }, 0);
     }
     //화면사이즈변경
     , fn_view_size_change : function(factor) {
