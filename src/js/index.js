@@ -1191,6 +1191,8 @@ let LOTTO = {
         newFontSize = Math.max(9, Math.min(16, newFontSize));
         localStorage.setItem("fontSize", newFontSize);
         html.style.fontSize = `${newFontSize}px`;
+        let baseLineHeight = baseFontSize * 2 + factor;
+        html.style.lineHeight = `${baseLineHeight}px`;
 
         let body = document.body;
         body.style.transformOrigin = "0 0";
