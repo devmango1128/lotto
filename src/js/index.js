@@ -1184,13 +1184,14 @@ let LOTTO = {
         window.location.href = `mailto:devmango1128@gmail.com?subject=${subject}`;
     }
     //폰트사이즈변경
-    , fn_font_size_change: function(factor) {
+    fn_font_size_change: function(factor) {
         let html = document.documentElement;
-        const fontSize = parseInt(getComputedStyle(html).fontSize);
-        const resultSize = fontSize + factor;
-        alert(resultSize);
-        html.dataset.fontSize = resultSize;
-        html.style.fontSize = `${resultSize}px`;
+        let baseFontSize = parseInt(localStorage.getItem("fontSize")) || 16;
+        let newFontSize = baseFontSize + factor;
+        newFontSize = Math.max(9, Math.min(16, newFontSize));
+        localStorage.setItem("fontSize", newFontSize);
+        html.style.fontSize = `${newFontSize}px`;
+        alert(`변경된 폰트 크기: ${newFontSize}px`);
     }
     //화면사이즈변경
     , fn_view_size_change : function(factor) {
