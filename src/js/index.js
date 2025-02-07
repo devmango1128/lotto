@@ -481,7 +481,7 @@ let LOTTO = {
 
         //storage 키 저장
         for (let i = 0; i < localStorage.length; i++) {
-            keyArr.push(localStorage.key(i));
+            if(localStorage.key(i).startsWith('lottoData_')) keyArr.push(localStorage.key(i));
         }
 
         // 선택된 숫자 정렬

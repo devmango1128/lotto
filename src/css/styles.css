@@ -4910,7 +4910,7 @@ div.save-lotto-list button.delete-btn {
   height: 24px;
   line-height: 12px;
   padding: 5px;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 div.win-rate-list-group {
@@ -4925,7 +4925,7 @@ div.win-rate-list-group div.win-rate-cnt-div {
   display: inline-block;
   width: 65px;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 div.win-rate-detail-search {
   display: inline-block;
@@ -4935,13 +4935,13 @@ div.win-rate-detail-search {
 div.win-rate-detail-search select.win-rate-select {
   width:180px;
   height:30px;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 div.win-rate-detail-search select.has-bonus {
   width: 90px;
   height:30px;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 div.win-rate-detail-search button.bonus-btn-blue {
@@ -5125,7 +5125,7 @@ div.bottom-btn button.bottom-btn-blue {
 div.store-lotto-search select.turn-list-select {
   width:180px;
   height:30px;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
 }
 
 div.store-lotto-list div.store-sub-div {
@@ -5139,7 +5139,7 @@ div.store-lotto-list div.store-sub-div {
 div.store-lotto-list div.store-title {
   display: inline-block;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 div.store-lotto-list div.store-gubun {
@@ -5189,7 +5189,7 @@ div button.red {
 .modal span.title{
   font-weight: 700;
   color: #212529;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .modal-content {
