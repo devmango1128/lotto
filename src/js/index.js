@@ -1188,7 +1188,7 @@ let LOTTO = {
         let html = document.documentElement;
         let baseFontSize = parseInt(localStorage.getItem("fontSize")) || 16;
         let newFontSize = baseFontSize + factor;
-        newFontSize = Math.max(9, Math.min(16, newFontSize));
+        // newFontSize = Math.max(9, Math.min(16, newFontSize));
         localStorage.setItem("fontSize", newFontSize);
         html.style.fontSize = `${newFontSize}px`;
         let baseLineHeight = baseFontSize * 2 + factor;
