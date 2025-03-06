@@ -4828,6 +4828,8 @@ div.navigate {
 
 div.contents {
   flex: 1;
+  display: flex;
+  margin-top: -20px;
 }
 
 div.auto-ball-area {
