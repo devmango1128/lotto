@@ -4771,19 +4771,19 @@ div.total-area, div.top-area {
 }
 
 div.lotto-area div.ball-0, div.auto-ball-area div.ball-0, div.auto-ball-list div.ball-0, div.fixed-number-list div.ball-0, div.save-ball-list div.ball-0, div.win-rate-list-group div.ball-0 {
-  background-color: #e3475a;
+  background-color: #ff7666;
 }
 div.lotto-area div.ball-1, div.auto-ball-area div.ball-1, div.auto-ball-list div.ball-1, div.fixed-number-list div.ball-1, div.save-ball-list div.ball-1, div.win-rate-list-group div.ball-1  {
   background-color: #f6aa55;
 }
 div.lotto-area div.ball-2, div.auto-ball-area div.ball-2, div.auto-ball-list div.ball-2, div.fixed-number-list div.ball-2, div.save-ball-list div.ball-2, div.win-rate-list-group div.ball-2 {
-  background-color: #32a65a;
+  background-color: #98e187;
 }
 div.lotto-area div.ball-3, div.auto-ball-area div.ball-3, div.auto-ball-list div.ball-3, div.fixed-number-list div.ball-3, div.save-ball-list div.ball-3, div.win-rate-list-group div.ball-3 {
-  background-color: #3177f1;
+  background-color: #6aa7e8;
 }
 div.lotto-area div.ball-4, div.auto-ball-area div.ball-4, div.auto-ball-list div.ball-4, div.fixed-number-list div.ball-4, div.save-ball-list div.ball-4, div.win-rate-list-group div.ball-4 {
-  background-color: #cb56e5;
+  background-color: #5a5e62;
 }
 
 div.auto-ball-list div.ball-q {

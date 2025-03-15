@@ -133,11 +133,11 @@ let LOTTO = {
     //공 1자리, 10자리, 20자리, 30자리, 40자리일때 색 다르게 하기 위해 시작숫자 구하기
     fn_digitNumber : function(number) {
 
-        if (number < 10) {
+        if (number < 1) {
             return 0;
-        } else if (number >= 10 && number < 100) {
-            return Math.floor(number / 10);
         }
+        return Math.ceil(number / 10) - 1;
+
     },
     //반자동(고정수)안에 볼 그리기
     fn_create_fixed_number_ball : function() {
