@@ -467,9 +467,10 @@ let LOTTO = {
     },
     //저장된 로또 번호 들고오기
     fn_get_save_number_list : function() {
-        console.log("fn_get_save_number_list");
+
         const _this = this;
         let roundSelect  = document.getElementById('roundSelect');
+        let infoText = document.getElementById('infoText');
         let draw = {};
         let winningNumbers = [];
 
@@ -513,6 +514,10 @@ let LOTTO = {
             listDiv.appendChild(noDataDiv);
             saveLottoList.appendChild(listDiv);
         } else {
+
+            roundSelect.style.display = 'inline-block';
+            infoText.style.display = 'inline-block';
+
             if(roundSelect.children.length === 0) {
 
                 let defaultOption = document.createElement('option');
@@ -608,7 +613,6 @@ let LOTTO = {
 
                 let span = document.createElement('span');
                 span.classList.add('result-span');
-                console.log('roundSelect.value', roundSelect.value);
                 span.innerText = roundSelect.value === '0' ? '-' : '낙첨';
                 span.style.background = '#a4a4a4';
 

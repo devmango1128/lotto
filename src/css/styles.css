@@ -12217,6 +12217,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
 
 .round-select {
   margin-top: 10px;
+  display: none;
 }
 
 .result-span {
@@ -12276,6 +12277,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
   color: #fc7568;
   font-size: 0.7rem;
   text-align: left;
+  display: none;
 }
 
 
