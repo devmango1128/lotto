@@ -1318,13 +1318,13 @@ let LOTTO = {
         banner.classList.remove('hidden');
 
         lines.forEach((line, idx) => {
-            setTimeout(() => line.classList.add('show'), 300 * idx);
+            setTimeout(() => line.classList.add('show'), 100 * idx);
         });
 
         setTimeout(() => {
             lines.forEach((line) => line.classList.remove('show'));
-            setTimeout(() => banner.classList.add('hidden'), 400);
-        }, 2000);
+            setTimeout(() => banner.classList.add('hidden'), 100);
+        }, 1000);
         console.log('-----1');
         const duration = 2000;
         const end = Date.now() + duration;
