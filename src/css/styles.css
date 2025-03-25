@@ -12238,6 +12238,11 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
   gap: 10px;
   margin: 0;
   padding: 0;
+  pointer-events: none;
+}
+
+#congrats-banner.hidden { 
+  pointer-events: none;
 }
 
 .banner-line {
