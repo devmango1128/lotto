@@ -1325,7 +1325,7 @@ let LOTTO = {
             lines.forEach((line) => line.classList.remove('show'));
             setTimeout(() => banner.classList.add('hidden'), 600);
         }, 4000);
-
+        console.log('-----1');
         const duration = 2000;
         const end = Date.now() + duration;
         const defaults = {
@@ -1335,13 +1335,14 @@ let LOTTO = {
             zIndex: 9999,
             colors: ['#1976d2', '#ff4081', '#4caf50', '#ffeb3b']
         };
-
+        console.log('------2');
         (function frame() {
             confetti({
                 ...defaults,
                 particleCount: 4,
                 origin: { x: Math.random(), y: Math.random() * 0.4 }
             });
+            console.log('-------3');
             if (Date.now() < end) requestAnimationFrame(frame);
         })();
     }
