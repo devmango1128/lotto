@@ -4786,6 +4786,11 @@ div.lotto-area div.ball-4, div.auto-ball-area div.ball-4, div.auto-ball-list div
   background-color: #5a5e62;
 }
 
+div.ball-gray {
+  color: #404142;
+  font-weight: 100;
+}
+
 div.auto-ball-list div.ball-q {
   background-color: #464545;
 }
@@ -4864,17 +4869,17 @@ div.fixed-number-list div.ball-click {
   background-color: #4c4c4c !important;
 }
 
-div.auto-ball-list div.list{
+div.auto-ball-list div.list {
   gap: 4px;
   margin-left: -20px;
 }
 
-div.auto-ball-list div.list div.alp{
+div.auto-ball-list div.list div.alp {
   color : #212529;
 }
 
-div.auto-ball-list div.list div{
-  margin: 1px 4px 1px 5px;
+div.auto-ball-list div.list div {
+  margin: 1px 2px 1px 5px;
 }
 
 div.checkbox-area {
@@ -4904,7 +4909,7 @@ div.save-lotto-list div.save-date {
 }
 
 div.save-lotto-list div.save-ball-list div {
-  margin: 0 10px 0 0;
+  margin: 0 5px 0 0;
 }
 
 div.save-lotto-list button.delete-btn {
@@ -12209,3 +12214,65 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus{
   justify-content: center;
   align-items: center;
 }
+
+.round-select {
+  margin-top: 10px;
+}
+
+.result-span {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+#congrats-banner {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-line {
+  background-color: #1976d2;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  width: 100vw;
+  box-sizing: border-box;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.banner-line.highlight {
+  background-color: #ff4081;
+  font-size: 1.6rem;
+  width: 75vw;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.banner-line.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.info-text {
+  color: #fc7568;
+  font-size: 0.7rem;
+  text-align: left;
+}
+
+
+
+

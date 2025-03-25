@@ -467,8 +467,11 @@ let LOTTO = {
     },
     //저장된 로또 번호 들고오기
     fn_get_save_number_list : function() {
-
+        console.log("fn_get_save_number_list");
         const _this = this;
+        let roundSelect  = document.getElementById('roundSelect');
+        let draw = {};
+        let winningNumbers = [];
 
         localStorage.removeItem('adfit.storage.test');
         localStorage.removeItem('adfit.ba.creativeCacheItems');
@@ -492,7 +495,7 @@ let LOTTO = {
         //데이터가 없는 경우
         if(keyArr.length === 0) {
 
-            let listDiv = document.createElement('div');
+            let listDiv= document.createElement('div');
 
             listDiv.classList.add('list');
             listDiv.classList.add('mg-t100');
@@ -509,6 +512,36 @@ let LOTTO = {
 
             listDiv.appendChild(noDataDiv);
             saveLottoList.appendChild(listDiv);
+        } else {
+            if(roundSelect.children.length === 0) {
+
+                let defaultOption = document.createElement('option');
+                defaultOption.selected = true;
+                defaultOption.value = '0';
+                defaultOption.text = '====== 선택 ======';
+
+                roundSelect.appendChild(defaultOption);
+
+                for (let i = _this.lottoData.length; i >= 1; i--) {
+                    let roundOption = document.createElement('option');
+                    roundOption.value = i;
+                    roundOption.text = i + '회 (' + _this.lottoData[i - 1].drwNoDate + ')';
+                    roundSelect.appendChild(roundOption);
+                }
+            }
+
+            draw = _this.lottoData.find(item => item.drwNo === Number(roundSelect.value));
+
+            if (draw) {
+                winningNumbers = [
+                    draw.drwtNo1,
+                    draw.drwtNo2,
+                    draw.drwtNo3,
+                    draw.drwtNo4,
+                    draw.drwtNo5,
+                    draw.drwtNo6,
+                ];
+            }
         }
 
         //생성된 storage key 갯수만큼 생성
@@ -545,8 +578,9 @@ let LOTTO = {
             lottoNumberDivs.classList.add('lotto-number-list');
 
             //key storage 안에 로또 번호 데이터 row 를 생성
-
             for (let j = 0; j < lottoData.lottoData.length; j++) {
+                let count = 0;
+                let bonus = false;
                 let lottoNumbers = document.createElement('div');
                 lottoNumbers.classList.add('save-ball-list');
                 lottoNumbers.classList.add('txt-ai-c');
@@ -554,15 +588,68 @@ let LOTTO = {
 
                 //row 안 숫자 정렬
                 for (let k = 0; k < lottoData.lottoData[j].length; k++) {
+                    const userNumber = lottoData.lottoData[j][k];
                     let lottoNumber = document.createElement('div');
-                    lottoNumber.className = 'ball-' + _this.fn_digitNumber(lottoData.lottoData[j][k]);
+                    // lottoNumber.className = 'ball-gray' + _this.fn_digitNumber(userNumber);
+                    lottoNumber.className = 'ball-gray';
+
+                    if (draw) {
+                        if (winningNumbers.includes(userNumber)) {
+                            count++;
+                            lottoNumber.className = 'ball-' + _this.fn_digitNumber(userNumber);
+                        }
+
+                        if(draw.bnusNo === userNumber) bonus = true;
+                    }
+
                     lottoNumber.textContent = lottoData.lottoData[j][k]
                     lottoNumbers.appendChild(lottoNumber);
                 }
 
+                let span = document.createElement('span');
+                span.classList.add('result-span');
+                console.log('roundSelect.value', roundSelect.value);
+                span.innerText = roundSelect.value === '0' ? '-' : '낙첨';
+                span.style.background = '#a4a4a4';
+
+                // 1등: 6개 일치
+                if (count === 6) {
+                    span.innerText = '1등🎉';
+                    span.style.background = '#c36cf5';
+                    span.classList.add('ball-check');
+                    _this.celebrate_lotto_win(1);
+
+                // 2등: 5개 + 보너스
+                } else if (count === 5 && bonus) {
+                    span.innerText = '2등';
+                    span.style.background = '#46affc';
+                    span.classList.add('ball-check');
+                    _this.celebrate_lotto_win(2);
+
+                // 3등: 5개
+                } else if (count === 5) {
+                    span.innerText = '3등';
+                    span.style.background = '#b2f343';
+                    span.classList.add('ball-check');
+                    _this.celebrate_lotto_win(3);
+
+                // 4등: 4개
+                } else if (count === 4) {
+                    span.innerText = '4등';
+                    span.classList.add('ball-check');
+                    span.style.background = '#f59451';
+                    _this.celebrate_lotto_win(4);
+
+                // 5등: 3개
+                } else if (count === 3) {
+                    span.innerText = '5등';
+                    span.classList.add('ball-check');
+                    span.style.background = '#f58e8e';
+                    _this.celebrate_lotto_win(5);
+                }
+                lottoNumbers.appendChild(span);
                 listDiv.appendChild(lottoNumbers);
             }
-
             saveLottoList.appendChild(listDiv);
         }
     },
@@ -922,7 +1009,6 @@ let LOTTO = {
 
         }
 
-
         const birthTime = document.getElementById('birth-time').value;
 
         if(birthTime === '') {
@@ -1217,6 +1303,43 @@ let LOTTO = {
         body.style.overflow = "hidden";
 
         body.dataset.scale = newScale;
+    }
+
+    , celebrate_lotto_win : function(rank) {
+        const banner = document.getElementById('congrats-banner');
+        const lines = banner.querySelectorAll('.banner-line');
+        const rankSpan = document.getElementById('lotto-rank');
+
+        rankSpan.textContent = `${rank}등`;
+        banner.classList.remove('hidden');
+
+        lines.forEach((line, idx) => {
+            setTimeout(() => line.classList.add('show'), 300 * idx);
+        });
+
+        setTimeout(() => {
+            lines.forEach((line) => line.classList.remove('show'));
+            setTimeout(() => banner.classList.add('hidden'), 600);
+        }, 4000);
+
+        const duration = 2000;
+        const end = Date.now() + duration;
+        const defaults = {
+            startVelocity: 30,
+            spread: 360,
+            ticks: 80,
+            zIndex: 9999,
+            colors: ['#1976d2', '#ff4081', '#4caf50', '#ffeb3b']
+        };
+
+        (function frame() {
+            confetti({
+                ...defaults,
+                particleCount: 4,
+                origin: { x: Math.random(), y: Math.random() * 0.4 }
+            });
+            if (Date.now() < end) requestAnimationFrame(frame);
+        })();
     }
 }
 
