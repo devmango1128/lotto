@@ -1346,17 +1346,17 @@ let LOTTO = {
         //     if (Date.now() < end) requestAnimationFrame(frame);
         // })();
 
-        const interval = setInterval(() => {
-            confetti({
-                ...defaults,
-                particleCount: 4,
-                origin: { x: Math.random(), y: Math.random() * 0.4 }
-            });
-
-            if (Date.now() > end) {
-                clearInterval(interval);
-            }
-        }, 16); // 약 60fps
+        // const interval = setInterval(() => {
+        //     confetti({
+        //         ...defaults,
+        //         particleCount: 4,
+        //         origin: { x: Math.random(), y: Math.random() * 0.4 }
+        //     });
+        //
+        //     if (Date.now() > end) {
+        //         clearInterval(interval);
+        //     }
+        // }, 16); // 약 60fps
     }
 }
 
