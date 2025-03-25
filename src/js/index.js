@@ -1310,21 +1310,21 @@ let LOTTO = {
     }
 
     , celebrate_lotto_win : function(rank) {
-        const banner = document.getElementById('congrats-banner');
-        const lines = banner.querySelectorAll('.banner-line');
-        const rankSpan = document.getElementById('lotto-rank');
-
-        rankSpan.textContent = `${rank}등`;
-        banner.classList.remove('hidden');
-
-        lines.forEach((line, idx) => {
-            setTimeout(() => line.classList.add('show'), 100 * idx);
-        });
-
-        setTimeout(() => {
-            lines.forEach((line) => line.classList.remove('show'));
-            setTimeout(() => banner.classList.add('hidden'), 100);
-        }, 1000);
+        // const banner = document.getElementById('congrats-banner');
+        // const lines = banner.querySelectorAll('.banner-line');
+        // const rankSpan = document.getElementById('lotto-rank');
+        //
+        // rankSpan.textContent = `${rank}등`;
+        // banner.classList.remove('hidden');
+        //
+        // lines.forEach((line, idx) => {
+        //     setTimeout(() => line.classList.add('show'), 100 * idx);
+        // });
+        //
+        // setTimeout(() => {
+        //     lines.forEach((line) => line.classList.remove('show'));
+        //     setTimeout(() => banner.classList.add('hidden'), 100);
+        // }, 1000);
         console.log('-----1');
         const duration = 2000;
         const end = Date.now() + duration;
@@ -1336,15 +1336,15 @@ let LOTTO = {
             colors: ['#1976d2', '#ff4081', '#4caf50', '#ffeb3b']
         };
         console.log('------2');
-        // (function frame() {
-        //     confetti({s
-        //         ...defaults,
-        //         particleCount: 4,
-        //         origin: { x: Math.random(), y: Math.random() * 0.4 }
-        //     });
-        //     console.log('-------3');
-        //     if (Date.now() < end) requestAnimationFrame(frame);
-        // })();
+        (function frame() {
+            confetti({
+                ...defaults,
+                particleCount: 4,
+                origin: { x: Math.random(), y: Math.random() * 0.4 }
+            });
+            console.log('-------3');
+            if (Date.now() < end) requestAnimationFrame(frame);
+        })();
     }
 }
 
