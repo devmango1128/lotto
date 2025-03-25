@@ -1323,8 +1323,8 @@ let LOTTO = {
 
         setTimeout(() => {
             lines.forEach((line) => line.classList.remove('show'));
-            setTimeout(() => banner.classList.add('hidden'), 600);
-        }, 4000);
+            setTimeout(() => banner.classList.add('hidden'), 400);
+        }, 2000);
         console.log('-----1');
         const duration = 2000;
         const end = Date.now() + duration;
