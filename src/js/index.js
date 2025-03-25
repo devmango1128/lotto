@@ -518,7 +518,7 @@ let LOTTO = {
                 let defaultOption = document.createElement('option');
                 defaultOption.selected = true;
                 defaultOption.value = '0';
-                defaultOption.text = '====== 선택 ======';
+                defaultOption.text = '====== 회차 선택 ======';
 
                 roundSelect.appendChild(defaultOption);
 
