@@ -1336,15 +1336,15 @@ let LOTTO = {
             colors: ['#1976d2', '#ff4081', '#4caf50', '#ffeb3b']
         };
         console.log('------2');
-        (function frame() {
-            confetti({
-                ...defaults,
-                particleCount: 4,
-                origin: { x: Math.random(), y: Math.random() * 0.4 }
-            });
-            console.log('-------3');
-            if (Date.now() < end) requestAnimationFrame(frame);
-        })();
+        // (function frame() {
+        //     confetti({s
+        //         ...defaults,
+        //         particleCount: 4,
+        //         origin: { x: Math.random(), y: Math.random() * 0.4 }
+        //     });
+        //     console.log('-------3');
+        //     if (Date.now() < end) requestAnimationFrame(frame);
+        // })();
     }
 }
 
