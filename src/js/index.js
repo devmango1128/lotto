@@ -1325,40 +1325,31 @@ let LOTTO = {
             lines.forEach((line) => line.classList.remove('show'));
             setTimeout(() => banner.classList.add('hidden'), 100);
         }, 1000);
-        console.log('-----1');
+   
         const duration = 2000;
         const end = Date.now() + duration;
+    
         const defaults = {
-            startVelocity: 30,
-            spread: 360,
-            ticks: 80,
-            zIndex: 9999,
-            colors: ['#1976d2', '#ff4081', '#4caf50', '#ffeb3b']
+          count: 4,
+          spread: 360,
+          velocity: party.variation.range(300, 400),
+          gravity: 800,
+          color: () => party.random.pick(['#1976d2', '#ff4081', '#4caf50', '#ffeb3b'])
         };
-        console.log('------2');
-        // (function frame() {
-        //     confetti({
-        //         ...defaults,
-        //         particleCount: 4,
-        //         origin: { x: Math.random(), y: Math.random() * 0.4 }
-        //     });
-        //     console.log('-------3');
-        //     if (Date.now() < end) requestAnimationFrame(frame);
-        // })();
+    
+        (function frame() {
+          party.confetti(document.body, {
+            ...defaults,
+            position: {
+              x: Math.random(),
+              y: Math.random() * 0.4
+            }
+          });
 
-        window.addEventListener('load', () => {
-            const interval = setInterval(() => {
-                confetti({
-                    ...defaults,
-                    particleCount: 4,
-                    origin: { x: Math.random(), y: Math.random() * 0.4 }
-                });
-            
-                if (Date.now() > end) {
-                    clearInterval(interval);
-                }
-            }, 16);
-        });
+          if (Date.now() < end) {
+            requestAnimationFrame(frame);
+          }
+        })();
     }
 }
 
