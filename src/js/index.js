@@ -1334,7 +1334,10 @@ let LOTTO = {
           spread: 360,
           velocity: party.variation.range(300, 400),
           gravity: 800,
-          color: () => party.random.pick(['#1976d2', '#ff4081', '#4caf50', '#ffeb3b'])
+          color: () =>
+            party.Color.fromHex(
+              party.random.pick(['#1976d2', '#ff4081', '#4caf50', '#ffeb3b'])
+            )
         };
     
         (function frame() {
