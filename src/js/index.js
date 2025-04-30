@@ -1139,13 +1139,13 @@ let LOTTO = {
 
                     let row = table.insertRow();
                     // UTC 날짜로 변환하여 사용
-                    let currentDate = new Date(tbToday.getTime() + i * 24 * 60 * 60 * 1000);
+                    const currentDate = new Date(tbToday.getTime() + i * 24 * 60 * 60 * 1000);
                     // 월과 일을 가져와서 2자리 숫자로 만들기
-                    let mm = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-                    let dd = currentDate.getDate().toString().padStart(2, '0');
+                    const mm = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+                    const dd = currentDate.getDate().toString().padStart(2, '0');
 
                     // mm-dd 형식으로 조합
-                    let formattedDate = `${mm}월${dd}일`;
+                    const formattedDate = `${mm}월${dd}일`;
 
                     dateArray.push(formattedDate);
 
@@ -1154,32 +1154,32 @@ let LOTTO = {
                         if(i === 0 && j === 0) {
                             cell.textContent = dateArray[0];
                             if(_this.fiveResult[(_this.fiveResultIdx % 25)].Score === 3) cell.classList.add('blue-font');
-                        } else if(i === 0 && j == 1) {
-                            cell.textContent = _this.fiveResult[_this.fiveResultIdx].Result;
+                        } else if(i === 0 && j === 1) {
+                            cell.textContent = _this.fiveResult[(_this.fiveResultIdx % 25)].Result;
                             if(_this.fiveResult[(_this.fiveResultIdx % 25)].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 1 && j === 0) {
                             cell.textContent = dateArray[1];
                             if(_this.fiveResult[(_this.fiveResultIdx + 1) % 25].Score === 3) cell.classList.add('blue-font');
-                        } else if(i === 1 && i === 1) {
-                            cell.textContent = _this.fiveResult[_this.fiveResultIdx + 1].Result;
+                        } else if(i === 1 && j === 1) {
+                            cell.textContent = _this.fiveResult[(_this.fiveResultIdx + 1) % 25].Result;
                             if(_this.fiveResult[(_this.fiveResultIdx + 1) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 2 && j === 0) {
                             cell.textContent = dateArray[2];
                             if(_this.fiveResult[(_this.fiveResultIdx + 2) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 2  && j === 1 ) {
-                            cell.textContent = _this.fiveResult[_this.fiveResultIdx + 2].Result;
+                            cell.textContent = _this.fiveResult[(_this.fiveResultIdx + 2) % 25].Result;
                             if(_this.fiveResult[(_this.fiveResultIdx + 2) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 3  && j === 0 ) {
                             cell.textContent = dateArray[3];
                             if(_this.fiveResult[(_this.fiveResultIdx + 3) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 3  && j === 1 ) {
-                            cell.textContent = _this.fiveResult[_this.fiveResultIdx + 3].Result;
+                            cell.textContent = _this.fiveResult[(_this.fiveResultIdx + 3) % 25].Result;
                             if(_this.fiveResult[(_this.fiveResultIdx + 3) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 4  && j === 0 ) {
                             cell.textContent = dateArray[4];
                             if(_this.fiveResult[(_this.fiveResultIdx + 4) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 4  && j === 1 ) {
-                            cell.textContent = _this.fiveResult[_this.fiveResultIdx + 4].Result;
+                            cell.textContent = _this.fiveResult[(_this.fiveResultIdx + 4) % 25].Result;
                             if(_this.fiveResult[(_this.fiveResultIdx + 4) % 25].Score === 3) cell.classList.add('blue-font');
                         }
                         cell.classList.add('table-cell');
@@ -1194,7 +1194,7 @@ let LOTTO = {
     }
     , fn_close_btn : function() {
 
-        let newButton = document.createElement('button');
+        const newButton = document.createElement('button');
         newButton.className = 'btn bottom-btn-gray result-close-btn';
         newButton.textContent = '닫기';
 
@@ -1207,17 +1207,15 @@ let LOTTO = {
     }
     , fn_get_today : function() {
         // 현재 날짜 객체 생성
-        let today = new Date();
+        const today = new Date();
 
         // 년, 월, 일 정보 가져오기
-        let year = today.getFullYear();
-        let month = today.getMonth() + 1; // 월은 0부터 시작하므로 1을 더해줌
-        let day = today.getDate();
+        const year = today.getFullYear();
+        const month = today.getMonth() + 1;
+        const day = today.getDate();
 
         // 날짜를 원하는 형식으로 표시
-        let formattedDate = year + '년 ' + (month < 10 ? '0' + month : month) + '월 ' + (day < 10 ? '0' + day : day) + '일';
-
-        return formattedDate;
+        return year + '년 ' + (month < 10 ? '0' + month : month) + '월 ' + (day < 10 ? '0' + day : day) + '일';
     }
     //오행 데이터 찾아오기
     ,fn_get_five_day_result_data : function() {
@@ -1232,9 +1230,9 @@ let LOTTO = {
         let mm = Number(birth.slice(4, 6));
         let dd = Number(birth.slice(6, 8));
 
-        for(let i = 0; i < perp.length; i++) {
-            if(perp[i].year === yyyy && perp[i].month === mm && perp[i].day === dd) {
-                fiveElem = perp[i].fiveElem;
+        for(const element of perp) {
+            if (element.year === yyyy && element.month === mm && element.day === dd) {
+                fiveElem = element.fiveElem;
                 break;
             }
         }
@@ -1249,9 +1247,9 @@ let LOTTO = {
 
         let fiveElem2 = '';
 
-        for(let i = 0; i < perp.length; i++) {
-            if(perp[i].year === year && perp[i].month === month && perp[i].day === day) {
-                fiveElem2 = perp[i].fiveElem;
+        for(const element of perp) {
+            if (element.year === year && element.month === month && element.day === day) {
+                fiveElem2 = element.fiveElem;
                 break;
             }
         }
