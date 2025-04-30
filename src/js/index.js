@@ -1153,34 +1153,34 @@ let LOTTO = {
                         let cell = row.insertCell();
                         if(i === 0 && j === 0) {
                             cell.textContent = dateArray[0];
-                            if(_this.fiveResult[_this.fiveResultIdx].Score === 3) cell.classList.add('blue-font');
+                            if(_this.fiveResult[(_this.fiveResultIdx % 25)].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 0 && j == 1) {
                             cell.textContent = _this.fiveResult[_this.fiveResultIdx].Result;
-                            if(_this.fiveResult[_this.fiveResultIdx].Score === 3) cell.classList.add('blue-font');
+                            if(_this.fiveResult[(_this.fiveResultIdx % 25)].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 1 && j === 0) {
                             cell.textContent = dateArray[1];
-                            if(_this.fiveResult[_this.fiveResultIdx + 1].Score === 3) cell.classList.add('blue-font');
+                            if(_this.fiveResult[(_this.fiveResultIdx + 1) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 1 && i === 1) {
                             cell.textContent = _this.fiveResult[_this.fiveResultIdx + 1].Result;
-                            if(_this.fiveResult[_this.fiveResultIdx + 1].Score === 3) cell.classList.add('blue-font');
+                            if(_this.fiveResult[(_this.fiveResultIdx + 1) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 2 && j === 0) {
                             cell.textContent = dateArray[2];
-                            if(_this.fiveResult[_this.fiveResultIdx + 2].Score === 3) cell.classList.add('blue-font');
+                            if(_this.fiveResult[(_this.fiveResultIdx + 2) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 2  && j === 1 ) {
                             cell.textContent = _this.fiveResult[_this.fiveResultIdx + 2].Result;
-                            if(_this.fiveResult[_this.fiveResultIdx + 2].Score === 3) cell.classList.add('blue-font');
+                            if(_this.fiveResult[(_this.fiveResultIdx + 2) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 3  && j === 0 ) {
                             cell.textContent = dateArray[3];
-                            if(_this.fiveResult[_this.fiveResultIdx + 3].Score === 3) cell.classList.add('blue-font');
+                            if(_this.fiveResult[(_this.fiveResultIdx + 3) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 3  && j === 1 ) {
                             cell.textContent = _this.fiveResult[_this.fiveResultIdx + 3].Result;
-                            if(_this.fiveResult[_this.fiveResultIdx + 3].Score === 3) cell.classList.add('blue-font');
+                            if(_this.fiveResult[(_this.fiveResultIdx + 3) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 4  && j === 0 ) {
                             cell.textContent = dateArray[4];
-                            if(_this.fiveResult[_this.fiveResultIdx + 4].Score === 3) cell.classList.add('blue-font');
+                            if(_this.fiveResult[(_this.fiveResultIdx + 4) % 25].Score === 3) cell.classList.add('blue-font');
                         } else if(i === 4  && j === 1 ) {
                             cell.textContent = _this.fiveResult[_this.fiveResultIdx + 4].Result;
-                            if(_this.fiveResult[_this.fiveResultIdx + 4].Score === 3) cell.classList.add('blue-font');
+                            if(_this.fiveResult[(_this.fiveResultIdx + 4) % 25].Score === 3) cell.classList.add('blue-font');
                         }
                         cell.classList.add('table-cell');
                     }
