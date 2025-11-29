@@ -1353,7 +1353,7 @@ let LOTTO = {
         })();
     },
     fn_lotto_bot : function() {
-        const lottoBotUrl = 'https://play.google.com/store/apps/details?id=com.devmango161128.newlotto&pcampaignid=web_share'; // 실제 카카오톡 오픈채팅방 링크로 변경
+        const lottoBotUrl = 'https://play.google.com/store/apps/details?id=com.devmango161128.newlotto&pcampaignid=web_share';
         window.open(lottoBotUrl, '_self');
     }
 }
