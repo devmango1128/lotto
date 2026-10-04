@@ -10,9 +10,9 @@ let LOTTO = {
     fiveResult : null, //오행 결과
     fiveResultIdx : -1,
     //시작
-    init : function() {
+    init : function(forceLatestTurn) {
         this.fn_five_day_result_data();
-        this.fn_lotto_turn_change();
+        this.fn_lotto_turn_change(forceLatestTurn);
         this.fn_create_fixed_number_ball();
     },
     //오행
@@ -60,8 +60,11 @@ let LOTTO = {
         xhr2.send();
     }
     //로또 회차별 데이터 조회
-    , fn_lotto_turn_change : function() {
+    , fn_lotto_turn_change : function(forceLatestTurn) {
         let _this = this;
+
+        const selectElement = document.getElementById('lottoTurn');
+        const prevValue = selectElement.value;
 
         const url = '/lotto/turnHistory.json?date=' + new Date();
         const xhr = new XMLHttpRequest();
@@ -72,7 +75,11 @@ let LOTTO = {
                 _this.lottoData = JSON.parse(xhr.responseText);
                 _this.fn_lotto_turn(_this.lottoData.length);
 
-                const selectElement = document.getElementById('lottoTurn');
+                //새로고침이 아니면 기존에 선택했던 회차 유지
+                if (!forceLatestTurn && prevValue) {
+                    selectElement.value = prevValue;
+                }
+
                 const selectedValue = selectElement.value ? selectElement.value : selectElement.options[0].value;
 
                 _this.weekLottoData = _this.lottoData[selectedValue-1];
@@ -96,7 +103,7 @@ let LOTTO = {
     fn_lotto_turn : function(lotto_len) {
         let _this = this;
         const lottoTurn = document.getElementById('lottoTurn');
-
+        lottoTurn.innerHTML = '';
 
         for (let i = lotto_len; i > 0; i--) {
 
@@ -1266,6 +1273,10 @@ let LOTTO = {
         if (window.Android && Android.openQRScanner) {
             Android.openQRScanner();
         }
+    }
+    //새로고침
+    , fn_refresh : function() {
+        this.init(true);
     }
     , fn_send_mail : function() {
         const subject = encodeURIComponent('조상님로또 의견/문의글입니다.');

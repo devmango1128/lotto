@@ -4823,6 +4823,53 @@ div.logo {
   font-size: 1.2rem;
 }
 
+.header-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #404142;
+  z-index: 2;
+  padding: 8px 14px;
+}
+
+.header-icon-scan {
+  display: block;
+  width: 1.2rem;
+  height: 1.3rem;
+  position: relative;
+  background: linear-gradient(currentColor, currentColor) no-repeat center / 100% 2px;
+}
+
+.header-icon-scan::before,
+.header-icon-scan::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 35%;
+  border: 2px solid currentColor;
+}
+
+.header-icon-scan::before {
+  top: 0;
+  border-bottom: none;
+}
+
+.header-icon-scan::after {
+  bottom: 0;
+  border-top: none;
+}
+
+.header-icon-left {
+  left: 0;
+}
+
+.header-icon-right {
+  right: 0;
+}
+
 div.navigate {
   display: block;
   text-align: left;
